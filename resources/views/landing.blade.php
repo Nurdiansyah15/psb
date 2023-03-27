@@ -53,7 +53,7 @@ https://templatemo.com/tm-586-scholar
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a href="index.html" class="logo">
-                            <h1>PSB | Kyai Galang Sewu</h1>
+                            <h1>PSB</h1>
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
@@ -81,113 +81,33 @@ https://templatemo.com/tm-586-scholar
                     <div class="owl-carousel owl-banner">
                         <div class="item item-1">
                             <div class="header-text row">
-                                <div class="col"> <span class="category">Our Courses</span>
-                                    <h2>Personalized fokus pada kebutuhan</h2>
-                                    <p>Siswa mendapatkan layanan personal sesuai kebutuhan dan target belajar yang
-                                        diinginkan. Catatan dan laporan belajar dikirmkan setiap selesai sesi belajar.
-                                    </p>
-                                    <div class="buttons">
+                                <div class="col">
+                                    {{-- <span class="category">Our Co</span> --}}
+                                    <h2>Kyai Galang Sewu</h2>
+                                    <p>Tembalang, Kota Semarang, Jawa Tengah</p>
+                                    {{-- <div class="buttons">
                                         <div class="main-button">
                                             <a href="#">Free Trial</a>
                                         </div>
                                         <div class="icon-button">
                                             <a href="#"><i class="fa fa-play"></i></a>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                 </div>
-                                <div class="col justify-content">
+                                <div class="col d-flex align-items-center">
                                     <img src="assets/images/logo.png" alt="" srcset="">
                                 </div>
 
 
                             </div>
                         </div>
-                        <div class="item item-2">
-                            <div class="header-text">
-                                <span class="category">Best Result</span>
-                                <h2>Systemized belajar jadi mudah dan efektif</h2>
-                                <p>Siswa mendapatkan modul soal yang sistematis dengan kombinasi gaya belajar linear dan
-                                    global untuk memudahkan pemahaman konsep.</p>
-                                <div class="buttons">
-                                    <div class="main-button">
-                                        <a href="#">Free Trial</a>
-                                    </div>
-                                    <div class="icon-button">
-                                        <a href="#"><i class="fa fa-play"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item item-3">
-                            <div class="header-text">
-                                <span class="category">Online Learning</span>
-                                <h2>Limitless Layanan 24 jam nonstop</h2>
-                                <p>Akses website e-learning untuk belajar mandiri melalui smartpeoples.click dan tanya
-                                    soal secara instan dengan aplikasi Tanya Jawab Soal -- kapan pun, di mana pun</p>
-                                <div class="buttons">
-                                    <div class="main-button">
-                                        <a href="#">Free Trial</a>
-                                    </div>
-                                    <div class="icon-button">
-                                        <a href="#"><i class="fa fa-play"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="services section" id="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item">
-                        <div class="icon">
-                            <img src="assets/images/service-01.png" alt="online degrees">
-                        </div>
-                        <div class="main-content">
-                            <h4>Online Degrees</h4>
-                            <p>Tingkatkan karier Anda ke level selanjutnya dengan gelar online.</p>
-                            <div class="main-button">
-                                <a href="#">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item">
-                        <div class="icon">
-                            <img src="assets/images/service-02.png" alt="short courses">
-                        </div>
-                        <div class="main-content">
-                            <h4>Short Courses</h4>
-                            <p>Short course adalah program kuliah atau kursus yang berdurasi singkat.</p>
-                            <div class="main-button">
-                                <a href="#">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item">
-                        <div class="icon">
-                            <img src="assets/images/service-03.png" alt="web experts">
-                        </div>
-                        <div class="main-content">
-                            <h4>Web Experts</h4>
-                            <p>Kami ahli dalam Desain Logo, Desain Situs Web, PHP Kustom, dan WordPress.</p>
-                            <div class="main-button">
-                                <a href="#">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div class="section about-us">
         <div class="container">
@@ -198,15 +118,13 @@ https://templatemo.com/tm-586-scholar
                             <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Profil Smart Peoples
+                                    Visi
                                 </button>
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse show"
                                 aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    Smart Peoples adalah sebuah tim yang berkomitmen, yang terdiri dari orang-orang yang
-                                    positif, mencintai dunia pendidikan yang selalu sabar, jujur, berorientasi terhadap
-                                    hasil didikan dan penuh integritas.
+                                    Mencetak Generasi Muda yang Berkualitas di Bidang Ilmu Agama, Ilmu Umum, dan Berkepribadian Akhlakul Karimah serta Menjalankan Syari’at Islam ala Ahlussunah Wal Jama’ah
                                 </div>
                             </div>
                         </div>
@@ -214,54 +132,17 @@ https://templatemo.com/tm-586-scholar
                             <h2 class="accordion-header" id="headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Program belajar sesuai kebutuhan
+                                 Misi
                                 </button>
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    Bahan ajar disusun secara khusus agar dapat memenuhi setiap kebutuhkan. Dengan
-                                    memperhatikan 4 aspek penting, antara lain karakter siswa, materi yang sedang
-                                    berjalan, di mana siswa bersekolah, dan event apa yang akan berlangsung, Smart
-                                    Peoples mengupayakan yang terbaik agar siswa belajar dengan tepat dan memperoleh
-                                    hasil yang maksimal.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="false"
-                                    aria-controls="collapseThree">
-                                    Modul belajar lengkap dan sistematis
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse"
-                                aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    Modul "Paket 7 Lapis" dari Smart Peoples, berisi rangkuman materi hingga soal-soal
-                                    latihan dengan susunan yang sistematis. Siswa dapat memulai belajar dari "posisi apa
-                                    pun" ia sekarang. Apakah ia merasa perlu pemahaman materi dari awal, apakah ia
-                                    merasa perlu mendalami beberapa konsep, atau apakah ia merasa perlu tantangan yang
-                                    lebih tinggi, semua bisa ia dapatkan.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingFour">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFour" aria-expanded="false"
-                                    aria-controls="collapseFour">
-                                    Pendekatan secara personal
-                                </button>
-                            </h2>
-                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    Smart Peoples menyesuaikan diri dengan karakter dan gaya belajar anak, karena pada
-                                    dasarnya setiap anak pasti memiliki karakter dan kebutuhan yang berbeda. Pendekatan
-                                    dilakukan secara personal untuk mendalami serta mengenal siswa lebih dalam, sehingga
-                                    siswa dapat merasa nyaman dan dapat mengikuti sesi pembelajaran secara maksimal.
+                                    &bull; Menanamkan nilai-nilai keislaman dalam aktivitas sehari-hari <br>
+                                    &bull; Membangkitkan semangat santri untuk senantiasa aktif dalam mengikuti majelis pengajian Al-qur’an maupun kitab di pondok <br>
+                                    &bull; Menciptakan santri yang siap untuk terjun di masyarakat <br>
+                                    &bull; Menciptakan suasana gotong-royong dan saling membantu antar santri <br>
+                                    &bull; Menjalin hubungan baik dengan masyarakat serta berbagai pihak dalam pengembangan pesantren yang unggul dan agamis
                                 </div>
                             </div>
                         </div>
@@ -269,19 +150,54 @@ https://templatemo.com/tm-586-scholar
                 </div>
                 <div class="col-lg-5 align-self-center">
                     <div class="section-heading">
-                        <h6>About Us</h6>
-                        <h2>Apa yang Menjadikan Kami Akademi Terbaik?</h2>
-                        <p>Dipercaya lebih dari 35.629 siswa dari sekolah unggulan kurikulum Nasional, Nasional+,
-                            International</p>
-                        <div class="main-button">
+                        <h2>Selayang Pandang</h2>
+                        <p>Pondok pesantren Kyai Galang Sewu merupakan pondok pesantren yang berpegang teguh pada Al-Qur’an , Hadits, Ijma’, Qiyas dan para ulama Ahlussunnah wal jamaah. Ponpes Kyai Galang Sewu juga menjunjung tinggi nilai-nilai Pancasila, UUD 1945, dan Bhinneka Tunggal Ika sebagai benteng dari pergolakan massa di Indonesia.
+                            Pondok Pesantren ini resmi didirikan pada tanggal 16 Agustus 1999 atas rintisan KH. M. Sam’ani Khoiruddin, S.Ag. Letaknya yang berada di kawasan kampus Universitas Diponegoro menjadikan Ponpes Kyai Galang Sewu menjadi pilihan tepat bagi mahasiswa yang ingin menuntut ilmu sembari memperdalam ilmu agama.
+                            dalam rangka meningkatkan kualitas pendidikan santri, Ponpes Kyai Galang Sewu memberikan pengajaran ilmu-ilmu di bidang Tauhid, Tajwid, Tafsir, Akhlaq, Fiqih, Nahwu, Shorof, dan lain-lain.</p>
+                        {{-- <div class="main-button">
                             <a href="#">Discover More</a>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+
+    <div class="services section" id="services">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="icon">
+                            <img src="assets/images/service-01.png" alt="online degrees">
+                        </div>
+                        <div class="main-content">
+                            <h4>Tahfidz</h4>
+                            <p>Tingkatkan karier Anda ke level selanjutnya dengan gelar online.</p>
+                            {{-- <div class="main-button">
+                                <a href="#">Read More</a>
+                            </div> --}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="icon">
+                            <img src="assets/images/service-02.png" alt="short courses">
+                        </div>
+                        <div class="main-content">
+                            <h4>Kitab</h4>
+                            <p>Short course adalah program kuliah atau kursus yang berdurasi singkat.</p>
+                            {{-- <div class="main-button">
+                                <a href="#">Read More</a>
+                            </div> --}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <section class="section courses" id="courses">
         <div class="container">
             <div class="row">
@@ -507,13 +423,11 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-7">
                     <div class="owl-carousel owl-testimonials">
                         <div class="item">
-                            <p>“Aku les di Smart Peoples sudah 2 tahun. Di sini cara belajarnya udah berubah, dulu tuh
-                                belajarnya di rumah dipaksa, kalau di sini kan sekarang udah gampang, nggak usah belajar
-                                lagi di rumah.”</p>
+                            <p>“Janganlah kamu menjadikan alasan kebodohanmu di hadapan Allah SWT, karena Allah SWT menuntutmu mencari ilmu, bukan menuntutmu untuk pandai.”</p>
                             <div class="author">
                                 <img src="assets/images/member-01.jpg" alt="">
-                                <span class="category">Full Stack Master</span>
-                                <h4>Edbert</h4>
+                                <span class="category">Pengajar</span>
+                                <h4>K. Abdillah Matori, S.Pd.I</h4>
                             </div>
                         </div>
                         <div class="item">
@@ -658,7 +572,7 @@ https://templatemo.com/tm-586-scholar
         </div>
     </div>
 
-    <div class="contact-us section" id="contact">
+    {{-- <div class="contact-us section" id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6  align-self-center">
@@ -674,46 +588,15 @@ https://templatemo.com/tm-586-scholar
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="contact-us-content">
-                        <form id="contact-form" action="" method="post">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <fieldset>
-                                        <input type="name" name="name" id="name"
-                                            placeholder="Your Name..." autocomplete="on" required>
-                                    </fieldset>
-                                </div>
-                                <div class="col-lg-12">
-                                    <fieldset>
-                                        <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*"
-                                            placeholder="Your E-mail..." required="">
-                                    </fieldset>
-                                </div>
-                                <div class="col-lg-12">
-                                    <fieldset>
-                                        <textarea name="message" id="message" placeholder="Your Message"></textarea>
-                                    </fieldset>
-                                </div>
-                                <div class="col-lg-12">
-                                    <fieldset>
-                                        <button type="submit" id="form-submit" class="orange-button">Send Message
-                                            Now</button>
-                                    </fieldset>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
             </div>
         </div>
-    </div>
-
+    </div> --}}
     <footer>
+
         <div class="container">
             <div class="col-lg-12">
-                <p>Copyright © 2023 Smart Peoples. All rights reserved. &nbsp;&nbsp;&nbsp; Design: <a
-                        href="https://templatemo.com" rel="nofollow" target="_blank">Adinia</a></p>
+                <p>Dibuat dengan &hearts; oleh KGS Devnet. &nbsp;&nbsp;&nbsp; Contact: <a
+                        href="https://templatemo.com" rel="nofollow" target="_blank">0888888 (Humas)</a></p>
             </div>
         </div>
     </footer>
