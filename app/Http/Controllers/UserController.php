@@ -2,20 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Santri;
+use App\Helpers\RegNumGenerator;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 
-class SantriController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $santris = Santri::all();
+        $users = User::all();
         return view('user', [
-            'users' => $santris
+            'users' => $users
         ]);
     }
 
@@ -25,13 +26,15 @@ class SantriController extends Controller
     public function create(Request $request)
     {
         $fields = $request->validate([
-            'fullname' => 'string|required',
-            'nickname' => 'string|required',
-            'email' => 'string|email:rfc,dns|required',
-            'program' => 'string|required',
-            'option' => 'string|required',
+            'no_regis' => 'string',
+            'role' => 'string|required',
+            'password' => 'string|required',
         ]);
-        $data = Santri::create($fields);
+
+        // p1000231
+        $fields['no_regis'] = RegNumGenerator::get();
+
+        $data = User::create($fields);
 
         if ($data) {
             return redirect()->back()->with('success', 'Data berhasil ditambahkan');
@@ -52,9 +55,9 @@ class SantriController extends Controller
      */
     public function show(string $id)
     {
-        $santri = Santri::where('id', $id)->first();
+        $user = User::where('id', $id)->first();
         return view('user', [
-            'user' => $santri
+            'user' => $user
         ]);
     }
 
@@ -72,14 +75,12 @@ class SantriController extends Controller
     public function update(Request $request, string $id)
     {
         $fields = $request->validate([
-            'fullname' => 'string',
-            'nickname' => 'string',
-            'email' => 'string|email:rfc,dns',
-            'program' => 'string',
-            'option' => 'string',
+            'no_regis' => 'string',
+            'role' => 'string',
+            'password' => 'string',
         ]);
-        $santri = Santri::where('id', $id)->first();
-        $data = $santri->update($fields);
+        $user = User::where('id', $id)->first();
+        $data = $user->update($fields);
         if ($data) {
             return redirect()->back()->with('success', 'Data berhasil diubah');
         }
@@ -91,8 +92,8 @@ class SantriController extends Controller
      */
     public function destroy(string $id)
     {
-        $santri = Santri::where('id', $id)->first();
-        $data = $santri->delete();
+        $user = User::where('id', $id)->first();
+        $data = $user->delete();
         if ($data) {
             return redirect()->back()->with('success', 'Data berhasil dihapus');
         }
