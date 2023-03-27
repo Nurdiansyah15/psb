@@ -24,11 +24,15 @@ Route::get('/2', function () {
     return view('dashboaradmin');
 });
 Route::get('/3', function () {
-    return view('');
+    return view('z');
 });
 Route::get('/4', function () {
     return view('daftarsantri');
 });
 Route::get('/5', function () {
     return view('user');
+});
+
+Route::get('/page', function () {
+    return view('landing');
 });
