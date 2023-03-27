@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
-    <title>Smart Peoples - Les Privat</title>
+    <title>PSB - Kyai Galang Sewu</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -53,7 +53,7 @@ https://templatemo.com/tm-586-scholar
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a href="index.html" class="logo">
-                            <h1>Smart Peoples</h1>
+                            <h1>PSB | Kyai Galang Sewu</h1>
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
@@ -61,9 +61,7 @@ https://templatemo.com/tm-586-scholar
                             <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
                             <li class="scroll-to-section"><a href="#services">Services</a></li>
                             <li class="scroll-to-section"><a href="#courses">Courses</a></li>
-                            <li class="scroll-to-section"><a href="#team">Team</a></li>
-                            <li class="scroll-to-section"><a href="#events">Events</a></li>
-                            <li class="scroll-to-section"><a href="#contact">Register Now!</a></li>
+
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -82,19 +80,26 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-12">
                     <div class="owl-carousel owl-banner">
                         <div class="item item-1">
-                            <div class="header-text">
-                                <span class="category">Our Courses</span>
-                                <h2>Personalized fokus pada kebutuhan</h2>
-                                <p>Siswa mendapatkan layanan personal sesuai kebutuhan dan target belajar yang
-                                    diinginkan. Catatan dan laporan belajar dikirmkan setiap selesai sesi belajar.</p>
-                                <div class="buttons">
-                                    <div class="main-button">
-                                        <a href="#">Free Trial</a>
-                                    </div>
-                                    <div class="icon-button">
-                                        <a href="#"><i class="fa fa-play"></i></a>
+                            <div class="header-text row">
+                                <div class="col"> <span class="category">Our Courses</span>
+                                    <h2>Personalized fokus pada kebutuhan</h2>
+                                    <p>Siswa mendapatkan layanan personal sesuai kebutuhan dan target belajar yang
+                                        diinginkan. Catatan dan laporan belajar dikirmkan setiap selesai sesi belajar.
+                                    </p>
+                                    <div class="buttons">
+                                        <div class="main-button">
+                                            <a href="#">Free Trial</a>
+                                        </div>
+                                        <div class="icon-button">
+                                            <a href="#"><i class="fa fa-play"></i></a>
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="col justify-content">
+                                    <img src="assets/images/logo.png" alt="" srcset="">
+                                </div>
+
+
                             </div>
                         </div>
                         <div class="item item-2">

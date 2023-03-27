@@ -187,12 +187,12 @@ body {
 }
 
 ::selection {
-    background: #7a6ad8;
+    background: #F08A5D;
     color: #fff;
 }
 
 ::-moz-selection {
-    background: #7a6ad8;
+    background: #F08A5D;
     color: #fff;
 }
 
@@ -214,12 +214,12 @@ body {
 }
 
 .section-heading h2 em {
-    color: #7a6ad8;
+    color: #F08A5D;
     font-style: normal;
 }
 
 .section-heading h6 {
-    color: #7a6ad8;
+    color: #F08A5D;
     font-size: 14px;
     text-transform: uppercase;
     font-weight: 600;
@@ -228,7 +228,7 @@ body {
 .main-button a {
     display: inline-block;
     background-color: #fff;
-    color: #7a6ad8;
+    color: #F08A5D;
     font-size: 14px;
     font-weight: 500;
     height: 40px;
@@ -239,7 +239,7 @@ body {
 }
 
 .main-button a:hover {
-    background-color: #7a6ad8;
+    background-color: #F08A5D;
     color: #fff;
 }
 
@@ -316,7 +316,7 @@ Pre-loader Style
     height: 16px;
     top: 12px;
     left: 15px;
-    background: #7a6ad8;
+    background: #F08A5D;
     border-radius: 50%;
     -webkit-transform: translateX(0);
     transform: translateX(0);
@@ -339,7 +339,7 @@ Pre-loader Style
     width: 16px;
     height: 16px;
     margin-left: 16px;
-    background: #7a6ad8;
+    background: #F08A5D;
     border-radius: 50%;
 }
 
@@ -350,7 +350,7 @@ Header Style
 */
 
 .background-header {
-    background-color: #7a6ad8 !important;
+    background-color: #F08A5D !important;
     border-radius: 0px 0px 25px 25px;
     height: 80px !important;
     position: fixed !important;
@@ -672,7 +672,7 @@ Header Style
     }
     .header-area.header-sticky .nav li a:hover,
     .header-area.header-sticky .nav li a.active {
-        color: #7a6ad8 !important;
+        color: #F08A5D !important;
         opacity: 1;
     }
     .header-area.header-sticky .nav li.search-icon a {
@@ -733,7 +733,7 @@ Banner Style
 
 .main-banner {
     //background-image: url(../images/member-01.jpg);
-    background-color: #6A2C70;
+    background-color: #F08A5D;
     background-position: right bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -741,15 +741,18 @@ Banner Style
 }
 
 .main-banner .item-1 {
-    background-image: url(../images/member-01.jpg);
+    /* background-image: url(../images/member-01.jpg); */
+    background-color: #B83B5E;
 }
 
 .main-banner .item-2 {
-    background-image: url(../images/member-01.jpg);
+    /* background-image: url(../images/member-01.jpg); */
+    background-color: #B83B5E;
 }
 
 .main-banner .item-3 {
-    background-image: url(../images/member-01.jpg);
+    /* background-image: url(../images/member-01.jpg); */
+    background-color: #B83B5E;
 }
 
 .main-banner .item {
@@ -757,7 +760,7 @@ Banner Style
     background-position: center center;
     background-size: cover;
     border-radius: 25px;
-    padding: 100px 100px;
+    padding: 30px 30px;
     margin-left: 130px;
 }
 
@@ -880,7 +883,7 @@ Services Style
     display: inline-block;
     text-align: center;
     line-height: 190px;
-    background-color: #7a6ad8;
+    background-color: #F08A5D;
     border-radius: 50%;
     position: absolute;
     right: 0;
@@ -943,7 +946,7 @@ About Style
 .accordion {
     margin-top: -40px;
     margin-bottom: -40px;
-    background-color: #7a6ad8;
+    background-color: #F08A5D;
     border-radius: 40px;
     padding: 80px 50px 50px 50px;
 }
@@ -962,7 +965,7 @@ About Style
 }
 
 .accordion-button:not(.collapsed) {
-    color: #7a6ad8;
+    color: #F08A5D;
     background-color: #fff;
 }
 
@@ -984,7 +987,7 @@ h2.accordion-header button {
     text-align: center;
     line-height: 30px;
     border-radius: 50%;
-    background-color: #7a6ad8;
+    background-color: #F08A5D;
     color: #fff;
 }
 
@@ -1047,7 +1050,7 @@ Courses Style
 
 .event_filter li .event_filter li a.is_active,
 .event_filter li a:hover {
-    color: #7a6ad8;
+    color: #F08A5D;
 }
 
 .events_item .thumb {
@@ -1066,7 +1069,7 @@ Courses Style
     top: 30px;
     font-size: 14px;
     text-transform: uppercase;
-    color: #7a6ad8;
+    color: #F08A5D;
     background-color: rgba(250, 250, 250, 0.95);
     padding: 8px 20px;
     border-radius: 25px;
@@ -1078,7 +1081,7 @@ Courses Style
     position: absolute;
     right: -30px;
     top: -50px;
-    background-color: rgba(122, 106, 216, 0.95);
+    background-color: #F08A5D;
     width: 130px;
     height: 130px;
     border-radius: 50%;
@@ -1116,7 +1119,7 @@ Courses Style
 }
 
 .events_item .down-content span.author {
-    color: #7a6ad8;
+    color: #F08A5D;
     font-size: 15px;
     display: inline-block;
     margin-bottom: 6px;
@@ -1129,7 +1132,7 @@ Courses Style
 }
 
 .events_item:hover .down-content h4 {
-    color: #7a6ad8;
+    color: #F08A5D;
 }
 
 .events_item:hover .thumb span.price {
@@ -1156,14 +1159,14 @@ Facts Style
     z-index: -1;
     width: 95%;
     height: 100%;
-    background-color: #7a6ad8;
+    background-color: #F08A5D;
     content: "";
     border-top-right-radius: 500px;
     border-bottom-right-radius: 500px;
 }
 
 .fun-facts:after {
-    background: url(../images/member-01.jpg);
+    /* background: url(../images/member-01.jpg); */
     position: absolute;
     left: 15%;
     opacity: 0.5;
@@ -1234,7 +1237,7 @@ Team Style
 }
 
 .team-member .main-content span.category {
-    color: #7a6ad8;
+    color: #F08A5D;
     font-size: 15px;
 }
 
@@ -1252,7 +1255,7 @@ Team Style
 
 .team-member .main-content ul li a {
     background-color: #fff;
-    color: #7a6ad8;
+    color: #F08A5D;
     display: inline-block;
     text-align: center;
     line-height: 40px;
@@ -1264,7 +1267,7 @@ Team Style
 }
 
 .team-member .main-content ul li a:hover {
-    background-color: #7a6ad8;
+    background-color: #F08A5D;
     color: #fff;
 }
 
@@ -1305,7 +1308,7 @@ Testimonials Style
 }
 
 .testimonials .item {
-    background-color: #7a6ad8;
+    background-color: #F08A5D;
     border-radius: 25px;
     padding: 80px;
 }
@@ -1355,7 +1358,7 @@ Testimonials Style
     line-height: 50px;
     font-size: 24px;
     display: inline-block;
-    color: #7a6ad8;
+    color: #F08A5D;
     background-color: #fff;
     border-radius: 50%;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
@@ -1421,7 +1424,7 @@ Events Style
 .events .item ul li span.category {
     font-size: 14px;
     text-transform: uppercase;
-    color: #7a6ad8;
+    color: #F08A5D;
     background-color: #fff;
     padding: 8px 20px;
     border-radius: 25px;
@@ -1444,7 +1447,7 @@ Events Style
 
 .events .item ul li h6 {
     font-size: 16px;
-    color: #7a6ad8;
+    color: #F08A5D;
     font-weight: 600;
 }
 
@@ -1452,7 +1455,7 @@ Events Style
     position: absolute;
     right: 0;
     top: 22px;
-    background-color: #7a6ad8;
+    background-color: #F08A5D;
     width: 60px;
     height: 120px;
     display: inline-block;
@@ -1512,7 +1515,7 @@ Contact Style
     position: absolute;
     left: 0;
     top: 0;
-    background-color: #7a6ad8;
+    background-color: #F08A5D;
     width: 80px;
     padding: 30px 8px;
     line-height: 25px;
@@ -1542,7 +1545,7 @@ Contact Style
 
 .contact-us .special-offer h6 em {
     font-style: normal;
-    color: #7a6ad8;
+    color: #F08A5D;
     font-weight: 600;
 }
 
@@ -1553,7 +1556,7 @@ Contact Style
 
 .contact-us .special-offer h4 em {
     font-style: normal;
-    color: #7a6ad8;
+    color: #F08A5D;
 }
 
 .contact-us .special-offer a {
@@ -1565,7 +1568,7 @@ Contact Style
     display: inline-block;
     text-align: center;
     line-height: 50px;
-    background-color: #7a6ad8;
+    background-color: #F08A5D;
     color: #fff;
     border-radius: 50%;
 }
@@ -1573,13 +1576,13 @@ Contact Style
 .contact-us .contact-us-content {
     border-radius: 25px;
     padding: 80px;
-    background-color: #7a6ad8;
+    background-color: #F08A5D;
     position: relative;
     z-index: 1;
 }
 
 .contact-us .contact-us-content::before {
-    background: url(../images/member-01.jpg);
+    /* background: url(../images/member-01.jpg); */
     position: absolute;
     left: 50%;
     transform: translateX(-149px);
@@ -1592,7 +1595,7 @@ Contact Style
 }
 
 .contact-us .contact-us-content::after {
-    background: url(../images/member-01.jpg);
+    /* background: url(../images/member-01.jpg); */
     position: absolute;
     right: 0;
     bottom: 0;
@@ -1650,7 +1653,7 @@ Contact Style
     background-color: #fff;
     padding: 0px 25px;
     border-radius: 25px;
-    color: #7a6ad8;
+    color: #F08A5D;
     transition: all 0.4s;
     position: relative;
     z-index: 3;
@@ -1698,7 +1701,7 @@ Footer Style
 footer {
     margin-top: 150px;
     position: relative;
-    background-color: #7a6ad8;
+    background-color: #F08A5D;
     vertical-align: middle;
     min-height: 150px;
     border-radius: 150px 150px 0px 0px;
@@ -1723,7 +1726,7 @@ footer p a:hover {
 }
 
 footer::before {
-    background: url(../images/member-01.jpg);
+    /* background: url(../images/member-01.jpg); */
     position: absolute;
     left: 30px;
     transform: rotate(180deg);
@@ -1847,7 +1850,7 @@ body {
         margin-top: 30px;
     }
     .about-us .main-button a {
-        background-color: #7a6ad8;
+        background-color: #F08A5D;
         color: #fff;
     }
     .courses {
