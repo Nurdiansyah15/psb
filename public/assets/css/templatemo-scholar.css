@@ -350,7 +350,7 @@ Header Style
 */
 
 .background-header {
-    background-color: #F08A5D !important;
+    background-color: #F08A5D!important;
     border-radius: 0px 0px 25px 25px;
     height: 80px !important;
     position: fixed !important;
@@ -742,7 +742,7 @@ Banner Style
 
 .main-banner .item-1 {
     /* background-image: url(../images/member-01.jpg); */
-    background-color: #B83B5E;
+    background-color: #F08A5D;
 }
 
 .main-banner .item-2 {
