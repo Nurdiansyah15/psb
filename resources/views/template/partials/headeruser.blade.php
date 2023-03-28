@@ -1,4 +1,4 @@
-<header class="header-area header-sticky fixed-top background-header">
+<header class="header-area header-sticky background-header">
     <div class="container">
         <div class="row">
             <div class="col-12">
