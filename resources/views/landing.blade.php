@@ -734,7 +734,7 @@ https://templatemo.com/tm-586-scholar
                             </div>
                             <div class="col">
                                 <h5>5995-01-023943-53-8</h5>
-                                <h6>a/n Muhammad Ainun Ni`am (BRI)</h6>
+                                <h6>a/n Muhammad Irvan Muahandis (BNI)</h6>
                             </div>
                         </div>
 
