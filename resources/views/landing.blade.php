@@ -66,7 +66,7 @@ https://templatemo.com/tm-586-scholar
                             <li class="scroll-to-section"><a href="#kuota">Kuota</a></li>
                             <li class="scroll-to-section"><a href="#ekstra">Ekstra</a></li>
                             <li class="scroll-to-section"><a href="#flow">Alur Pendaftaran</a></li>
-
+                            <li class="scroll-to-section"><a href="daftar">login</a></li>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
