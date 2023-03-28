@@ -325,11 +325,11 @@ https://templatemo.com/tm-586-scholar
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
+                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra">
                     <div class="events_item">
                         <div class="thumb" style="height: 230px">
                             <a href="#"><img src="img/silat.jpg" alt=""></a>
-                            <span class="category">Putra / Putri</span>
+                            <span class="category">Putra</span>
 
                         </div>
                         <div class="down-content">
