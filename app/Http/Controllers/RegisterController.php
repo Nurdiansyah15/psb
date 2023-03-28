@@ -11,7 +11,14 @@ class RegisterController extends Controller
      */
     public function index()
     {
-        //
+        $client = new Client();
+        $headers = [
+        'Accept' => 'application/json',
+        'X-API-KEY'=>'siponapikey'
+        ];
+        $request = new Request('GET', '{{base_url}}/api/v1/psb/setting/1', $headers);
+        $res = $client->sendAsync($request)->wait();
+        echo $res->getBody();
     }
 
     /**
