@@ -14,7 +14,6 @@
     $pi=intval($tahfidhpi)+intval($kitabpi);
 
     $today=date('Y-m-d');
-    $today='2023-03-29';
 
 ?>
 
@@ -57,31 +56,11 @@
                                             <p class="text-center h5 fw-bold mb-5 mx-1 mx-md-4 mt-3">Cek ketersediaan kuota !!!</p>
                                             <form class="mx-1 mx-md-4" action="daftar/step2" method="POST">
                                                 @csrf
-                                                {{-- <div class="d-flex flex-row align-items-center mb-4">
-                                                    <i class="fas fa-file fa-lg me-3 fa-fw"></i>
-                                                    <div class="form-outline flex-fill mb-0">
-                                                        <input type="name" class=" form-control" id="floatingInput"
-                                                            placeholder="NIK">
-                                                    </div>
-                                                </div><div class="d-flex flex-row align-items-center mb-4">
-                                                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                                                    <div class="form-outline flex-fill mb-0">
-                                                        <input type="name" class=" form-control" id="floatingInput"
-                                                            placeholder="Nama Lengkap">
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-row align-items-center mb-4">
-                                                    <i class="fas fa-phone fa-lg me-3 fa-fw"></i>
-                                                    <div class="form-outline flex-fill mb-0">
-                                                        <input type="text" class="form-control" id="floatingInput"
-                                                            placeholder="Nomor Whatsapp">
-                                                    </div>
-                                                </div> --}}
                                                 <!-- jenis Kelamin -->
                                                 <div class="d-flex flex-row align-items-center mb-4">
                                                     <i class="fas fa-male fa-lg me-3 fa-fw"></i>
-                                                    <select class="form-select" id="inputGroupSelect01" name="">
-                                                        <option selected>Jenis Kelamin</option>
+                                                    <select required class="form-select" id="inputGroupSelect01" name="option">
+                                                        <option value="">Jenis Kelamin</option>
                                                         <option value="1">Laki-Laki</option>
                                                         <option value="2">Perempuan</option>
                                                     </select>
@@ -89,50 +68,21 @@
                                                 <!-- Program -->
                                                 <div class="d-flex flex-row align-items-center mb-4">
                                                     <i class="fas fa-book fa-lg me-3 fa-fw"></i>
-                                                    <select class="form-select" id="inputGroupSelect01">
-                                                        <option selected>Program</option>
-                                                        <option value="1">Kitab</option>
-                                                        <option value="2">Tahfidh</option>
+                                                    <select required class="form-select" id="inputGroupSelect02" name="program">
+                                                        <option value="">Program</option>
+                                                        <option value="Kitab">Kitab</option>
+                                                        <option value="Tahfidh">Tahfidh</option>
                                                     </select>
                                                 </div>
-
-                                                <!-- <div class="d-flex flex-row align-items-center mb-4">
-                                                    <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
-                                                    <div class="form-outline flex-fill mb-0">
-                                                        <input type="password" class="form-control"
-                                                            id="floatingPassword" placeholder="Password">
-                                                    </div>
-                                                </div>
-
-                                                <div class="d-flex flex-row align-items-center mb-4">
-                                                    <i class="fas fa-key fa-lg me-3 fa-fw"></i>
-                                                    <div class="form-outline flex-fill mb-0">
-                                                        <input type="password" class="form-control"
-                                                            id="floatingPassword" placeholder="Password">
-                                                    </div>
-                                                </div> -->
-
-                                                {{-- <div class="form-check d-flex justify-content-center mb-5">
-                                                    <input class="form-check-input me-2" type="checkbox" value=""
-                                                        id="form2Example3c" />
-                                                    <label class="form-check-label" for="form2Example3">
-                                                        Saya menyutujui segala persyaratan<a href="#!"></a>
-                                                    </label>
-                                                </div> --}}
-
                                                 <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                                    <button type="button"
+                                                    <button type="submit"
                                                         class="btn btn-primary btn-lg">Cek</button>
                                                 </div>
-
                                             </form>
-
                                         </div>
                                         <div
                                             class="col-md-8 col-lg-4 col-xl-5 d-flex align-items-center order-1 order-lg-2">
-
                                             <img src="assets/images/logo-kgs.png" class="img-fluid" alt="Sample image">
-
                                         </div>
                                     </div>
                                 </div>
