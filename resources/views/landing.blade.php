@@ -263,7 +263,7 @@ https://templatemo.com/tm-586-scholar
             <div class="row event_box">
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
-                        <div class="thumb">
+                        <div class="thumb" style="height: 230px" style="height: 230px">
                             <a href="#"><img src="img/rebana.jpg" alt=""></a>
                             <span class="category">Putra / Putri</span>
 
@@ -276,7 +276,7 @@ https://templatemo.com/tm-586-scholar
                 </div>
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra ">
                     <div class="events_item">
-                        <div class="thumb">
+                        <div class="thumb" style="height: 230px">
                             <a href="#"><img src="img/kgs tv.jpg" alt=""></a>
                             <span class="category">Putra </span>
 
@@ -289,8 +289,8 @@ https://templatemo.com/tm-586-scholar
                 </div>
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
-                        <div class="thumb">
-                            <a href="#"><img src="img/media.jpg" alt=""></a>
+                        <div class="thumb" style="height: 230px">
+                            <a href="#"><img src="img/kgs media.png" alt=""></a>
                             <span class="category">Putra / Putri</span>
 
                         </div>
@@ -302,7 +302,7 @@ https://templatemo.com/tm-586-scholar
                 </div>
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
-                        <div class="thumb">
+                        <div class="thumb" style="height: 230px">
                             <a href="#"><img src="img/devnet.jpg" alt=""></a>
                             <span class="category">Putra / Putri</span>
 
@@ -315,7 +315,7 @@ https://templatemo.com/tm-586-scholar
                 </div>
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
-                        <div class="thumb">
+                        <div class="thumb" style="height: 230px">
                             <a href="#"><img src="img/puskes.jpg" alt=""></a>
                             <span class="category">Putra / Putri</span>
 
@@ -328,7 +328,7 @@ https://templatemo.com/tm-586-scholar
                 </div>
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
-                        <div class="thumb">
+                        <div class="thumb" style="height: 230px">
                             <a href="#"><img src="img/silat.jpg" alt=""></a>
                             <span class="category">Putra / Putri</span>
 
@@ -342,7 +342,7 @@ https://templatemo.com/tm-586-scholar
 
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
-                        <div class="thumb">
+                        <div class="thumb" style="height: 230px">
                             <a href="#"><img src="img/kaligrafi.jpg" alt=""></a>
                             <span class="category">Putra / Putri</span>
                             <span class="price">
@@ -358,7 +358,7 @@ https://templatemo.com/tm-586-scholar
 
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra">
                     <div class="events_item">
-                        <div class="thumb">
+                        <div class="thumb" style="height: 230px">
                             <a href="#"><img src="img/sound.jpg" alt=""></a>
                             <span class="category">Putra </span>
 
@@ -372,7 +372,7 @@ https://templatemo.com/tm-586-scholar
 
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
-                        <div class="thumb">
+                        <div class="thumb" style="height: 230px">
                             <a href="#"><img src="img/rne.jpg" alt=""></a>
                             <span class="category">Putra / Putri</span>
                             <span class="price">
@@ -788,8 +788,12 @@ https://templatemo.com/tm-586-scholar
     <footer>
         <div class="container">
             <div class="col-lg-12">
-                <p>Dibuat dengan &hearts; oleh KGS Devnet. &nbsp;&nbsp;&nbsp; Contact: <a href="http://wa.me/6285280009949" target="_blank" rel="noopener noreferrer">085280009949 (putra)</a> -
-                    <a href="http://wa.me/6285280009930" target="_blank" rel="noopener noreferrer">085280009930 (putri)</a></a></p>
+                <p>Dibuat dengan &hearts; oleh KGS Devnet. &nbsp;&nbsp;&nbsp; Contact: <a
+                        href="http://wa.me/6285280009949" target="_blank" rel="noopener noreferrer">085280009949
+                        (putra)</a> -
+                    <a href="http://wa.me/6285280009930" target="_blank" rel="noopener noreferrer">085280009930
+                        (putri)</a></a>
+                </p>
             </div>
         </div>
     </footer>
