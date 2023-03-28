@@ -13,7 +13,7 @@
         integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous">
     </script>
     <title>PSB KGS</title>
-    <link rel="shortcut icon" href="{{asset('/assets/images/logo-kgs.png')}}" />
+    <link rel="shortcut icon" href="{{ asset('/assets/images/logo-kgs.png') }}" />
     <!-- Bootstrap core CSS -->
     <link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -37,19 +37,19 @@
     <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
     <meta name="theme-color" content="#7952b3">
     <style>
-    .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-    }
-
-    @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-            font-size: 3.5rem;
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
         }
-    }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
     </style>
     <!-- Custom styles for this template -->
     <link href="sidebars.css" rel="stylesheet">
@@ -65,16 +65,16 @@
 
 <body>
 
-    <body>
-        @include("template.partials.navbar")
-        <div class="d-flex">
-            @include("template.partials.sidebar")
-            <div class="container-fluid p-0">
-                @yield("content")
+    @include('template.partials.navbar')
+    <div class="d-flex">
+        @include('template.partials.sidebar')
+        <div class="container-fluid p-0">
+            @yield('content')
 
-            </div>
         </div>
-        @include("template.partials.footer")
-    </body>
+    </div>
+    @include('template.partials.footer')
+
+</body>
 
 </html>

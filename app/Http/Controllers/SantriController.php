@@ -26,7 +26,6 @@ class SantriController extends Controller
     {
         $fields = $request->validate([
             'fullname' => 'string|required',
-            'nickname' => 'string|required',
             'email' => 'string|email:rfc,dns|required',
             'program' => 'string|required',
             'option' => 'string|required',

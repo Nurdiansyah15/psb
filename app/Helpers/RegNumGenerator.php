@@ -11,7 +11,7 @@ class RegNumGenerator
     {
         $last = DB::table('user')->latest('created_at')->first();
         $year = date('y');
-        $prefixnum = 'p1000' . $year; //p100023000
+        $prefixnum = 'P1000' . $year; //p100023000
 
         if ($last !== null) {
 
