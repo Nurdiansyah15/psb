@@ -9,7 +9,7 @@
         rel="stylesheet">
 
     <title>PSB | PP. Kyai Galang Sewu</title>
-    <link rel="shortcut icon" href="https://sipon.kyaigalangsewu.net/img/logo.png">
+
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -20,9 +20,9 @@
     <link rel="stylesheet" href="assets/css/template.css">
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="css/landing-style.css">
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <!--
-
 
 TemplateMo 586 Scholar
 
@@ -55,6 +55,7 @@ https://templatemo.com/tm-586-scholar
         </div>
     </div>
     @include('template.partials.footeruser')
+
     <!-- Scripts -->
     <!-- Bootstrap core JavaScript -->
     <script src="assets/js/jquery.min.js"></script>
@@ -67,3 +68,4 @@ https://templatemo.com/tm-586-scholar
 </body>
 
 </html>
+
