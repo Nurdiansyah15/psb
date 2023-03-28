@@ -43,4 +43,4 @@ use SebastianBergmann\Template\Template;
 Route::get('/', [LandingController::class, 'index']);
 Route::get('/daftar', [RegisterController::class, 'index']);
 Route::post('/daftar/step2', [RegisterController::class, 'step2']);
-Route::post('/daftar', [RegisterController::class, 'store']);
+Route::post('/daftar', [RegisterController::class, 'store'])->name('daftar.store');
