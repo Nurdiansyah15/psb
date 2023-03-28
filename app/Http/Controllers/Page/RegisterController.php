@@ -16,22 +16,24 @@ class RegisterController extends Controller
         $response = Http::withHeaders([
             'Accept' => 'aplication/json',
             'X-API-KEY' => 'siponapikey',
-        ])->get('http://sipon.kyaigalangsewu.net/api/v1/psb/setting/1');
+        ])->get('http://sipon.kyaigalangsewu.net/api/v1/psb/setActive');
 
         return view('user.formregister',[
             "data"=>$response['data'],
         ]);
     }
 
-    public function step2()
+    public function step2(Request $request)
     {
         $response = Http::withHeaders([
             'Accept' => 'aplication/json',
             'X-API-KEY' => 'siponapikey',
-        ])->get('http://sipon.kyaigalangsewu.net/api/v1/psb/setting/1');
+        ])->get('http://sipon.kyaigalangsewu.net/api/v1/psb/setActive');
 
         return view('user.formregister1',[
             "data"=>$response['data'],
+            "option"=>$request->option,
+            "program"=>$request->program,
         ]);
     }
 
