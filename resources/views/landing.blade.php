@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
-    <title>PSB - Kyai Galang Sewu</title>
+    <title>PSB | PP. Kyai Galang Sewu</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -17,7 +17,7 @@
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="    https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link rel="stylesheet" href="assets/css/templatemo-scholar.css">
+    <link rel="stylesheet" href="assets/css/template.css">
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="css/landing-style.css">
@@ -73,7 +73,11 @@ https://templatemo.com/tm-586-scholar
         </div>
     </header>
     <!-- ***** Header Area End ***** -->
+<<<<<<< HEAD
     <div class="banner mt-0">
+=======
+    <div class="banner" id="top">
+>>>>>>> 0f83c5fc2268cd34d83fc8ec3a27878e45b3c6c9
         <div class="container-fluid">
             <div class="row background" style="background-image: url({{ asset('/img/banner2.jpg') }})">
                 <div class="col-5 title">
@@ -88,7 +92,7 @@ https://templatemo.com/tm-586-scholar
                         </div>
                         <div class="buttons mt-2">
                             <div class="main-button">
-                                <a href="#">Pendaftaran</a>
+                                <a href="daftar">Pendaftaran</a>
                             </div>
                         </div>
                     </div>
@@ -119,7 +123,7 @@ https://templatemo.com/tm-586-scholar
         </div>
     </div>
 
-    <div class="section about-us " id="top">
+    <div class="section about-us ">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 offset-lg-1">
@@ -726,11 +730,10 @@ https://templatemo.com/tm-586-scholar
 
 
     <footer>
-
         <div class="container">
             <div class="col-lg-12">
-                <p>Dibuat dengan &hearts; oleh KGS Devnet. &nbsp;&nbsp;&nbsp; Contact: <a href="https://templatemo.com"
-                        rel="nofollow" target="_blank">0888888 (Humas)</a></p>
+                <p>Dibuat dengan &hearts; oleh KGS Devnet. &nbsp;&nbsp;&nbsp; Contact: <a href="http://wa.me/6285280009949" target="_blank" rel="noopener noreferrer">085280009949 (putra)</a> -
+                    <a href="http://wa.me/6285280009930" target="_blank" rel="noopener noreferrer">085280009930 (putri)</a></a></p>
             </div>
         </div>
     </footer>

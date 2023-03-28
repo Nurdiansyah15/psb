@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Page;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class RegisterController extends Controller
 {
@@ -12,7 +13,26 @@ class RegisterController extends Controller
      */
     public function index()
     {
-        //
+        $response = Http::withHeaders([
+            'Accept' => 'aplication/json',
+            'X-API-KEY' => 'siponapikey',
+        ])->get('http://sipon.kyaigalangsewu.net/api/v1/psb/setting/1');
+
+        return view('user.formregister',[
+            "data"=>$response['data'],
+        ]);
+    }
+
+    public function step2()
+    {
+        $response = Http::withHeaders([
+            'Accept' => 'aplication/json',
+            'X-API-KEY' => 'siponapikey',
+        ])->get('http://sipon.kyaigalangsewu.net/api/v1/psb/setting/1');
+
+        return view('user.formregister1',[
+            "data"=>$response['data'],
+        ]);
     }
 
     /**

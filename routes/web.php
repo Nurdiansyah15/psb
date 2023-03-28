@@ -41,4 +41,5 @@ use SebastianBergmann\Template\Template;
 
 
 Route::get('/', [LandingController::class, 'index']);
-Route::get('/register', [RegisterController::class, 'index']);
+Route::get('/daftar', [RegisterController::class, 'index']);
+Route::post('/daftar/2', [RegisterController::class, 'step2']);
