@@ -8,7 +8,7 @@
                  <nav class="main-nav">
                      <!-- ***** Logo Start ***** -->
                      <a href="/" class="logo">
-                         <p>Penerimaan Santri Baru</p>
+                         <h1>PSB</h1>
                      </a>
                      <!-- ***** Logo End ***** -->
                      <!-- ***** Menu Start ***** -->
