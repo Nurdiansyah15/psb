@@ -352,11 +352,11 @@ Header Style
 .background-header {
     background-color: #f08a5d !important;
     border-radius: 0px 0px 25px 25px;
-    height: 80px !important;
+    height: 65px !important;
     position: fixed !important;
     top: 0 !important;
-    left: 0;
-    right: 0;
+    left: 20px;
+    right: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15) !important;
     -webkit-transition: all 0.5s ease 0s;
     -moz-transition: all 0.5s ease 0s;
@@ -367,9 +367,9 @@ Header Style
 .header-area {
     position: absolute;
     background-color: transparent;
-    top: 40px;
-    left: 0;
-    right: 0;
+    top: 0;
+    left: 20px;
+    right: 20px;
     z-index: 100;
     -webkit-transition: all 0.5s ease 0s;
     -moz-transition: all 0.5s ease 0s;
@@ -406,7 +406,7 @@ Header Style
 
 .background-header .main-nav .logo,
 .background-header .main-nav #search {
-    margin-top: 18px;
+    margin-top: 0;
 }
 
 .header-area .main-nav #search {
@@ -481,7 +481,7 @@ Header Style
 }
 
 .background-header .main-nav .nav {
-    margin-top: 20px;
+    margin-top: 13px;
 }
 
 .background-header .main-nav .nav li {
