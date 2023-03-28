@@ -46,7 +46,11 @@ https://templatemo.com/tm-586-scholar
     <!-- ***** Preloader End ***** -->
 
     <!-- ***** Header Area Start ***** -->
+<<<<<<< Updated upstream
     <header class="header-area header-sticky background-header">
+=======
+    <header class="header-area header-sticky fixed-top background-header">
+>>>>>>> Stashed changes
         <div class="container">
             <div class="row">
                 <div class="col-12">
