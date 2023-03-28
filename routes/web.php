@@ -36,7 +36,3 @@ Route::get('/5', function () {
 Route::get('/page', function () {
     return view('landing');
 });
-
-Route::get('/register', function () {
-    return view('register');
-});
