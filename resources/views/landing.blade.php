@@ -400,57 +400,31 @@ https://templatemo.com/tm-586-scholar
                             <div class="col-lg-3 col-md-6">
                                 <div class="counter">
                                     <h2 class="timer count-title count-number"
-                                        data-to="{{ $setting['quota_kitab_pa'] }}" data-speed="1000"></h2>
-                                    <p class="count-text ">Kitab Putra</p>
+                                        data-to="{{ $setting['quota_kitab_pa'] + $setting['quota_tahfidh_pa'] }}"
+                                        data-speed="1000"></h2>
+                                    <p class="count-text ">Santri Putra</p>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6">
                                 <div class="counter">
                                     <h2 class="timer count-title count-number"
-                                        data-to="{{ $setting['quota_kitab_pi'] }}" data-speed="1000"></h2>
-                                    <p class="count-text ">Kitab Putri</p>
+                                        data-to="{{ $setting['quota_kitab_pi'] + $setting['quota_tahfidh_pi'] }}"
+                                        data-speed="1000"></h2>
+                                    <p class="count-text ">Santri Putri</p>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6">
                                 <div class="counter">
-                                    <h2 class="timer count-title count-number"
-                                        data-to="{{ $setting['quota_tahfidh_pa'] }}" data-speed="1000"></h2>
-                                    <p class="count-text ">Tahfidh Putra</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6">
-                                <div class="counter end">
-                                    <h2 class="timer count-title count-number"
-                                        data-to="{{ $setting['quota_tahfidh_pi'] }}" data-speed="1000"></h2>
-                                    <p class="count-text ">Tahfidh Putri</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6">
-                                <div class="counter end">
-                                    <h2 class="timer count-title count-number" data-to="{{ $count['kitab_putra'] }}"
+                                    <h2 class="timer count-title count-number" data-to="{{ $count['putra'] }}"
                                         data-speed="1000"></h2>
-                                    <p class="count-text ">Kitab Putra Terisi</p>
+                                    <p class="count-text ">Putra Terisi</p>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6">
                                 <div class="counter end">
-                                    <h2 class="timer count-title count-number" data-to="{{ $count['kitab_putri'] }}"
+                                    <h2 class="timer count-title count-number" data-to="{{ $count['putri'] }}"
                                         data-speed="1000"></h2>
-                                    <p class="count-text ">Kitab Putri Terisi</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6">
-                                <div class="counter end">
-                                    <h2 class="timer count-title count-number" data-to="{{ $count['tahfidh_putra'] }}"
-                                        data-speed="1000"></h2>
-                                    <p class="count-text ">Tahfidh Putra Terisi</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6">
-                                <div class="counter end">
-                                    <h2 class="timer count-title count-number" data-to="{{ $count['tahfidh_putri'] }}"
-                                        data-speed="1000"></h2>
-                                    <p class="count-text ">Tahfidh Putra Terisi</p>
+                                    <p class="count-text ">Putri Terisi</p>
                                 </div>
                             </div>
                         </div>
@@ -480,7 +454,7 @@ https://templatemo.com/tm-586-scholar
                             <img src="img/abah2.jpg" alt="" alt=""
                                 style="box-shadow: 2px 2px 5px #0000001c">
                             <span class="category">Pendiri</span>
-                            <h5>Abah K.H.R. M. Sam'ani Khoiruddin, S.Ag. </h5>
+                            <h5>( Alm. )Abah K.H.R. M. Sam'ani Khoiruddin, S.Ag. </h5>
 
                         </div>
                     </div>
@@ -511,7 +485,7 @@ https://templatemo.com/tm-586-scholar
                             <div class="author">
                                 <img src="assets/images/abdillah.jpg" alt="">
                                 <span class="category">Pengajar</span>
-                                <h4>K. Abdillah Matori, S.Pd.I</h4>
+                                <h4>Bapak K. Abdillah Matori, S.Pd.I</h4>
                             </div>
                         </div>
                         <div class="item">
@@ -519,7 +493,7 @@ https://templatemo.com/tm-586-scholar
                             <div class="author">
                                 <img src="assets/images/bapak.jpg" alt="">
                                 <span class="category">Pengasuh</span>
-                                <h4>K.M. Nur Salafudin A.H</h4>
+                                <h4>Bapak K.M. Nur Salafudin A.H</h4>
                             </div>
                         </div>
                     </div>
@@ -669,7 +643,7 @@ https://templatemo.com/tm-586-scholar
                                         <span><strong> Cek Lokasi </strong></span>
                                         <h6>----------></h6>
                                     </li>
-                                    <a href="https://goo.gl/maps/3jCsuCYQzofVRm3CA">
+                                    <a target="_blank" href="https://goo.gl/maps/3jCsuCYQzofVRm3CA">
                                         <i class="fa-solid fa-location-dot"></i>
                                     </a>
 
@@ -703,7 +677,7 @@ https://templatemo.com/tm-586-scholar
                                         <h6>----------></h6>
                                     </li>
 
-                                    <a href="https://goo.gl/maps/3jCsuCYQzofVRm3CA">
+                                    <a target="_blank" href="https://goo.gl/maps/3jCsuCYQzofVRm3CA">
                                         <i class="fa-solid fa-location-dot"></i>
                                     </a>
 
