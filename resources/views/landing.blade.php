@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
-    <title>PSB - Kyai Galang Sewu</title>
+    <title>PSB | PP. Kyai Galang Sewu</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -88,7 +88,7 @@ https://templatemo.com/tm-586-scholar
                         </div>
                         <div class="buttons mt-2">
                             <div class="main-button">
-                                <a href="#">Pendaftaran</a>
+                                <a href="daftar">Pendaftaran</a>
                             </div>
                         </div>
                     </div>
@@ -788,8 +788,8 @@ https://templatemo.com/tm-586-scholar
     <footer>
         <div class="container">
             <div class="col-lg-12">
-                <p>Dibuat dengan &hearts; oleh KGS Devnet. &nbsp;&nbsp;&nbsp; Contact: <a href="https://templatemo.com"
-                        rel="nofollow" target="_blank">0888888 (Humas)</a></p>
+                <p>Dibuat dengan &hearts; oleh KGS Devnet. &nbsp;&nbsp;&nbsp; Contact: <a href="http://wa.me/6285280009949" target="_blank" rel="noopener noreferrer">085280009949 (putra)</a> -
+                    <a href="http://wa.me/6285280009930" target="_blank" rel="noopener noreferrer">085280009930 (putri)</a></a></p>
             </div>
         </div>
     </footer>
