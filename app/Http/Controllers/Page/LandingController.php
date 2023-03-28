@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Page;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class LandingController extends Controller
 {
@@ -12,7 +13,15 @@ class LandingController extends Controller
      */
     public function index()
     {
-        return view('landing');
+        $response = Http::withHeaders([
+        'Accept' => 'aplication/json',
+        'X-API-KEY' => 'siponapikey',
+        ])->get('http://sipon.kyaigalangsewu.net/api/v1/psb/setting/1');
+
+        return view('landing',[
+            "data"=>$response['data'],
+        ]);
+
     }
 
     /**

@@ -11,8 +11,7 @@
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                         <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                        <li class="scroll-to-section"><a href="#services">Services</a></li>
-                        <li class="scroll-to-section"><a href="#courses">Courses</a></li>
+                        <li class="scroll-to-section"><a href="#courses">Login</a></li>
 
                     </ul>
                     <a class='menu-trigger'>
