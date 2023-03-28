@@ -60,7 +60,12 @@ https://templatemo.com/tm-586-scholar
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="#courses">Login</a></li>
+                            <li class="scroll-to-section"><a href="#video">Video</a></li>
+                            <li class="scroll-to-section"><a href="#visi">Visi/Misi</a></li>
+                            <li class="scroll-to-section"><a href="#courses">Jurusan</a></li>
+                            <li class="scroll-to-section"><a href="#kuota">Kuota</a></li>
+                            <li class="scroll-to-section"><a href="#ekstra">Ekstra</a></li>
+                            <li class="scroll-to-section"><a href="#flow">Alur Pendaftaran</a></li>
 
                         </ul>
                         <a class='menu-trigger'>
@@ -117,51 +122,72 @@ https://templatemo.com/tm-586-scholar
             </div>
         </div>
     </div>
-    <div class="section about-us " id="top">
+    <section class="section" id="video">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-heading">
+                        {{-- <h6>EKSTRA</h6> --}}
+                        <h2>VIDEO PERKENALAN <i class="fa-brands fa-youtube"></i></h2>
+                        <iframe width="850" height="500" src="https://www.youtube.com/embed/FXc8zE2Hr6Q">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <div class="section about-us ">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 offset-lg-1">
+                    <span id="visi" style="margin-top: -60px"></span>
                     <div class="accordion" id="accordionExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Visi
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    Mencetak Generasi Muda yang Berkualitas di Bidang Ilmu Agama, Ilmu Umum, dan
-                                    Berkepribadian Akhlakul Karimah serta Menjalankan Syari’at Islam ala Ahlussunah Wal
-                                    Jama’ah
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Visi
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Mencetak Generasi Muda yang Berkualitas di Bidang Ilmu Agama, Ilmu Umum, dan
+                                        Berkepribadian Akhlakul Karimah serta Menjalankan Syari’at Islam ala Ahlussunah
+                                        Wal
+                                        Jama’ah
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Misi
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <ul style="list-style-position: outside;">
-                                        <li>&bull; Menanamkan nilai-nilai keislaman dalam aktivitas sehari-hari</li>
-                                        <li>&bull; Membangkitkan semangat santri untuk senantiasa aktif dalam mengikuti
-                                            majelis
-                                            pengajian Al-qur’an maupun kitab di pondok</li>
-                                        <li>&bull; Menciptakan santri yang siap untuk terjun di masyarakat</li>
-                                        <li>&bull; Menciptakan suasana gotong-royong dan saling membantu antar santri
-                                        </li>
-                                        <li>&bull; Menjalin hubungan baik dengan masyarakat serta berbagai pihak dalam
-                                            pengembangan pesantren yang unggul dan agamis</li>
-                                    </ul>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                        aria-controls="collapseTwo">
+                                        Misi
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse"
+                                    aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <ul style="list-style-position: outside;">
+                                            <li>&bull; Menanamkan nilai-nilai keislaman dalam aktivitas sehari-hari</li>
+                                            <li>&bull; Membangkitkan semangat santri untuk senantiasa aktif dalam
+                                                mengikuti
+                                                majelis
+                                                pengajian Al-qur’an maupun kitab di pondok</li>
+                                            <li>&bull; Menciptakan santri yang siap untuk terjun di masyarakat</li>
+                                            <li>&bull; Menciptakan suasana gotong-royong dan saling membantu antar
+                                                santri
+                                            </li>
+                                            <li>&bull; Menjalin hubungan baik dengan masyarakat serta berbagai pihak
+                                                dalam
+                                                pengembangan pesantren yang unggul dan agamis</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+
                     </div>
                 </div>
                 <div class="col-lg-5 align-self-center">
@@ -189,7 +215,7 @@ https://templatemo.com/tm-586-scholar
     </div>
 
 
-    <div class="services section" id="services">
+    <div class="services section" id="courses">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -238,7 +264,7 @@ https://templatemo.com/tm-586-scholar
             </div>
         </div>
     </div>
-    <section class="section courses" id="courses">
+    <section class="section courses" id="ekstra">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -388,7 +414,7 @@ https://templatemo.com/tm-586-scholar
         </div>
     </section>
 
-    <div class="section fun-facts">
+    <div class="section fun-facts" id="kuota">
         <div class="container">
             <div class="section-heading" style="margin-top: -100px">
                 <h2>Kuota Pendaftaran</h2>
@@ -536,7 +562,7 @@ https://templatemo.com/tm-586-scholar
         </div>
     </div>
 
-    <div class="section events" id="events">
+    <div class="section events" id="flow">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
