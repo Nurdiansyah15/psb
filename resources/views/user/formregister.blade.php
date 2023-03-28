@@ -47,7 +47,7 @@
                     <div class="row d-flex justify-content-center align-items-center h-100">
                         <div class="col-lg-12 col-xl-11">
                             <div class="card text-black">
-                                <div class="card-header" style="background:#f08a5d;color:#fff;">
+                                <div class="card-header" style="background:#146C94;color:#fff;">
                                     Step 1
                                 </div>
                                 <div class="card-body p-md-5">

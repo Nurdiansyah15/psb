@@ -55,13 +55,13 @@ class RegisterController extends Controller
             'X-API-KEY' => 'siponapikey',
         ])->get('http://sipon.kyaigalangsewu.net/api/v1/psb/register',$request->all());
 
-
-        if(@$response['message']=='Success'){
-            return redirect('/')->with('status', 'Berhasil melakukan pendaftaran');
-        }else{
-            return back()->withInput()
-            ->withErrors($response['errors']);
-        }
+            echo $response;
+        // if(@$response['message']=='Success'){
+        //     return redirect('/')->with('status', 'Berhasil melakukan pendaftaran');
+        // }else{
+        //     return back()->withInput()
+        //     ->withErrors($response['errors']);
+        // }
     }
 
     /**
