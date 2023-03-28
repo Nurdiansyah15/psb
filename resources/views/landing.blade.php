@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="assets/css/templatemo-scholar.css">
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="css/landing-style.css">
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <!--
 
@@ -46,21 +47,20 @@ https://templatemo.com/tm-586-scholar
     <!-- ***** Preloader End ***** -->
 
     <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky">
+    <header class="header-area header-sticky background-header">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">
-                            <h1>PSB | Kyai Galang Sewu</h1>
+                        <a href="/" class="logo">
+                            <p>Penerimaan Santri Baru</p>
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="#services">Services</a></li>
-                            <li class="scroll-to-section"><a href="#courses">Courses</a></li>
+                            <li class="scroll-to-section"><a href="#courses">Login</a></li>
 
                         </ul>
                         <a class='menu-trigger'>
@@ -73,87 +73,147 @@ https://templatemo.com/tm-586-scholar
         </div>
     </header>
     <!-- ***** Header Area End ***** -->
-
-    <div class="main-banner" id="top">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
+    <div class="banner">
+        <div class="container-fluid">
+            <div class="row background" style="background-image: url({{ asset('/img/banner2.jpg') }})">
+                <div class="col-5 title">
+                    <div class="title-content">
+                        <div class="title-ponpes">
+                            <span>Pondok Pesantren </span>
+                            <p>Kyai Galang Sewu</p>
+                            <span>Ala Ahlussunnah Wal Jama'ah </span>
+                        </div>
+                        <div class="sub-title-ponpes">
+                            <p>Kota Semarang, Jawa Tengah</p>
+                        </div>
+                        <div class="buttons mt-2">
+                            <div class="main-button">
+                                <a href="#">Pendaftaran</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-5 logo-pondok">
+                    <img src="assets/images/logo.png" alt="logo" srcset="">
+                </div>
+                {{-- <div class="col-lg-12">
                     <div class="owl-carousel owl-banner">
                         <div class="item item-1">
-                            <div class="header-text row">
-                                <div class="col"> <span class="category">Our Courses</span>
-                                    <h2>Personalized fokus pada kebutuhan</h2>
-                                    <p>Siswa mendapatkan layanan personal sesuai kebutuhan dan target belajar yang
-                                        diinginkan. Catatan dan laporan belajar dikirmkan setiap selesai sesi belajar.
-                                    </p>
-                                    <div class="buttons">
-                                        <div class="main-button">
-                                            <a href="#">Free Trial</a>
-                                        </div>
-                                        <div class="icon-button">
-                                            <a href="#"><i class="fa fa-play"></i></a>
-                                        </div>
-                                    </div>
+                            <div class=" row">
+                                <div class="col">
+                                    <h2>Kyai Galang Sewu</h2>
+                                    <p>Tembalang, Kota Semarang, Jawa Tengah</p>
+
                                 </div>
-                                <div class="col justify-content">
+                                <div class="col d-flex align-items-center">
                                     <img src="assets/images/logo.png" alt="" srcset="">
                                 </div>
 
 
                             </div>
                         </div>
-                        <div class="item item-2">
-                            <div class="header-text">
-                                <span class="category">Best Result</span>
-                                <h2>Systemized belajar jadi mudah dan efektif</h2>
-                                <p>Siswa mendapatkan modul soal yang sistematis dengan kombinasi gaya belajar linear dan
-                                    global untuk memudahkan pemahaman konsep.</p>
-                                <div class="buttons">
-                                    <div class="main-button">
-                                        <a href="#">Free Trial</a>
-                                    </div>
-                                    <div class="icon-button">
-                                        <a href="#"><i class="fa fa-play"></i></a>
-                                    </div>
+
+                    </div>
+                </div> --}}
+            </div>
+        </div>
+    </div>
+
+    <div class="section about-us " id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-1">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Visi
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Mencetak Generasi Muda yang Berkualitas di Bidang Ilmu Agama, Ilmu Umum, dan
+                                    Berkepribadian Akhlakul Karimah serta Menjalankan Syari’at Islam ala Ahlussunah Wal
+                                    Jama’ah
                                 </div>
                             </div>
                         </div>
-                        <div class="item item-3">
-                            <div class="header-text">
-                                <span class="category">Online Learning</span>
-                                <h2>Limitless Layanan 24 jam nonstop</h2>
-                                <p>Akses website e-learning untuk belajar mandiri melalui smartpeoples.click dan tanya
-                                    soal secara instan dengan aplikasi Tanya Jawab Soal -- kapan pun, di mana pun</p>
-                                <div class="buttons">
-                                    <div class="main-button">
-                                        <a href="#">Free Trial</a>
-                                    </div>
-                                    <div class="icon-button">
-                                        <a href="#"><i class="fa fa-play"></i></a>
-                                    </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Misi
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <ul style="list-style-position: outside;">
+                                        <li>&bull; Menanamkan nilai-nilai keislaman dalam aktivitas sehari-hari</li>
+                                        <li>&bull; Membangkitkan semangat santri untuk senantiasa aktif dalam mengikuti
+                                            majelis
+                                            pengajian Al-qur’an maupun kitab di pondok</li>
+                                        <li>&bull; Menciptakan santri yang siap untuk terjun di masyarakat</li>
+                                        <li>&bull; Menciptakan suasana gotong-royong dan saling membantu antar santri
+                                        </li>
+                                        <li>&bull; Menjalin hubungan baik dengan masyarakat serta berbagai pihak dalam
+                                            pengembangan pesantren yang unggul dan agamis</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <div class="section-heading">
+                        <h2>Selayang Pandang</h2>
+                        <p>Pondok pesantren Kyai Galang Sewu merupakan pondok pesantren yang berpegang teguh pada
+                            Al-Qur’an , Hadits, Ijma’, Qiyas dan para ulama Ahlussunnah wal jamaah. Ponpes Kyai Galang
+                            Sewu juga menjunjung tinggi nilai-nilai Pancasila, UUD 1945, dan Bhinneka Tunggal Ika
+                            sebagai benteng dari pergolakan massa di Indonesia.
+                            Pondok Pesantren ini resmi didirikan pada tanggal 16 Agustus 1999 atas rintisan KH. M.
+                            Sam’ani Khoiruddin, S.Ag. Letaknya yang berada di kawasan kampus Universitas Diponegoro
+                            menjadikan Ponpes Kyai Galang Sewu menjadi pilihan tepat bagi mahasiswa yang ingin menuntut
+                            ilmu sembari memperdalam ilmu agama.
+                            dalam rangka meningkatkan kualitas pendidikan santri, Ponpes Kyai Galang Sewu memberikan
+                            pengajaran ilmu-ilmu di bidang Tauhid, Tajwid, Tafsir, Akhlaq, Fiqih, Nahwu, Shorof, dan
+                            lain-lain.</p>
+                        {{-- <div class="main-button">
+                            <a href="#">Discover More</a>
+                        </div> --}}
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+
     <div class="services section" id="services">
         <div class="container">
             <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-heading">
+                        <h6>Jurusan</h6>
+                        <h2>JURUSAN</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center">
                 <div class="col-lg-4 col-md-6">
                     <div class="service-item">
                         <div class="icon">
                             <img src="assets/images/service-01.png" alt="online degrees">
                         </div>
                         <div class="main-content">
-                            <h4>Online Degrees</h4>
-                            <p>Tingkatkan karier Anda ke level selanjutnya dengan gelar online.</p>
-                            <div class="main-button">
+                            <h4>Tahfidz Qur'an</h4>
+                            <p>Jurusan Tahfidz Qur'an merupakan program jurusan hafalan 30 juz Al Qur’an yang bersanad
+                                sampai kepada Kiai Arwani Kudus hingga akhirnya bermuara pada baginda Rasulullah SAW.
+                            </p>
+                            {{-- <div class="main-button">
                                 <a href="#">Read More</a>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -163,237 +223,163 @@ https://templatemo.com/tm-586-scholar
                             <img src="assets/images/service-02.png" alt="short courses">
                         </div>
                         <div class="main-content">
-                            <h4>Short Courses</h4>
-                            <p>Short course adalah program kuliah atau kursus yang berdurasi singkat.</p>
-                            <div class="main-button">
+                            <h4>Kitab</h4>
+                            <p>Jurusan Kitab merupakan program jurusan yang difokuskan untuk mengkaji kitab kuning /
+                                kitab gundul yang berisi pelajaran agama islam (diraasah al-islamiyyah), mulai dari
+                                fiqh, aqidah, akhlaq/tasawuf, atur bahasa arab (`ilmu nahwu dan `ilmu sharf), hadits,
+                                tafsir, `ulumul qur'aan, hingga pada ilmu sosial dan kemasyarakatan (mu`amalah).</p>
+                            {{-- <div class="main-button">
                                 <a href="#">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item">
-                        <div class="icon">
-                            <img src="assets/images/service-03.png" alt="web experts">
-                        </div>
-                        <div class="main-content">
-                            <h4>Web Experts</h4>
-                            <p>Kami ahli dalam Desain Logo, Desain Situs Web, PHP Kustom, dan WordPress.</p>
-                            <div class="main-button">
-                                <a href="#">Read More</a>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="section about-us">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-1">
-                    <div class="accordion" id="accordionExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Profil Smart Peoples
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show"
-                                aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    Smart Peoples adalah sebuah tim yang berkomitmen, yang terdiri dari orang-orang yang
-                                    positif, mencintai dunia pendidikan yang selalu sabar, jujur, berorientasi terhadap
-                                    hasil didikan dan penuh integritas.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Program belajar sesuai kebutuhan
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    Bahan ajar disusun secara khusus agar dapat memenuhi setiap kebutuhkan. Dengan
-                                    memperhatikan 4 aspek penting, antara lain karakter siswa, materi yang sedang
-                                    berjalan, di mana siswa bersekolah, dan event apa yang akan berlangsung, Smart
-                                    Peoples mengupayakan yang terbaik agar siswa belajar dengan tepat dan memperoleh
-                                    hasil yang maksimal.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="false"
-                                    aria-controls="collapseThree">
-                                    Modul belajar lengkap dan sistematis
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse"
-                                aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    Modul "Paket 7 Lapis" dari Smart Peoples, berisi rangkuman materi hingga soal-soal
-                                    latihan dengan susunan yang sistematis. Siswa dapat memulai belajar dari "posisi apa
-                                    pun" ia sekarang. Apakah ia merasa perlu pemahaman materi dari awal, apakah ia
-                                    merasa perlu mendalami beberapa konsep, atau apakah ia merasa perlu tantangan yang
-                                    lebih tinggi, semua bisa ia dapatkan.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingFour">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFour" aria-expanded="false"
-                                    aria-controls="collapseFour">
-                                    Pendekatan secara personal
-                                </button>
-                            </h2>
-                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    Smart Peoples menyesuaikan diri dengan karakter dan gaya belajar anak, karena pada
-                                    dasarnya setiap anak pasti memiliki karakter dan kebutuhan yang berbeda. Pendekatan
-                                    dilakukan secara personal untuk mendalami serta mengenal siswa lebih dalam, sehingga
-                                    siswa dapat merasa nyaman dan dapat mengikuti sesi pembelajaran secara maksimal.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5 align-self-center">
-                    <div class="section-heading">
-                        <h6>About Us</h6>
-                        <h2>Apa yang Menjadikan Kami Akademi Terbaik?</h2>
-                        <p>Dipercaya lebih dari 35.629 siswa dari sekolah unggulan kurikulum Nasional, Nasional+,
-                            International</p>
-                        <div class="main-button">
-                            <a href="#">Discover More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <section class="section courses" id="courses">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="section-heading">
-                        <h6>Latest Courses</h6>
-                        <h2>Latest Courses</h2>
+                        <h6>EKSTRA</h6>
+                        <h2>EKSTRAKULIKULER</h2>
                     </div>
                 </div>
             </div>
             <ul class="event_filter">
                 <li>
-                    <a class="is_active" href="#!" data-filter="*">Show All</a>
+                    <a class="is_active" href="#!" data-filter="*">Tampilkan Semua</a>
                 </li>
                 <li>
-                    <a href="#!" data-filter=".design">Webdesign</a>
+                    <a href="#!" data-filter=".putra">Putra</a>
                 </li>
                 <li>
-                    <a href="#!" data-filter=".development">Development</a>
-                </li>
-                <li>
-                    <a href="#!" data-filter=".wordpress">Wordpress</a>
+                    <a href="#!" data-filter=".putri">Putri</a>
                 </li>
             </ul>
             <div class="row event_box">
-                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design">
+                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
                         <div class="thumb">
                             <a href="#"><img src="assets/images/course-01.jpg" alt=""></a>
-                            <span class="category">Logo Design</span>
-                            <span class="price">
-                                <h6><em>Rp</em>2.9</h6>
-                            </span>
+                            <span class="category">Putra / Putri</span>
+
                         </div>
                         <div class="down-content">
-                            <span class="author">Stenley</span>
-                            <h4>Learn Web Design</h4>
+                            <span class="author">Musik</span>
+                            <h4>Rebana</h4>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6  development">
+                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra ">
                     <div class="events_item">
                         <div class="thumb">
                             <a href="#"><img src="assets/images/course-02.jpg" alt=""></a>
-                            <span class="category">Website Design</span>
-                            <span class="price">
-                                <h6><em>Rp</em>3.9</h6>
-                            </span>
+                            <span class="category">Putra </span>
+
                         </div>
                         <div class="down-content">
-                            <span class="author">Pingkan</span>
-                            <h4>Web Development Tips</h4>
+                            <span class="author">Streaming</span>
+                            <h4>KGS TV</h4>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design wordpress">
+                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
                         <div class="thumb">
                             <a href="#"><img src="assets/images/course-03.jpg" alt=""></a>
-                            <span class="category">Custom PHP</span>
-                            <span class="price">
-                                <h6><em>Rp</em>4.9</h6>
-                            </span>
+                            <span class="category">Putra / Putri</span>
+
                         </div>
                         <div class="down-content">
-                            <span class="author">Umam</span>
-                            <h4>Full Stack Developer</h4>
+                            <span class="author">Desain Media</span>
+                            <h4>KGS Media</h4>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 development">
+                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
                         <div class="thumb">
                             <a href="#"><img src="assets/images/course-04.jpg" alt=""></a>
-                            <span class="category">Wordpress</span>
-                            <span class="price">
-                                <h6><em>Rp</em>2.9</h6>
-                            </span>
+                            <span class="category">Putra / Putri</span>
+
                         </div>
                         <div class="down-content">
-                            <span class="author">Rivaldi</span>
-                            <h4>Be a WordPress Master</h4>
+                            <span class="author">Teknologi</span>
+                            <h4>Dev Net</h4>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 wordpress development">
+                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
                         <div class="thumb">
                             <a href="#"><img src="assets/images/course-05.jpg" alt=""></a>
-                            <span class="category">OpenCart</span>
-                            <span class="price">
-                                <h6><em>Rp</em>3.9</h6>
-                            </span>
+                            <span class="category">Putra / Putri</span>
+
                         </div>
                         <div class="down-content">
-                            <span class="author">Aurennisa</span>
-                            <h4>Online Learning Steps</h4>
+                            <span class="author">Kesehatan</span>
+                            <h4>Puskestren</h4>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 wordpress design">
+                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
                         <div class="thumb">
                             <a href="#"><img src="assets/images/course-06.jpg" alt=""></a>
-                            <span class="category">Joomla</span>
+                            <span class="category">Putra / Putri</span>
+
+                        </div>
+                        <div class="down-content">
+                            <span class="author">Olahraga</span>
+                            <h4>Silat</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
+                    <div class="events_item">
+                        <div class="thumb">
+                            <a href="#"><img src="assets/images/course-06.jpg" alt=""></a>
+                            <span class="category">Putra / Putri</span>
                             <span class="price">
-                                <h6><em>Rp</em>4.9</h6>
+                                <h6>Baru</h6>
                             </span>
                         </div>
                         <div class="down-content">
-                            <span class="author">Reyhan</span>
-                            <h4>Latest Web Trends</h4>
+                            <span class="author">Kesenian</span>
+                            <h4>KGS Kaligrafi</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra">
+                    <div class="events_item">
+                        <div class="thumb">
+                            <a href="#"><img src="assets/images/course-06.jpg" alt=""></a>
+                            <span class="category">Putra </span>
+
+                        </div>
+                        <div class="down-content">
+                            <span class="author">Manajemen Suara</span>
+                            <h4>KGS Sound</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
+                    <div class="events_item">
+                        <div class="thumb">
+                            <a href="#"><img src="assets/images/course-06.jpg" alt=""></a>
+                            <span class="category">Putra / Putri</span>
+                            <span class="price">
+                                <h6>Baru</h6>
+                            </span>
+                        </div>
+                        <div class="down-content">
+                            <span class="author">Penelitian / Sains</span>
+                            <h4>KGS RNE</h4>
                         </div>
                     </div>
                 </div>
@@ -409,26 +395,26 @@ https://templatemo.com/tm-586-scholar
                         <div class="row">
                             <div class="col-lg-3 col-md-6">
                                 <div class="counter">
-                                    <h2 class="timer count-title count-number" data-to="150" data-speed="1000"></h2>
-                                    <p class="count-text ">Happy Students</p>
+                                    <h2 class="timer count-title count-number" data-to="100" data-speed="1000"></h2>
+                                    <p class="count-text ">Kuota Putra</p>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6">
                                 <div class="counter">
                                     <h2 class="timer count-title count-number" data-to="804" data-speed="1000"></h2>
-                                    <p class="count-text ">Course Hours</p>
+                                    <p class="count-text ">Kuota Putri</p>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6">
                                 <div class="counter">
                                     <h2 class="timer count-title count-number" data-to="50" data-speed="1000"></h2>
-                                    <p class="count-text ">Employed Students</p>
+                                    <p class="count-text ">Kuota Putra Terisi</p>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6">
                                 <div class="counter end">
                                     <h2 class="timer count-title count-number" data-to="9" data-speed="1000"></h2>
-                                    <p class="count-text ">Years Experience</p>
+                                    <p class="count-text ">Kuota Putri Terisi</p>
                                 </div>
                             </div>
                         </div>
@@ -440,32 +426,25 @@ https://templatemo.com/tm-586-scholar
 
     <div class="team section" id="team">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="team-member">
-                        <div class="main-content">
-                            <img src="assets/images/member-01.jpg" alt="">
-                            <span class="category">UX Teacher</span>
-                            <h4>Pingkan</h4>
-                            <ul class="social-icons">
-                                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            <div class="row d-flex justify-content-center">
                 <div class="col-lg-3 col-md-6">
                     <div class="team-member">
                         <div class="main-content">
                             <img src="assets/images/member-02.jpg" alt="">
-                            <span class="category">Graphic Teacher</span>
-                            <h4>Aurennisa</h4>
-                            <ul class="social-icons">
-                                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                            </ul>
+                            <span class="category"> Pengasuh</span>
+                            <h6>Bapak K.H. M Nur Salafudin A.H.</h6>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-member">
+                        <div class="main-content">
+                            <img src="assets/images/member-04.jpg" alt="">
+                            <span class="category">Pengasuh</span>
+                            <h6>Bapak K.H.R M Sam'ani Khoiruddin </h6>
+
                         </div>
                     </div>
                 </div>
@@ -473,27 +452,9 @@ https://templatemo.com/tm-586-scholar
                     <div class="team-member">
                         <div class="main-content">
                             <img src="assets/images/member-03.jpg" alt="">
-                            <span class="category">Full Stack Master</span>
-                            <h4>Stenley</h4>
-                            <ul class="social-icons">
-                                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="team-member">
-                        <div class="main-content">
-                            <img src="assets/images/member-04.jpg" alt="">
-                            <span class="category">Digital Animator</span>
-                            <h4>Diana</h4>
-                            <ul class="social-icons">
-                                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                            </ul>
+                            <span class="category">Pengasuh</span>
+                            <h6 class="category">Bapak Ust. Ulin Nuha Aba M.Si.</h6>
+
                         </div>
                     </div>
                 </div>
@@ -507,42 +468,30 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-7">
                     <div class="owl-carousel owl-testimonials">
                         <div class="item">
-                            <p>“Aku les di Smart Peoples sudah 2 tahun. Di sini cara belajarnya udah berubah, dulu tuh
-                                belajarnya di rumah dipaksa, kalau di sini kan sekarang udah gampang, nggak usah belajar
-                                lagi di rumah.”</p>
+                            <p>“Janganlah kamu menjadikan alasan kebodohanmu di hadapan Allah SWT, karena Allah SWT
+                                menuntutmu mencari ilmu, bukan menuntutmu untuk pandai.”</p>
                             <div class="author">
-                                <img src="assets/images/member-01.jpg" alt="">
-                                <span class="category">Full Stack Master</span>
-                                <h4>Edbert</h4>
+                                <img src="assets/images/abdillah.jpg" alt="">
+                                <span class="category">Pengajar</span>
+                                <h4>K. Abdillah Matori, S.Pd.I</h4>
                             </div>
                         </div>
                         <div class="item">
-                            <p>“Aku sudah di Smart Peoples sekitar 6 bulan. Selama di sini aku diajarin dengan jelas
-                                banget. Aku ngerti setiap kali dijelasin oleh kakak pengajarnya dan juga sabar
-                                menjelaskannya.”</p>
+                            <p>“Seberapa besar kita memuliakan Al-Quran, sebesar itupula Allah memuliakan kita”</p>
                             <div class="author">
-                                <img src="assets/images/member-01.jpg" alt="">
-                                <span class="category">UI Expert</span>
-                                <h4>Kelly</h4>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <p>“Belajar di Smart Peoples itu menyenangkan, karena belajarnya tuh asik dan rileks. Saat
-                                guru menjelaskan Saya bisa mengerti dengan cepat.”</p>
-                            <div class="author">
-                                <img src="assets/images/member-01.jpg" alt="">
-                                <span class="category">Digital Animator</span>
-                                <h4>Kevin</h4>
+                                <img src="assets/images/bapak.jpg" alt="">
+                                <span class="category">Pengasuh</span>
+                                <h4>K.M. Nur Salafudin A.H</h4>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-5 align-self-center">
                     <div class="section-heading">
-                        <h6>TESTIMONIALS</h6>
-                        <h2>What they say about us?</h2>
-                        <p>Belajar bersama Master Teacher lulusan PTN favorit. Memberikan cara belajar yang suportif dan
-                            menyenangkan, sehingga kamu lebih paham materi dan jago mengerjakan soal-soal sulit.</p>
+                        <h6>Dawuh Guru</h6>
+                        <h2>Apa Kata mereka?</h2>
+                        <p>Kamu ingin belajar di Pondok Pesantren ? Tapi masih mikir mikir dulu ? Tenang, biar kamu bisa
+                            memantapkan hatimu, yuk simak apa yang para guru sampaikan</p>
                     </div>
                 </div>
             </div>
@@ -554,8 +503,8 @@ https://templatemo.com/tm-586-scholar
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="section-heading">
-                        <h6>Schedule</h6>
-                        <h2>Upcoming Events</h2>
+                        <h6>Timeline</h6>
+                        <h2>Jadwal Penerimaan Santri</h2>
                     </div>
                 </div>
                 <div class="col-lg-12 col-md-6">
@@ -569,20 +518,12 @@ https://templatemo.com/tm-586-scholar
                             <div class="col-lg-9">
                                 <ul>
                                     <li>
-                                        <span class="category">Web Design</span>
-                                        <h4>UI Best Practices</h4>
+                                        <span class="category">online</span>
+                                        <h4>Pendaftaran</h4>
                                     </li>
                                     <li>
-                                        <span>Date:</span>
-                                        <h6>16 Mar 2023</h6>
-                                    </li>
-                                    <li>
-                                        <span>Duration:</span>
-                                        <h6>22 Hours</h6>
-                                    </li>
-                                    <li>
-                                        <span>Price:</span>
-                                        <h6>Rp6.9</h6>
+                                        <span>Tanggal:</span>
+                                        <h6>28 Mar 2023 - 19 April 2023</h6>
                                     </li>
                                 </ul>
                                 <a href="#"><i class="fa fa-angle-right"></i></a>
@@ -601,23 +542,18 @@ https://templatemo.com/tm-586-scholar
                             <div class="col-lg-9">
                                 <ul>
                                     <li>
-                                        <span class="category">Front End</span>
-                                        <h4>New Design Trend</h4>
+                                        <span class="category">online</span>
+                                        <h4>Verifikasi Berkas</h4>
                                     </li>
                                     <li>
-                                        <span>Date:</span>
-                                        <h6>24 Mar 2023</h6>
+                                        <span>Tanggal:</span>
+                                        <h6>28 Mar 2023 - 19 April 2023</h6>
                                     </li>
                                     <li>
                                         <span>Duration:</span>
                                         <h6>30 Hours</h6>
                                     </li>
-                                    <li>
-                                        <span>Price:</span>
-                                        <h6>Rp6.4</h6>
-                                    </li>
                                 </ul>
-                                <a href="#"><i class="fa fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -633,32 +569,145 @@ https://templatemo.com/tm-586-scholar
                             <div class="col-lg-9">
                                 <ul>
                                     <li>
-                                        <span class="category">Full Stack</span>
-                                        <h4>Web Programming</h4>
+                                        <span class="category">online</span>
+                                        <h4>Pembayaran </h4>
                                     </li>
                                     <li>
-                                        <span>Date:</span>
-                                        <h6>12 Apr 2023</h6>
+                                        <span>Tanggal:</span>
+                                        <h6>28 Mar 2023 - 19 April 2023</h6>
                                     </li>
                                     <li>
                                         <span>Duration:</span>
                                         <h6>48 Hours</h6>
                                     </li>
-                                    <li>
-                                        <span>Price:</span>
-                                        <h6>Rp7.9</h6>
-                                    </li>
+                                    <a href="#" onclick="return func(0)" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal"><i class="fa fa-angle-right"></i></a>
+                                    <!-- Button trigger modal -->
+
+
+
                                 </ul>
-                                <a href="#"><i class="fa fa-angle-right"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 col-md-6">
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="image">
+                                    <img src="assets/images/event-03.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-9">
+                                <ul>
+                                    <li>
+                                        <span class="category">offline</span>
+                                        <h4>Mengumpulkan Berkas </h4>
+                                    </li>
+
+                                    <li>
+                                        <span>Tempat:</span>
+                                        <h6>PP Kyai Galang Sewu</h6>
+                                    </li>
+
+                                    <a href="https://goo.gl/maps/3jCsuCYQzofVRm3CA">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </a>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 col-md-6">
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="image">
+                                    <img src="assets/images/event-03.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-9">
+                                <ul>
+                                    <li>
+                                        <span class="category">offline</span>
+                                        <h4>Masuk Pondok </h4>
+                                    </li>
+
+                                    <li>
+                                        <span>Tempat:</span>
+                                        <h6>PP Kyai Galang Sewu</h6>
+                                    </li>
+
+                                    <a href="https://goo.gl/maps/3jCsuCYQzofVRm3CA">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </a>
+
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Pembayaran</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row mt-2">
+                            <div class="col-4">
+                                <span class="category">
+                                    Santri putra</span>
+                            </div>
+                            <div class="col">
+                                <h5>5995-01-023943-53-8</h5>
+                                <h6>a/n Muhammad Ainun Ni`am (BRI)</h6>
+                            </div>
+                        </div>
+
+                        <div class="row mt-2">
+                            <div class="col-4">
+                                <span class="category">Santri putri</span>
+                            </div>
+                            <div class="col">
+                                <h5>5918-01-017999-53-1</h5>
+                                <h6>a/n Saniyatin (BRI)</h6>
+                            </div>
+
+                        </div>
+
+
+                        <div class="mt-3"><strong class="text-danger">* Upload bukti pembayaran dan konfirmasi ke
+                                nomor pengurus</strong></div>
+                        <p class="mt-3">
+                            Pembayaran dapat dicicil 3x dalam waktu 1 tahun
+                            Minimal pembayaran pertama sebesar Rp 400.000,-
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn" style="color:white;background-color: #F08A5D"
+                            data-bs-dismiss="modal">Close</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="contact-us section" id="contact">
+    {{-- <div class="contact-us section" id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6  align-self-center">
@@ -674,46 +723,17 @@ https://templatemo.com/tm-586-scholar
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="contact-us-content">
-                        <form id="contact-form" action="" method="post">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <fieldset>
-                                        <input type="name" name="name" id="name"
-                                            placeholder="Your Name..." autocomplete="on" required>
-                                    </fieldset>
-                                </div>
-                                <div class="col-lg-12">
-                                    <fieldset>
-                                        <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*"
-                                            placeholder="Your E-mail..." required="">
-                                    </fieldset>
-                                </div>
-                                <div class="col-lg-12">
-                                    <fieldset>
-                                        <textarea name="message" id="message" placeholder="Your Message"></textarea>
-                                    </fieldset>
-                                </div>
-                                <div class="col-lg-12">
-                                    <fieldset>
-                                        <button type="submit" id="form-submit" class="orange-button">Send Message
-                                            Now</button>
-                                    </fieldset>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
             </div>
         </div>
-    </div>
+    </div> --}}
+
 
     <footer>
+
         <div class="container">
             <div class="col-lg-12">
-                <p>Copyright © 2023 Smart Peoples. All rights reserved. &nbsp;&nbsp;&nbsp; Design: <a
-                        href="https://templatemo.com" rel="nofollow" target="_blank">Adinia</a></p>
+                <p>Dibuat dengan &hearts; oleh KGS Devnet. &nbsp;&nbsp;&nbsp; Contact: <a href="https://templatemo.com"
+                        rel="nofollow" target="_blank">0888888 (Humas)</a></p>
             </div>
         </div>
     </footer>

@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Page\LandingController;
+use App\Http\Controllers\Page\RegisterController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\Template\Template;
 
@@ -14,25 +16,29 @@ use SebastianBergmann\Template\Template;
 |
 */
 
-Route::get('/', function () {
-    return view('login');
-});
-Route::get('/1', function () {
-    return view('dashboarduser');
-});
-Route::get('/2', function () {
-    return view('dashboaradmin');
-});
-Route::get('/3', function () {
-    return view('z');
-});
-Route::get('/4', function () {
-    return view('daftarsantri');
-});
-Route::get('/5', function () {
-    return view('user');
-});
+// Route::get('/', function () {
+//     return view('login');
+// });
+// Route::get('/1', function () {
+//     return view('dashboarduser');
+// });
+// Route::get('/2', function () {
+//     return view('dashboaradmin');
+// });
+// Route::get('/3', function () {
+//     return view('z');
+// });
+// Route::get('/4', function () {
+//     return view('daftarsantri');
+// });
+// Route::get('/5', function () {
+//     return view('user');
+// });
 
-Route::get('/page', function () {
-    return view('landing');
-});
+// Route::get('/page', function () {
+//     return view('landing');
+// });
+
+
+Route::get('/', [LandingController::class, 'index']);
+Route::get('/register', [RegisterController::class, 'index']);

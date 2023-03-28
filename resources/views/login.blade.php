@@ -22,14 +22,17 @@
         <div class="row login-box">
             <div class="row">
             </div>
-            image
             <div class="col-12 login-form">
-                <div class="title-login-form">
-                    <span> Selamat Datang, </span><br>
-                    Santri Ponpes Kyai Galang Sewu
+                <div class="col-lg-12 col-md-12 col-xs-12 mb-1">
+                    <marquee onmouseover="this.stop();" onmouseout="this.start();">
+                        <h3> Selamat Datang di Sistem Informasi Pendaftaran Santri Baru Pondok Pesantren Kyai Galang
+                            Sewu<h3>
+                    </marquee>
                 </div>
                 <div class="form-section">
-                    <form action="https://sipon.kyaigalangsewu.net/login" method="POST">
+                    <form action="" method="POST">
+                        <div class=" thumbnail"><img class="rounded mx-auto d-block" style="width: 3cm; height: 3cm;"
+                                src="./assets/images/logo-kgs.png" /></div>
                         <input type="hidden" name="_token" value="o6W1ga5BPMD2Dyc0RGG6jeFxIxAWIhPmx9aDdlP8">
                         <div class="input-section">
                             <label for="">Nomor Pendaftaran</label>

@@ -1,0 +1,71 @@
+/* navbar */
+.header-area {
+    border-radius: 0 0 10px 10px;
+}
+.logo {
+    border: none;
+    width: 500px;
+    margin-top: 0 !important;
+    display: flex;
+    align-items: center;
+}
+.logo p {
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    margin-top: 25px;
+}
+/* main banner */
+.banner {
+    height: 100vh;
+    margin: 20px 0 0 0;
+    padding: 0;
+}
+.container-fluid {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+.background {
+    display: flex;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    background-color: aqua;
+    margin: 0;
+    height: 100%;
+}
+.background .title {
+    align-items: center;
+    display: flex;
+}
+
+.title-ponpes p {
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px #0000006c;
+    margin: 10px 0 20px 0;
+}
+.title-ponpes span {
+    color: white;
+    font-size: 30px;
+    text-shadow: 2px 2px 5px #0000006c;
+}
+
+.sub-title-ponpes p {
+    color: white;
+    font-size: 18px;
+    text-shadow: 2px 2px 5px #0000006c;
+}
+.logo-pondok {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo-pondok img {
+    width: 600px;
+}
+.main-button a {
+    font-size: 20px;
+}
