@@ -16,7 +16,7 @@ class LandingController extends Controller
         $response = Http::withHeaders([
             'X-API-KEY' => config('app.api_key'),
             'Accept' => 'application/json'
-        ])->get('https://sipon.kyaigalangsewu.net/api/v1/psb/setting/1');
+        ])->get('https://sipon.kyaigalangsewu.net/api/v1/psb/setActive');
         $setting = $response->json()['data'];
 
         $response = Http::withHeaders([
@@ -51,10 +51,8 @@ class LandingController extends Controller
         $jmlKitabPutri = count($kitabPutri);
 
         $count = array(
-            'tahfidh_putra' => $jmlTahfidhPutra,
-            'tahfidh_putri' => $jmlTahfidhPutri,
-            'kitab_putra' => $jmlKitabPutra,
-            'kitab_putri' => $jmlKitabPutri
+            'putra' => $jmlTahfidhPutra + $jmlKitabPutra,
+            'putri' => $jmlTahfidhPutri + $jmlKitabPutri
         );
 
 
