@@ -72,12 +72,7 @@ https://templatemo.com/tm-586-scholar
             </div>
         </div>
     </header>
-    <!-- ***** Header Area End ***** -->
-<<<<<<< HEAD
-    <div class="banner mt-0">
-=======
-    <div class="banner" id="top">
->>>>>>> 0f83c5fc2268cd34d83fc8ec3a27878e45b3c6c9
+    <div class="banner mt-0 ">
         <div class="container-fluid">
             <div class="row background" style="background-image: url({{ asset('/img/banner2.jpg') }})">
                 <div class="col-5 title">
@@ -123,7 +118,7 @@ https://templatemo.com/tm-586-scholar
         </div>
     </div>
 
-    <div class="section about-us ">
+    <div class="section about-us " id="top">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 offset-lg-1">
@@ -305,7 +300,7 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
                         <div class="thumb">
-                            <a href="#"><img src="assets/images/course-04.jpg" alt=""></a>
+                            <a href="#"><img src="assets/images/devnet.jpeg" alt=""></a>
                             <span class="category">Putra / Putri</span>
 
                         </div>
