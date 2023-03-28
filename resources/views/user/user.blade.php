@@ -49,7 +49,7 @@ https://templatemo.com/tm-586-scholar
     <!-- ***** Header Area Start ***** -->
     @include('template.partials.headeruser')
     <!-- ***** Header Area End ***** -->
-    <div class="container-fluid" style="margin-top:100px">
+    <div id="top" class="container-fluid" style="margin-top:100px">
         <div class="row">
             @yield('content')
         </div>

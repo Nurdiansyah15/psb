@@ -72,8 +72,7 @@ https://templatemo.com/tm-586-scholar
             </div>
         </div>
     </header>
-    <div class="banner" id="top">
-    <div class="banner mt-0 ">
+    <div class="banner mt-0 " id="top">
         <div class="container-fluid">
             <div class="row background" style="background-image: url({{ asset('/img/banner2.jpg') }})">
                 <div class="col-5 title">
