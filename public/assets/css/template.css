@@ -480,6 +480,13 @@ Header Style
     letter-spacing: 0.25px;
 }
 
+
+.header-area .main-nav .nav li a:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    opacity: 1;
+}
+
 .background-header .main-nav .nav {
     margin-top: 13px;
 }
@@ -1417,8 +1424,12 @@ Events Style
     position: absolute;
     border-radius: 25px;
     max-width: 260px;
+    height:180px;
     left: 0;
-    top: -70px;
+    /* top: -70px; */
+    object-fit:cover;
+
+    border: dashed 2px #f08a5d;
 }
 
 .events .item ul li {

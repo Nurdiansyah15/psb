@@ -550,7 +550,7 @@ https://templatemo.com/tm-586-scholar
                         <div class="row">
                             <div class="col-lg-3">
                                 <div class="image">
-                                    <img src="assets/images/event-01.jpg" alt="">
+                                    <img src="img/daftar.png" alt="">
                                 </div>
                             </div>
                             <div class="col-lg-9">
@@ -572,6 +572,10 @@ https://templatemo.com/tm-586-scholar
                                             ?>
                                         </h6>
                                     </li>
+                                    <li>
+                                        <span><strong> Link Pendaftaran </strong></span>
+                                        <h6>----------></h6>
+                                    </li>
                                 </ul>
                                 <a href="#"><i class="fa fa-angle-right"></i></a>
                             </div>
@@ -583,7 +587,7 @@ https://templatemo.com/tm-586-scholar
                         <div class="row">
                             <div class="col-lg-3">
                                 <div class="image">
-                                    <img src="assets/images/event-02.jpg" alt="">
+                                    <img src="img/verif.png" alt="">
                                 </div>
                             </div>
                             <div class="col-lg-9">
@@ -605,10 +609,6 @@ https://templatemo.com/tm-586-scholar
                                             ?>
                                         </h6>
                                     </li>
-                                    <li>
-                                        <span>Duration:</span>
-                                        <h6>30 Hours</h6>
-                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -619,7 +619,7 @@ https://templatemo.com/tm-586-scholar
                         <div class="row">
                             <div class="col-lg-3">
                                 <div class="image">
-                                    <img src="assets/images/event-03.jpg" alt="">
+                                    <img src="img/pay.png" alt="">
                                 </div>
                             </div>
                             <div class="col-lg-9">
@@ -633,8 +633,8 @@ https://templatemo.com/tm-586-scholar
                                         <h6>28 Mar 2023 - 19 April 2023</h6>
                                     </li>
                                     <li>
-                                        <span>Duration:</span>
-                                        <h6>48 Hours</h6>
+                                        <span><strong> Metode Pembayaran </strong></span>
+                                        <h6>----------></h6>
                                     </li>
                                     <a href="#" onclick="return func(0)" data-bs-toggle="modal"
                                         data-bs-target="#exampleModal"><i class="fa fa-angle-right"></i></a>
@@ -651,7 +651,7 @@ https://templatemo.com/tm-586-scholar
                         <div class="row">
                             <div class="col-lg-3">
                                 <div class="image">
-                                    <img src="assets/images/datang.jpg" alt="">
+                                    <img src="img/dokum.png" alt="">
                                 </div>
                             </div>
                             <div class="col-lg-9">
@@ -665,7 +665,10 @@ https://templatemo.com/tm-586-scholar
                                         <span>Tempat:</span>
                                         <h6>PP Kyai Galang Sewu</h6>
                                     </li>
-
+                                    <li>
+                                        <span><strong> Cek Lokasi </strong></span>
+                                        <h6>----------></h6>
+                                    </li>
                                     <a href="https://goo.gl/maps/3jCsuCYQzofVRm3CA">
                                         <i class="fa-solid fa-location-dot"></i>
                                     </a>
@@ -681,7 +684,7 @@ https://templatemo.com/tm-586-scholar
                         <div class="row">
                             <div class="col-lg-3">
                                 <div class="image">
-                                    <img src="assets/images/pondok.jpg" alt="">
+                                    <img src="img/welcome.png" alt="">
                                 </div>
                             </div>
                             <div class="col-lg-9">
@@ -694,6 +697,10 @@ https://templatemo.com/tm-586-scholar
                                     <li>
                                         <span>Tempat:</span>
                                         <h6>PP Kyai Galang Sewu</h6>
+                                    </li>
+                                    <li>
+                                        <span><strong> Cek Lokasi</strong></span>
+                                        <h6>----------></h6>
                                     </li>
 
                                     <a href="https://goo.gl/maps/3jCsuCYQzofVRm3CA">
