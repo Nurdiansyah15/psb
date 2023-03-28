@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Page;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Http;
 
 class LandingController extends Controller
 {
@@ -12,7 +13,55 @@ class LandingController extends Controller
      */
     public function index()
     {
-        return view('landing');
+        $response = Http::withHeaders([
+            'X-API-KEY' => config('app.api_key'),
+            'Accept' => 'application/json'
+        ])->get('https://sipon.kyaigalangsewu.net/api/v1/psb/setting/1');
+        $setting = $response->json()['data'];
+
+        $response = Http::withHeaders([
+            'X-API-KEY' => config('app.api_key'),
+            'Accept' => 'application/json'
+        ])->get('https://sipon.kyaigalangsewu.net/api/v1/psb/register');
+        $registers = $response->json()['data'];
+        // dd($registers);
+        $program = "program";
+        $option = "option";
+        $tahfidh = "Tahfidh";
+        $kitab = "Kitab";
+        $putra = "1";
+        $putri = "2";
+
+        $tahfidhPutra = array_filter($registers, function ($item) use ($program, $tahfidh, $option, $putra) {
+            return isset($item[$program]) && $item[$program] === $tahfidh && isset($item[$option]) && $item[$option] === $putra;
+        });
+        $tahfidhPutri = array_filter($registers, function ($item) use ($program, $tahfidh, $option, $putri) {
+            return isset($item[$program]) && $item[$program] === $tahfidh && isset($item[$option]) && $item[$option] === $putri;
+        });
+        $kitabPutra = array_filter($registers, function ($item) use ($program, $kitab, $option, $putra) {
+            return isset($item[$program]) && $item[$program] === $kitab && isset($item[$option]) && $item[$option] === $putra;
+        });
+        $kitabPutri = array_filter($registers, function ($item) use ($program, $kitab, $option, $putri) {
+            return isset($item[$program]) && $item[$program] === $kitab && isset($item[$option]) && $item[$option] === $putri;
+        });
+
+        $jmlTahfidhPutra = count($tahfidhPutra);
+        $jmlTahfidhPutri = count($tahfidhPutri);
+        $jmlKitabPutra = count($kitabPutra);
+        $jmlKitabPutri = count($kitabPutri);
+
+        $count = array(
+            'tahfidh_putra' => $jmlTahfidhPutra,
+            'tahfidh_putri' => $jmlTahfidhPutri,
+            'kitab_putra' => $jmlKitabPutra,
+            'kitab_putri' => $jmlKitabPutri
+        );
+
+
+        return view('landing', [
+            'setting' => $setting,
+            'count' => $count
+        ]);
     }
 
     /**
