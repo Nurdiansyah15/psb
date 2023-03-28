@@ -13,10 +13,19 @@ class SantriController extends Controller
      */
     public function index()
     {
-        $santris = Santri::all();
-        return view('user', [
-            'users' => $santris
-        ]);
+        $client = new Client();
+        $headers = [
+        'Accept' => 'application/json',
+        'X-API-KEY'=>'siponapikey'
+        ];
+        $request = new Request('GET', '{{base_url}}/api/v1/psb/setting/1', $headers);
+        $res = $client->sendAsync($request)->wait();
+        echo $res->getBody();
+
+        // $setting = $res->getBody();
+        // return view('user', [
+        //     'users' => $santris
+        // ]);
     }
 
     /**

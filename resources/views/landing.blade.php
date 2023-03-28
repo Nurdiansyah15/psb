@@ -46,7 +46,11 @@ https://templatemo.com/tm-586-scholar
     <!-- ***** Preloader End ***** -->
 
     <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky">
+<<<<<<< Updated upstream
+    <header class="header-area header-sticky background-header">
+=======
+    <header class="header-area header-sticky fixed-top background-header">
+>>>>>>> Stashed changes
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -74,25 +78,17 @@ https://templatemo.com/tm-586-scholar
     </header>
     <!-- ***** Header Area End ***** -->
 
-    <div class="main-banner" id="top">
+    {{-- <div class="main-banner" id="top">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="owl-carousel owl-banner">
                         <div class="item item-1">
-                            <div class="header-text row">
+                            <div class=" row">
                                 <div class="col">
-                                    {{-- <span class="category">Our Co</span> --}}
-                                    <h2>Kyai Galang Sewu</h2>
+                                     <h2>Kyai Galang Sewu</h2>
                                     <p>Tembalang, Kota Semarang, Jawa Tengah</p>
-                                    {{-- <div class="buttons">
-                                        <div class="main-button">
-                                            <a href="#">Free Trial</a>
-                                        </div>
-                                        <div class="icon-button">
-                                            <a href="#"><i class="fa fa-play"></i></a>
-                                        </div>
-                                    </div> --}}
+
                                 </div>
                                 <div class="col d-flex align-items-center">
                                     <img src="assets/images/logo.png" alt="" srcset="">
@@ -106,10 +102,10 @@ https://templatemo.com/tm-586-scholar
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
 
-    <div class="section about-us">
+    <div class="section about-us " id="top">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 offset-lg-1">
@@ -438,28 +434,17 @@ https://templatemo.com/tm-586-scholar
                             <p>“Janganlah kamu menjadikan alasan kebodohanmu di hadapan Allah SWT, karena Allah SWT
                                 menuntutmu mencari ilmu, bukan menuntutmu untuk pandai.”</p>
                             <div class="author">
-                                <img src="assets/images/member-01.jpg" alt="">
+                                <img src="assets/images/abdillah.jpg" alt="">
                                 <span class="category">Pengajar</span>
                                 <h4>K. Abdillah Matori, S.Pd.I</h4>
                             </div>
                         </div>
                         <div class="item">
-                            <p>“Aku sudah di Smart Peoples sekitar 6 bulan. Selama di sini aku diajarin dengan jelas
-                                banget. Aku ngerti setiap kali dijelasin oleh kakak pengajarnya dan juga sabar
-                                menjelaskannya.”</p>
+                            <p>“Seberapa besar kita memuliakan Al-Quran, sebesar itupula Allah memuliakan kita”</p>
                             <div class="author">
-                                <img src="assets/images/member-01.jpg" alt="">
-                                <span class="category">UI Expert</span>
-                                <h4>Kelly</h4>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <p>“Belajar di Smart Peoples itu menyenangkan, karena belajarnya tuh asik dan rileks. Saat
-                                guru menjelaskan Saya bisa mengerti dengan cepat.”</p>
-                            <div class="author">
-                                <img src="assets/images/member-01.jpg" alt="">
-                                <span class="category">Digital Animator</span>
-                                <h4>Kevin</h4>
+                                <img src="assets/images/bapak.jpg" alt="">
+                                <span class="category">Pengasuh</span>
+                                <h4>K.M. Nur Salafudin A.H</h4>
                             </div>
                         </div>
                     </div>

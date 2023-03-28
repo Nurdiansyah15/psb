@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\Template\Template;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +33,5 @@ Route::get('/4', function () {
 Route::get('/5', function () {
     return view('user');
 });
+
+Route::get('register', [RegisterController ::class, 'index'])->name('register.index');
