@@ -764,6 +764,16 @@ Banner Style
     margin-left: 130px;
 }
 
+.modal span.category{
+    background-color: #F08A5D;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 5px 15px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
 .main-banner .item span.category {
     background-color: #F08A5D;
     color: #fff;
@@ -1092,7 +1102,7 @@ Courses Style
 .events_item .thumb span.price h6 {
     margin-top: 72px;
     margin-left: 22px;
-    font-size: 28px;
+    font-size: 24px;
     text-transform: uppercase;
     color: #fff;
     font-weight: 700;
@@ -1189,7 +1199,7 @@ Facts Style
 }
 
 .fun-facts h2::after {
-    content: "+";
+    content: "";
     margin-left: 5px;
 }
 
@@ -1699,17 +1709,17 @@ Footer Style
 */
 
 footer {
-    margin-top: 150px;
+    margin-top: 10px;
     position: relative;
     background-color: #F08A5D;
     vertical-align: middle;
-    min-height: 150px;
-    border-radius: 150px 150px 0px 0px;
+    min-height: 10px;
+    border-radius: 50px 50px 0px 0px;
 }
 
 footer p {
     text-align: center;
-    line-height: 150px;
+    line-height: 70px;
     color: #fff;
     font-weight: 400;
 }
@@ -1733,7 +1743,7 @@ footer::before {
     opacity: 1;
     bottom: 0;
     width: 318px;
-    height: 119px;
+    height: 30px;
     content: "";
     z-index: 2;
 }
