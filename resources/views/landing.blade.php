@@ -72,6 +72,7 @@ https://templatemo.com/tm-586-scholar
             </div>
         </div>
     </header>
+    <div class="banner" id="top">
     <div class="banner mt-0 ">
         <div class="container-fluid">
             <div class="row background" style="background-image: url({{ asset('/img/banner2.jpg') }})">
@@ -117,7 +118,6 @@ https://templatemo.com/tm-586-scholar
             </div>
         </div>
     </div>
-
     <div class="section about-us " id="top">
         <div class="container">
             <div class="row">
@@ -125,12 +125,12 @@ https://templatemo.com/tm-586-scholar
                     <div class="accordion" id="accordionExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                     Visi
                                 </button>
                             </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     Mencetak Generasi Muda yang Berkualitas di Bidang Ilmu Agama, Ilmu Umum, dan
@@ -168,17 +168,18 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-5 align-self-center">
                     <div class="section-heading">
                         <h2>Selayang Pandang</h2>
-                        <p>Pondok pesantren Kyai Galang Sewu merupakan pondok pesantren yang berpegang teguh pada
-                            Al-Qur’an , Hadits, Ijma’, Qiyas dan para ulama Ahlussunnah wal jamaah. Ponpes Kyai Galang
-                            Sewu juga menjunjung tinggi nilai-nilai Pancasila, UUD 1945, dan Bhinneka Tunggal Ika
-                            sebagai benteng dari pergolakan massa di Indonesia.
+                        <p style="text-align: justify; text-indent:1.2cm">Pondok pesantren Kyai Galang Sewu merupakan
+                            pondok pesantren yang
+                            berpegang teguh pada Al-Qur’an , Hadits, Ijma’, Qiyas dan para ulama Ahlussunnah wal jamaah.
+                            Ponpes Kyai Galang Sewu juga menjunjung tinggi nilai-nilai Pancasila, UUD 1945, dan Bhinneka
+                            Tunggal Ika sebagai benteng dari pergolakan massa di Indonesia. <br></p>
+                        <p style="text-align: justify; text-indent:1.2cm">
                             Pondok Pesantren ini resmi didirikan pada tanggal 16 Agustus 1999 atas rintisan KH. M.
-                            Sam’ani Khoiruddin, S.Ag. Letaknya yang berada di kawasan kampus Universitas Diponegoro
+                            Sam’ani Khoiruddin, S.Ag. Letaknya yang berada di kawasan kampus ternama seperti Universitas
+                            Diponegoro, Politeknik Negri Semarang, dan Politeknik Kesehatan Semarang
                             menjadikan Ponpes Kyai Galang Sewu menjadi pilihan tepat bagi mahasiswa yang ingin menuntut
-                            ilmu sembari memperdalam ilmu agama.
-                            dalam rangka meningkatkan kualitas pendidikan santri, Ponpes Kyai Galang Sewu memberikan
-                            pengajaran ilmu-ilmu di bidang Tauhid, Tajwid, Tafsir, Akhlaq, Fiqih, Nahwu, Shorof, dan
-                            lain-lain.</p>
+                            ilmu sekaligus memperdalam ilmu agama. <br>
+                        </p>
                         {{-- <div class="main-button">
                             <a href="#">Discover More</a>
                         </div> --}}
@@ -194,7 +195,7 @@ https://templatemo.com/tm-586-scholar
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="section-heading">
-                        <h6>Jurusan</h6>
+                        {{-- <h6>Jurusan</h6> --}}
                         <h2>JURUSAN</h2>
                     </div>
                 </div>
@@ -205,9 +206,10 @@ https://templatemo.com/tm-586-scholar
                         <div class="icon">
                             <img src="assets/images/service-01.png" alt="online degrees">
                         </div>
-                        <div class="main-content">
+                        <div class="main-content" style="height: 450px">
                             <h4>Tahfidz Qur'an</h4>
-                            <p>Jurusan Tahfidz Qur'an merupakan program jurusan hafalan 30 juz Al Qur’an yang bersanad
+                            <p style="text-align: justify; text-indent:1.2cm">Jurusan Tahfidz Qur'an merupakan program
+                                jurusan hafalan 30 juz Al Qur’an yang bersanad
                                 sampai kepada Kiai Arwani Kudus hingga akhirnya bermuara pada baginda Rasulullah SAW.
                             </p>
                             {{-- <div class="main-button">
@@ -221,9 +223,10 @@ https://templatemo.com/tm-586-scholar
                         <div class="icon">
                             <img src="assets/images/service-02.png" alt="short courses">
                         </div>
-                        <div class="main-content">
+                        <div class="main-content" style="height: 450px">
                             <h4>Kitab</h4>
-                            <p>Jurusan Kitab merupakan program jurusan yang difokuskan untuk mengkaji kitab kuning /
+                            <p style="text-align: justify; text-indent:1.2cm">Jurusan Kitab merupakan program jurusan
+                                yang difokuskan untuk mengkaji kitab kuning /
                                 kitab gundul yang berisi pelajaran agama islam (diraasah al-islamiyyah), mulai dari
                                 fiqh, aqidah, akhlaq/tasawuf, atur bahasa arab (`ilmu nahwu dan `ilmu sharf), hadits,
                                 tafsir, `ulumul qur'aan, hingga pada ilmu sosial dan kemasyarakatan (mu`amalah).</p>
@@ -241,7 +244,7 @@ https://templatemo.com/tm-586-scholar
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="section-heading">
-                        <h6>EKSTRA</h6>
+                        {{-- <h6>EKSTRA</h6> --}}
                         <h2>EKSTRAKULIKULER</h2>
                     </div>
                 </div>
@@ -261,7 +264,7 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
                         <div class="thumb">
-                            <a href="#"><img src="assets/images/course-01.jpg" alt=""></a>
+                            <a href="#"><img src="img/rebana.jpg" alt=""></a>
                             <span class="category">Putra / Putri</span>
 
                         </div>
@@ -274,7 +277,7 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra ">
                     <div class="events_item">
                         <div class="thumb">
-                            <a href="#"><img src="assets/images/course-02.jpg" alt=""></a>
+                            <a href="#"><img src="img/kgs tv.jpg" alt=""></a>
                             <span class="category">Putra </span>
 
                         </div>
@@ -287,7 +290,7 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
                         <div class="thumb">
-                            <a href="#"><img src="assets/images/course-03.jpg" alt=""></a>
+                            <a href="#"><img src="img/media.jpg" alt=""></a>
                             <span class="category">Putra / Putri</span>
 
                         </div>
@@ -300,7 +303,7 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
                         <div class="thumb">
-                            <a href="#"><img src="assets/images/devnet.jpeg" alt=""></a>
+                            <a href="#"><img src="img/devnet.jpg" alt=""></a>
                             <span class="category">Putra / Putri</span>
 
                         </div>
@@ -313,7 +316,7 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
                         <div class="thumb">
-                            <a href="#"><img src="assets/images/course-05.jpg" alt=""></a>
+                            <a href="#"><img src="img/puskes.jpg" alt=""></a>
                             <span class="category">Putra / Putri</span>
 
                         </div>
@@ -326,7 +329,7 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
                         <div class="thumb">
-                            <a href="#"><img src="assets/images/course-06.jpg" alt=""></a>
+                            <a href="#"><img src="img/silat.jpg" alt=""></a>
                             <span class="category">Putra / Putri</span>
 
                         </div>
@@ -340,7 +343,7 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
                         <div class="thumb">
-                            <a href="#"><img src="assets/images/course-06.jpg" alt=""></a>
+                            <a href="#"><img src="img/kaligrafi.jpg" alt=""></a>
                             <span class="category">Putra / Putri</span>
                             <span class="price">
                                 <h6>Baru</h6>
@@ -356,7 +359,7 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra">
                     <div class="events_item">
                         <div class="thumb">
-                            <a href="#"><img src="assets/images/course-06.jpg" alt=""></a>
+                            <a href="#"><img src="img/sound.jpg" alt=""></a>
                             <span class="category">Putra </span>
 
                         </div>
@@ -370,7 +373,7 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
                         <div class="thumb">
-                            <a href="#"><img src="assets/images/course-06.jpg" alt=""></a>
+                            <a href="#"><img src="img/rne.jpg" alt=""></a>
                             <span class="category">Putra / Putri</span>
                             <span class="price">
                                 <h6>Baru</h6>
@@ -388,32 +391,67 @@ https://templatemo.com/tm-586-scholar
 
     <div class="section fun-facts">
         <div class="container">
+            <div class="section-heading" style="margin-top: -100px">
+                <h2>Kuota Pendaftaran</h2>
+            </div>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="wrapper">
                         <div class="row">
                             <div class="col-lg-3 col-md-6">
                                 <div class="counter">
-                                    <h2 class="timer count-title count-number" data-to="100" data-speed="1000"></h2>
-                                    <p class="count-text ">Kuota Putra</p>
+                                    <h2 class="timer count-title count-number"
+                                        data-to="{{ $setting['quota_kitab_pa'] }}" data-speed="1000"></h2>
+                                    <p class="count-text ">Kitab Putra</p>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6">
                                 <div class="counter">
-                                    <h2 class="timer count-title count-number" data-to="804" data-speed="1000"></h2>
-                                    <p class="count-text ">Kuota Putri</p>
+                                    <h2 class="timer count-title count-number"
+                                        data-to="{{ $setting['quota_kitab_pi'] }}" data-speed="1000"></h2>
+                                    <p class="count-text ">Kitab Putri</p>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6">
                                 <div class="counter">
-                                    <h2 class="timer count-title count-number" data-to="50" data-speed="1000"></h2>
-                                    <p class="count-text ">Kuota Putra Terisi</p>
+                                    <h2 class="timer count-title count-number"
+                                        data-to="{{ $setting['quota_tahfidh_pa'] }}" data-speed="1000"></h2>
+                                    <p class="count-text ">Tahfidh Putra</p>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6">
                                 <div class="counter end">
-                                    <h2 class="timer count-title count-number" data-to="9" data-speed="1000"></h2>
-                                    <p class="count-text ">Kuota Putri Terisi</p>
+                                    <h2 class="timer count-title count-number"
+                                        data-to="{{ $setting['quota_tahfidh_pi'] }}" data-speed="1000"></h2>
+                                    <p class="count-text ">Tahfidh Putri</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="counter end">
+                                    <h2 class="timer count-title count-number" data-to="{{ $count['kitab_putra'] }}"
+                                        data-speed="1000"></h2>
+                                    <p class="count-text ">Kitab Putra Terisi</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="counter end">
+                                    <h2 class="timer count-title count-number" data-to="{{ $count['kitab_putri'] }}"
+                                        data-speed="1000"></h2>
+                                    <p class="count-text ">Kitab Putri Terisi</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="counter end">
+                                    <h2 class="timer count-title count-number" data-to="{{ $count['tahfidh_putra'] }}"
+                                        data-speed="1000"></h2>
+                                    <p class="count-text ">Tahfidh Putra Terisi</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="counter end">
+                                    <h2 class="timer count-title count-number" data-to="{{ $count['tahfidh_putri'] }}"
+                                        data-speed="1000"></h2>
+                                    <p class="count-text ">Tahfidh Putra Terisi</p>
                                 </div>
                             </div>
                         </div>
@@ -429,9 +467,9 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-3 col-md-6">
                     <div class="team-member">
                         <div class="main-content">
-                            <img src="assets/images/member-02.jpg" alt="">
+                            <img src="img/bapak2.jpg" alt="" style="box-shadow: 2px 2px 5px #0000001c">
                             <span class="category"> Pengasuh</span>
-                            <h6>Bapak K.H. M Nur Salafudin A.H.</h6>
+                            <h5>Bapak K. M. Nur Salafuddin, A.H.</h5>
 
                         </div>
                     </div>
@@ -440,9 +478,10 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-3 col-md-6">
                     <div class="team-member">
                         <div class="main-content">
-                            <img src="assets/images/member-04.jpg" alt="">
-                            <span class="category">Pengasuh</span>
-                            <h6>Bapak K.H.R M Sam'ani Khoiruddin </h6>
+                            <img src="img/abah2.jpg" alt="" alt=""
+                                style="box-shadow: 2px 2px 5px #0000001c">
+                            <span class="category">Pendiri</span>
+                            <h5>Abah K.H.R. M. Sam'ani Khoiruddin, S.Ag. </h5>
 
                         </div>
                     </div>
@@ -450,9 +489,10 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-3 col-md-6">
                     <div class="team-member">
                         <div class="main-content">
-                            <img src="assets/images/member-03.jpg" alt="">
+                            <img src="img/pak ulin2.jpg" alt="" alt=""
+                                style="box-shadow: 2px 2px 5px #0000001c">
                             <span class="category">Pengasuh</span>
-                            <h6 class="category">Bapak Ust. Ulin Nuha Aba M.Si.</h6>
+                            <h5 class="category">Bapak Ust. Ulin Nuha ABA, M.Si.</h5>
 
                         </div>
                     </div>
@@ -502,7 +542,7 @@ https://templatemo.com/tm-586-scholar
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="section-heading">
-                        <h6>Timeline</h6>
+                        {{-- <h6>Timeline</h6> --}}
                         <h2>Jadwal Penerimaan Santri</h2>
                     </div>
                 </div>
@@ -522,7 +562,16 @@ https://templatemo.com/tm-586-scholar
                                     </li>
                                     <li>
                                         <span>Tanggal:</span>
-                                        <h6>28 Mar 2023 - 19 April 2023</h6>
+                                        <h6>
+                                            <?php
+                                            setlocale(LC_ALL, 'ID');
+                                            echo strftime('%d %B %Y', strtotime($setting['start_period']));
+                                            ?> -
+                                            <?php
+                                            setlocale(LC_ALL, 'ID');
+                                            echo strftime('%d %B %Y', strtotime($setting['end_period']));
+                                            ?>
+                                        </h6>
                                     </li>
                                 </ul>
                                 <a href="#"><i class="fa fa-angle-right"></i></a>
@@ -546,7 +595,16 @@ https://templatemo.com/tm-586-scholar
                                     </li>
                                     <li>
                                         <span>Tanggal:</span>
-                                        <h6>28 Mar 2023 - 19 April 2023</h6>
+                                        <h6>
+                                            <?php
+                                            setlocale(LC_ALL, 'ID');
+                                            echo strftime('%d %B %Y', strtotime($setting['start_period']));
+                                            ?> -
+                                            <?php
+                                            setlocale(LC_ALL, 'ID');
+                                            echo strftime('%d %B %Y', strtotime($setting['end_period']));
+                                            ?>
+                                        </h6>
                                     </li>
                                     <li>
                                         <span>Duration:</span>
