@@ -47,7 +47,7 @@ https://templatemo.com/tm-586-scholar
     <!-- ***** Preloader End ***** -->
 
     <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky background-header">
+    <header class="header-area header-sticky ">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -72,8 +72,7 @@ https://templatemo.com/tm-586-scholar
             </div>
         </div>
     </header>
-    <!-- ***** Header Area End ***** -->
-    <div class="banner" id="top">
+    <div class="banner mt-0 " id="top">
         <div class="container-fluid">
             <div class="row background" style="background-image: url({{ asset('/img/banner2.jpg') }})">
                 <div class="col-5 title">
@@ -118,7 +117,7 @@ https://templatemo.com/tm-586-scholar
             </div>
         </div>
     </div>
-    <div class="section about-us ">
+    <div class="section about-us " id="top">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 offset-lg-1">
@@ -640,9 +639,6 @@ https://templatemo.com/tm-586-scholar
                                     <a href="#" onclick="return func(0)" data-bs-toggle="modal"
                                         data-bs-target="#exampleModal"><i class="fa fa-angle-right"></i></a>
                                     <!-- Button trigger modal -->
-
-
-
                                 </ul>
 
                             </div>
@@ -655,7 +651,7 @@ https://templatemo.com/tm-586-scholar
                         <div class="row">
                             <div class="col-lg-3">
                                 <div class="image">
-                                    <img src="assets/images/event-03.jpg" alt="">
+                                    <img src="assets/images/datang.jpg" alt="">
                                 </div>
                             </div>
                             <div class="col-lg-9">
@@ -685,7 +681,7 @@ https://templatemo.com/tm-586-scholar
                         <div class="row">
                             <div class="col-lg-3">
                                 <div class="image">
-                                    <img src="assets/images/event-03.jpg" alt="">
+                                    <img src="assets/images/pondok.jpg" alt="">
                                 </div>
                             </div>
                             <div class="col-lg-9">
