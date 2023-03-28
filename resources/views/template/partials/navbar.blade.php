@@ -2,7 +2,7 @@
 <nav class="navbar" style="background-color: coral;">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
-            <img src="/assets/images/logo-kgs.png" alt="Logo" width="30" height="30"
+            <img src="../assets/images/logo-kgs.png" alt="Logo" width="30" height="30"
                 class="d-inline-block align-text-top">
             <b>PSB</b>
         </a>

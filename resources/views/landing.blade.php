@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="assets/css/templatemo-scholar.css">
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <!--
 
 TemplateMo 586 Scholar
@@ -59,8 +59,8 @@ https://templatemo.com/tm-586-scholar
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="#services">Services</a></li>
-                            <li class="scroll-to-section"><a href="#courses">Courses</a></li>
+                            <li class="scroll-to-section"><a href="#services">Pendaftaran</a></li>
+                            <li class="scroll-to-section"><a href="#courses">Login</a></li>
 
                         </ul>
                         <a class='menu-trigger'>
@@ -121,10 +121,12 @@ https://templatemo.com/tm-586-scholar
                                     Visi
                                 </button>
                             </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show"
-                                aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    Mencetak Generasi Muda yang Berkualitas di Bidang Ilmu Agama, Ilmu Umum, dan Berkepribadian Akhlakul Karimah serta Menjalankan Syari’at Islam ala Ahlussunah Wal Jama’ah
+                                    Mencetak Generasi Muda yang Berkualitas di Bidang Ilmu Agama, Ilmu Umum, dan
+                                    Berkepribadian Akhlakul Karimah serta Menjalankan Syari’at Islam ala Ahlussunah Wal
+                                    Jama’ah
                                 </div>
                             </div>
                         </div>
@@ -132,17 +134,19 @@ https://templatemo.com/tm-586-scholar
                             <h2 class="accordion-header" id="headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                 Misi
+                                    Misi
                                 </button>
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     &bull; Menanamkan nilai-nilai keislaman dalam aktivitas sehari-hari <br>
-                                    &bull; Membangkitkan semangat santri untuk senantiasa aktif dalam mengikuti majelis pengajian Al-qur’an maupun kitab di pondok <br>
+                                    &bull; Membangkitkan semangat santri untuk senantiasa aktif dalam mengikuti majelis
+                                    pengajian Al-qur’an maupun kitab di pondok <br>
                                     &bull; Menciptakan santri yang siap untuk terjun di masyarakat <br>
                                     &bull; Menciptakan suasana gotong-royong dan saling membantu antar santri <br>
-                                    &bull; Menjalin hubungan baik dengan masyarakat serta berbagai pihak dalam pengembangan pesantren yang unggul dan agamis
+                                    &bull; Menjalin hubungan baik dengan masyarakat serta berbagai pihak dalam
+                                    pengembangan pesantren yang unggul dan agamis
                                 </div>
                             </div>
                         </div>
@@ -151,9 +155,17 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-5 align-self-center">
                     <div class="section-heading">
                         <h2>Selayang Pandang</h2>
-                        <p>Pondok pesantren Kyai Galang Sewu merupakan pondok pesantren yang berpegang teguh pada Al-Qur’an , Hadits, Ijma’, Qiyas dan para ulama Ahlussunnah wal jamaah. Ponpes Kyai Galang Sewu juga menjunjung tinggi nilai-nilai Pancasila, UUD 1945, dan Bhinneka Tunggal Ika sebagai benteng dari pergolakan massa di Indonesia.
-                            Pondok Pesantren ini resmi didirikan pada tanggal 16 Agustus 1999 atas rintisan KH. M. Sam’ani Khoiruddin, S.Ag. Letaknya yang berada di kawasan kampus Universitas Diponegoro menjadikan Ponpes Kyai Galang Sewu menjadi pilihan tepat bagi mahasiswa yang ingin menuntut ilmu sembari memperdalam ilmu agama.
-                            dalam rangka meningkatkan kualitas pendidikan santri, Ponpes Kyai Galang Sewu memberikan pengajaran ilmu-ilmu di bidang Tauhid, Tajwid, Tafsir, Akhlaq, Fiqih, Nahwu, Shorof, dan lain-lain.</p>
+                        <p>Pondok pesantren Kyai Galang Sewu merupakan pondok pesantren yang berpegang teguh pada
+                            Al-Qur’an , Hadits, Ijma’, Qiyas dan para ulama Ahlussunnah wal jamaah. Ponpes Kyai Galang
+                            Sewu juga menjunjung tinggi nilai-nilai Pancasila, UUD 1945, dan Bhinneka Tunggal Ika
+                            sebagai benteng dari pergolakan massa di Indonesia.
+                            Pondok Pesantren ini resmi didirikan pada tanggal 16 Agustus 1999 atas rintisan KH. M.
+                            Sam’ani Khoiruddin, S.Ag. Letaknya yang berada di kawasan kampus Universitas Diponegoro
+                            menjadikan Ponpes Kyai Galang Sewu menjadi pilihan tepat bagi mahasiswa yang ingin menuntut
+                            ilmu sembari memperdalam ilmu agama.
+                            dalam rangka meningkatkan kualitas pendidikan santri, Ponpes Kyai Galang Sewu memberikan
+                            pengajaran ilmu-ilmu di bidang Tauhid, Tajwid, Tafsir, Akhlaq, Fiqih, Nahwu, Shorof, dan
+                            lain-lain.</p>
                         {{-- <div class="main-button">
                             <a href="#">Discover More</a>
                         </div> --}}
@@ -423,7 +435,8 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-7">
                     <div class="owl-carousel owl-testimonials">
                         <div class="item">
-                            <p>“Janganlah kamu menjadikan alasan kebodohanmu di hadapan Allah SWT, karena Allah SWT menuntutmu mencari ilmu, bukan menuntutmu untuk pandai.”</p>
+                            <p>“Janganlah kamu menjadikan alasan kebodohanmu di hadapan Allah SWT, karena Allah SWT
+                                menuntutmu mencari ilmu, bukan menuntutmu untuk pandai.”</p>
                             <div class="author">
                                 <img src="assets/images/member-01.jpg" alt="">
                                 <span class="category">Pengajar</span>
@@ -595,8 +608,8 @@ https://templatemo.com/tm-586-scholar
 
         <div class="container">
             <div class="col-lg-12">
-                <p>Dibuat dengan &hearts; oleh KGS Devnet. &nbsp;&nbsp;&nbsp; Contact: <a
-                        href="https://templatemo.com" rel="nofollow" target="_blank">0888888 (Humas)</a></p>
+                <p>Dibuat dengan &hearts; oleh KGS Devnet. &nbsp;&nbsp;&nbsp; Contact: <a href="https://templatemo.com"
+                        rel="nofollow" target="_blank">0888888 (Humas)</a></p>
             </div>
         </div>
     </footer>
