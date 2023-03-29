@@ -65,7 +65,7 @@ https://templatemo.com/tm-586-scholar
                             <li class="scroll-to-section"><a href="#ekstra">Ekstra</a></li>
                             <li class="scroll-to-section"><a href="#kuota">Kuota</a></li>
                             <li class="scroll-to-section"><a href="#flow">Alur</a></li>
-                            <li class="scroll-to-section"><a href="daftar">Login</a></li>
+                            <li class="scroll-to-section"><a href="login">Login</a></li>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -287,7 +287,7 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
                         <div class="thumb" style="height: 230px" style="height: 230px">
-                            <a href="#" onclick="return func(0)"><img src="img/rebana.jpg" alt=""></a>
+                            <img src="img/rebana.jpg" alt="">
                             <span class="category">Putra / Putri</span>
 
                         </div>
@@ -300,7 +300,7 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra ">
                     <div class="events_item">
                         <div class="thumb" style="height: 230px">
-                            <a href="#" onclick="return func(0)"><img src="img/kgs tv.jpg" alt=""></a>
+                            <img src="img/kgs tv.jpg" alt="">
                             <span class="category">Putra </span>
 
                         </div>
@@ -313,8 +313,7 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
                         <div class="thumb" style="height: 230px">
-                            <a href="#" onclick="return func(0)"><img src="img/kgs media.png"
-                                    alt=""></a>
+                            <img src="img/kgs media.png" alt="">
                             <span class="category">Putra / Putri</span>
 
                         </div>
@@ -327,7 +326,7 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
                         <div class="thumb" style="height: 230px">
-                            <a href="#" onclick="return func(0)"><img src="img/devnet.jpg" alt=""></a>
+                            <img src="img/devnet.jpg" alt="">
                             <span class="category">Putra / Putri</span>
 
                         </div>
@@ -340,7 +339,7 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
                         <div class="thumb" style="height: 230px">
-                            <a href="#" onclick="return func(0)"><img src="img/puskes.jpg" alt=""></a>
+                            <img src="img/puskes.jpg" alt="">
                             <span class="category">Putra / Putri</span>
 
                         </div>
@@ -353,7 +352,7 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra">
                     <div class="events_item">
                         <div class="thumb" style="height: 230px">
-                            <a href="#" onclick="return func(0)"><img src="img/silat.jpg" alt=""></a>
+                            <img src="img/silat.jpg" alt="">
                             <span class="category">Putra</span>
 
                         </div>
@@ -367,8 +366,7 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
                         <div class="thumb" style="height: 230px">
-                            <a href="#" onclick="return func(0)"><img src="img/kaligrafi.jpg"
-                                    alt=""></a>
+                            <img src="img/kaligrafi.jpg" alt=""></a>
                             <span class="category">Putra / Putri</span>
                             <span class="price">
                                 <h6>Baru</h6>
@@ -384,8 +382,8 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra">
                     <div class="events_item">
                         <div class="thumb" style="height: 230px">
-                            <a href="#" onclick="return func(0)"><img src="img/sound.jpg" alt=""></a>
-                            <span class="category">Putra </span>
+                            <img src="img/sound.jpg" alt="">
+                            < <span class="category">Putra </span>
 
                         </div>
                         <div class="down-content">
@@ -398,8 +396,7 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
                         <div class="thumb" style="height: 230px">
-                            <a href="#" onclick="return func(0)"><img src="img/rne.jpg" alt=""></a>
-                            <span class="category">Putra / Putri</span>
+                            <img src="img/rne.jpg" alt=""></ <span class="category">Putra / Putri</span>
                             <span class="price">
                                 <h6>Baru</h6>
                             </span>
@@ -722,52 +719,53 @@ https://templatemo.com/tm-586-scholar
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel"
-                            style="color: #F08A5D">Info Pembayaran</h1>
+                        <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #F08A5D">Info Pembayaran
+                        </h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                             aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <div class="table-responsive">
-                        <table class="table table-hover table-stripped">
-                            <thead>
-                                <tr>
-                                    <th class="category">
-                                        Santri
-                                    </th>
-                                    <th class="category">Biaya </th>
-                                    <th class="category">Cicilan </th>
+                            <table class="table table-hover table-stripped">
+                                <thead>
+                                    <tr>
+                                        <th class="category">
+                                            Santri
+                                        </th>
+                                        <th class="category">Biaya </th>
+                                        <th class="category">Cicilan </th>
 
-                                </tr>
-                            </thead>
-                            <tbody>
+                                    </tr>
+                                </thead>
+                                <tbody>
 
-                                <tr>
-                                    <td>Santri Putra</td>
+                                    <tr>
+                                        <td>Santri Putra</td>
 
-                                    <td>Rp 1.630.XXX ,-</td>
-                                    <td>Pembayaran maksimal dicicil 2 kali, pembayaran pertama saat mendaftar minimal
-                                        Rp 500.000, kemudian saat datang ke pondok wajib melunasi sisanya</td>
+                                        <td>Rp 1.630.XXX ,-</td>
+                                        <td>Pembayaran maksimal dicicil 2 kali, pembayaran pertama saat mendaftar
+                                            minimal
+                                            Rp 500.000, kemudian saat datang ke pondok wajib melunasi sisanya</td>
 
-                                </tr>
+                                    </tr>
 
-                                <tr>
-                                    <td>Santri Putri</td>
-                                    <td>Rp 2.350.XXX ,-</td>
-                                    <td>
-                                        Pembayaran bisa dicicil hingga bulan Desember 2023
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="3">Jumlah yang harus ditransferkan adalah biaya pendaftaran
-                                        ditambah 3 digit terakhir nomor pendaftaran
-                                        Contoh : biaya pendaftaran Rp 2.350.000, nomor pendaftaran anda P100020001
-                                        Berarti jumlah yang harus ditransfer adalah Rp 2.350.001</td>
-                                </tr>
+                                    <tr>
+                                        <td>Santri Putri</td>
+                                        <td>Rp 2.350.XXX ,-</td>
+                                        <td>
+                                            Pembayaran bisa dicicil hingga bulan Desember 2023
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">Jumlah yang harus ditransferkan adalah biaya pendaftaran
+                                            ditambah 3 digit terakhir nomor pendaftaran
+                                            Contoh : biaya pendaftaran Rp 2.350.000, nomor pendaftaran anda P100020001
+                                            Berarti jumlah yang harus ditransfer adalah Rp 2.350.001</td>
+                                    </tr>
 
-                            </tbody>
-                        </table>
-                    </div>
+                                </tbody>
+                            </table>
+                        </div>
                         <div class="row">
                             <div class="col-4">Santri Putra ditransfer ke</div>
                             <div class="col-8">3680-01-024604-53-4 (BRI)
