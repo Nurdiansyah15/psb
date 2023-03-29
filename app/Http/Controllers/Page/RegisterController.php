@@ -38,8 +38,8 @@ class RegisterController extends Controller
         $aktif=$response['data']['id'];
         $kuotaPa=intval($response['data']['quota_tahfidh_pa'])+intval($response['data']['quota_kitab_pa']);
         $kuotaPi=intval($response['data']['quota_tahfidh_pi'])+intval($response['data']['quota_kitab_pi']);
-        $totalPa=40;
-        $totalPi=40;
+        $totalPa=0;
+        $totalPi=0;
         foreach($pendaftar['data'] as $rows =>$r){
             if($r['option']=='1' && $r['setting_id']==$aktif){
                 $totalPa++;

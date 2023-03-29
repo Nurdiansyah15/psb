@@ -10,7 +10,8 @@
 
 
 @if ($next=='n')
-<div style="margin-top:15%;margin-bottom:15%">
+<div style="margin-top:10%;margin-bottom:15%">
+    <i class="fa-solid fa-face-sad-cry fa-5x mb-2"></i>
      <h3>Maaf, Kuota sudah penuh !</h3>
 
 </div>

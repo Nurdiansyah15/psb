@@ -14,7 +14,7 @@
 
 <body>
     <div class="container-fluid">
-        <div class="row upper" style="background-image: url(https://sipon.kyaigalangsewu.net/img/nature.jpg)">
+        <div class="row upper" style="background-image:url({{asset('img/banner2.jpg')}})">
             <div class="col-12 jumbroton">
                 <!-- <img src="./Sipon Kyai Galang Sewu_files/logo-sipon-inverted.png" alt="logo"> -->
             </div>

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Page\LandingController;
 use App\Http\Controllers\Page\RegisterController;
+use App\Http\Controllers\Auth\AuthController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\Template\Template;
 
@@ -40,7 +41,10 @@ use SebastianBergmann\Template\Template;
 // });
 
 
+Route::get('/login', [AuthController::class, 'index']);
+
 Route::get('/', [LandingController::class, 'index']);
+
 Route::get('/daftar', [RegisterController::class, 'index']);
 Route::post('/daftar/step2', [RegisterController::class, 'step2']);
 Route::post('/daftar', [RegisterController::class, 'store'])->name('daftar.store');
