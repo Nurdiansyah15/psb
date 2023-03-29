@@ -57,7 +57,8 @@
                         class="btn" style="background:#146C94;color:#fff;">Login</button>
                 </div>
             </form>
-            <div>Belum punya akun? Daftar <a href="daftar">Disini</a> </div>
+            <div>Belum punya akun? Daftar <a href="{{url('daftar')}}">Disini</a> </div>
+            <div>Lupa Password? Klik <a href="{{url('forgot')}}">Disini</a> </div>
         </div>
 
       </div>

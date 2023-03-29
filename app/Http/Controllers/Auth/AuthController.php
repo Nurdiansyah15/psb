@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
@@ -18,19 +20,25 @@ class AuthController extends Controller
             'no_regis' => 'required|string',
             'password' => 'required|string'
         ]);
-        if (Auth::attempt($credentials)) {
+        $pendaftar = Http::withHeaders([
+            'X-API-KEY' => config('app.api_key'),
+            'Accept' => 'application/json'
+        ])->get('https://sipon.kyaigalangsewu.net/api/v1/psb/register');
+        foreach($pendaftar['data'] as $row =>$r){
 
-            $request->session()->regenerate();
+            if($r['no_regis']==$request->no_regis && Hash::check($request->password,$r['password'] )){
 
-            return redirect()->intended('/');
+                $request->session()->put('id',$r['id']);
+                return redirect()->intended('/5');
+            }
         }
 
-        return back()->withErrors(['failed' => 'Login Failed']);
+        return back()->with('failed' , 'Login Failed');
     }
     public function logout(Request $request)
     {
 
-        Auth::logout();
+        $request->session()->forget('id');
 
         $request->session()->invalidate();
 

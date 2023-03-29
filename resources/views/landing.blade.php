@@ -83,7 +83,7 @@ https://templatemo.com/tm-586-scholar
                     <div class="title-content">
                         <div class="title-ponpes">
                             <span>Pondok Pesantren </span>
-                            <p>Kyai Galang Sewu</p>
+                            <p>Kyai Galang Sewu {{session('id')}}</p>
                             <span>Ala Ahlussunnah Wal Jama'ah </span>
                         </div>
                         <div class="sub-title-ponpes">
@@ -832,6 +832,17 @@ https://templatemo.com/tm-586-scholar
         </div>
     </footer>
 
+@if (session('failed'))
+    <script>
+        alert("Gagal login, coba lagi");
+    </script>
+@endif
+@if (session('id'))
+
+    <script>
+        alert("Berhasil login");
+    </script>
+@endif
   <!-- Modal -->
   <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -867,7 +878,8 @@ https://templatemo.com/tm-586-scholar
                         class="btn" style="background:#146C94;color:#fff;">Login</button>
                 </div>
             </form>
-            <div>Belum punya akun? Daftar <a href="daftar">Disini</a> </div>
+            <div>Belum punya akun? Daftar <a href="{{url('daftar')}}">Disini</a> </div>
+            <div>Lupa Password? Klik <a href="{{url('forgot')}}">Disini</a> </div>
         </div>
 
       </div>

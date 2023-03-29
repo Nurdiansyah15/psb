@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Page\LandingController;
 use App\Http\Controllers\Page\RegisterController;
+use App\Http\Controllers\Page\ForgotController;
 use App\Http\Controllers\Auth\AuthController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\Template\Template;
@@ -32,9 +33,7 @@ use SebastianBergmann\Template\Template;
 // Route::get('/4', function () {
 //     return view('daftarsantri');
 // });
-Route::get('/5', function () {
-    return view('dashboard-user.dashboard-user');
-});
+
 
 // Route::get('/page', function () {
 //     return view('landing');
@@ -42,11 +41,20 @@ Route::get('/5', function () {
 
 
 Route::get('/login', [AuthController::class, 'index']);
+Route::get('/logout', [AuthController::class, 'logout']);
 Route::post('/auth', [AuthController::class, 'login'])->name('login');
 
 Route::get('/', [LandingController::class, 'index']);
+
+Route::get('/forgot', [ForgotController::class, 'index']);
 
 Route::get('/daftar', [RegisterController::class, 'index']);
 Route::post('/daftar/step2', [RegisterController::class, 'step2']);
 Route::get('/daftar/{id}', [RegisterController::class, 'show']);
 Route::post('/daftar', [RegisterController::class, 'store'])->name('daftar.store');
+
+Route::group(['middleware' => ['user']], function () {
+    Route::get('/5', function () {
+        return view('dashboard-user.dashboard-user');
+    });
+});
