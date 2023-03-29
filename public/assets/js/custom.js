@@ -18,14 +18,14 @@
     //     }
     // });
 
-    var width = $(window).width();
-    $(window).resize(function () {
-        if (width > 767 && $(window).width() < 767) {
-            location.reload();
-        } else if (width < 767 && $(window).width() > 767) {
-            location.reload();
-        }
-    });
+    // var width = $(window).width();
+    // $(window).resize(function () {
+    //     if (width > 767 && $(window).width() < 767) {
+    //         location.reload();
+    //     } else if (width < 767 && $(window).width() > 767) {
+    //         location.reload();
+    //     }
+    // });
 
     const elem = document.querySelector(".event_box");
     const filtersElem = document.querySelector(".event_filter");
@@ -117,6 +117,7 @@
                     var width = $(window).width();
                     if (width < 767) {
                         $(".menu-trigger").removeClass("active");
+                        $('#psb').text('PSB');
                         $(".header-area .nav").slideUp(200);
                     }
                     $("html,body").animate(
@@ -179,6 +180,7 @@
             }
         });
     }
+
 
     // Page loading animation
     $(window).on("load", function () {

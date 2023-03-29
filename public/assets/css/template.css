@@ -317,7 +317,7 @@ Pre-loader Style
     top: 12px;
     left: 15px;
     background: #146C94;
-    border-radius: 50%;
+    border-radius: 20%;
     -webkit-transform: translateX(0);
     transform: translateX(0);
     -webkit-animation: dot 2.8s infinite;
@@ -340,7 +340,7 @@ Pre-loader Style
     height: 16px;
     margin-left: 16px;
     background: #146C94;
-    border-radius: 50%;
+    border-radius: 20%;
 }
 
 /*
@@ -666,7 +666,7 @@ Header Style
         flex-basis: 100%;
     }
     .header-area .main-nav .logo {
-        position: absolute;
+
         left: 30px;
         top: 0px;
     }

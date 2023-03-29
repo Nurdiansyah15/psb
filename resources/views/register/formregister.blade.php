@@ -5,42 +5,21 @@
 
     $id=$data['id'];
     $nama=$data['name'];
-    $awal=$data['start_period'];
-    $akhir=$data['end_period'];
-    $tahfidhpa=$data['quota_tahfidh_pa'];
-    $tahfidhpi=$data['quota_tahfidh_pi'];
-    $kitabpa=$data['quota_kitab_pa'];
-    $kitabpi=$data['quota_kitab_pi'];
-    $pa=intval($tahfidhpa)+intval($kitabpa);
-    $pi=intval($tahfidhpi)+intval($kitabpi);
-
-    $today=date('Y-m-d');
-    // $today='2023-03-29';
 
 ?>
 
 
-@if ($today<$awal)
+@if ($next=='n')
 <div style="margin-top:10%;margin-bottom:15%">
-    <h3>Perhatian !</h3>
-    <p>Maaf, pendaftaran Gelombang ini belum dibuka</p>
-    <p>Info lebih lanjut, hubungi <a href="http://wa.me/6285280009949" target="_blank" rel="noopener noreferrer">085280009949 (putra)</a> -
-        <a href="http://wa.me/6285280009930" target="_blank" rel="noopener noreferrer">085280009930 (putri)</a></p>
-</div>
-@endif
-@if ($today>$akhir)
-<div style="margin-top:10%;margin-bottom:15%">
-    <h3>Perhatian !</h3>
-    <p>Maaf, pendaftaran Gelombang ini sudah ditutup, nantikan gelombang berikutnya</p>
-    <p>Info lebih lanjut, hubungi <a href="http://wa.me/6285280009949" target="_blank" rel="noopener noreferrer">085280009949 (putra)</a> -
-        <a href="http://wa.me/6285280009930" target="_blank" rel="noopener noreferrer">085280009930 (putri)</a></p>
-</div>
-@endif
-{{-- <h3>Perhatian !!!</h3>
-<p>Maaf, Kuota yang anda pilih sudah penuh!!!!</p>
-<p>Nantikan gelombang selanjutnya!!!!</p> --}}
+    <i class="fa-solid fa-face-sad-cry fa-5x mb-2"></i>
+     <h3>Maaf, Kuota sudah penuh !</h3>
 
-@if ($today>=$awal && $today<=$akhir)
+</div>
+@endif
+
+
+
+@if ($next=='y')
 <h3>Pendaftaran Santri Tahun {{$nama}}</h3>
     <div class="d-flex">
         <div class="container-fluid">
@@ -49,63 +28,79 @@
                     <div class="row d-flex justify-content-center align-items-center h-100">
                         <div class="col-lg-12 col-xl-11">
                             <div class="card text-black">
-                                <div class="card-header" style="background:#f08a5d;color:#fff;">
+                                <div class="card-header" style="background:#146C94;color:#fff;">
                                     Step 2
                                 </div>
                                 <div class="card-body p-md-5">
                                     <div class="row justify-content-center">
                                         <div class="col-md-10 col-lg-12 col-xl-5 order-2 order-lg-1">
-                                            <p class="text-center h5 fw-bold mb-5 mx-1 mx-md-4 mt-3">Daftar</p>
-                                            <form class="mx-1 mx-md-6" action="daftar" method="POST">
+                                            <p class="text-center h5 fw-bold mb-5 mx-1 mx-md-4">Daftar</p>
+                                            <form class="mx-1 mx-md-6" action="{{route('daftar.store')}}" method="POST">
                                                 @csrf
                                                 <div class="d-flex flex-row align-items-center mb-4">
                                                     <i class="fas fa-file fa-lg me-3 fa-fw"></i>
                                                     <div class="form-outline flex-fill mb-0">
-                                                        <input required name="nik" type="text" class=" form-control" id="floatingInput"
+                                                        <input value="{{old('nik')}}" required name="nik" type="text" class=" form-control" id="floatingInput"
                                                             placeholder="NIK">
+                                                            @error('nik')
+                                                                <div class="alert alert-danger">{{ $message }}</div>
+                                                            @enderror
                                                     </div>
                                                 </div>
                                                 <div class="d-flex flex-row align-items-center mb-4">
                                                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                                                     <div class="form-outline flex-fill mb-0">
-                                                        <input required name="fullname" type="text" class=" form-control" id="floatingInput"
+                                                        <input value="{{old('fullname')}}" required name="fullname" type="text" class=" form-control" id="floatingInput"
                                                             placeholder="Nama Lengkap">
+                                                            @error('fullname')
+                                                                <div class="alert alert-danger">{{ $message }}</div>
+                                                            @enderror
                                                     </div>
                                                 </div>
                                                 <div class="d-flex flex-row align-items-center mb-4">
                                                     <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                                                     <div class="form-outline flex-fill mb-0">
-                                                        <input required name="email" type="email" class=" form-control" id="floatingInput"
+                                                        <input value="{{old('email')}}" required name="email" type="email" class=" form-control" id="floatingInput"
                                                             placeholder="Email">
+                                                            @error('email')
+                                                                <div class="alert alert-danger">{{ $message }}</div>
+                                                            @enderror
                                                     </div>
                                                 </div>
                                                 <div class="d-flex flex-row align-items-center mb-4">
                                                     <i class="fas fa-phone fa-lg me-3 fa-fw"></i>
                                                     <div class="form-outline flex-fill mb-0">
-                                                        <input required name="phone"type="text" class="form-control" id="floatingInput"
+                                                        <input value="{{old('phone')}}" required name="phone"type="text" class="form-control" id="floatingInput"
                                                             placeholder="Nomor Whatsapp">
+                                                            @error('phone')
+                                                                <div class="alert alert-danger">{{ $message }}</div>
+                                                            @enderror
                                                             <input required type="hidden" name="option" value="{{$option}}">
                                                             <input required type="hidden" name="program" value="{{$program}}">
+                                                            <input required type="hidden" name="setting_id" value="{{$id}}">
                                                     </div>
                                                 </div>
                                                 <div class="d-flex flex-row align-items-center mb-4">
                                                     <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                                                     <div class="form-outline flex-fill mb-0">
-                                                        <input required name="password" type="password" class=" form-control" id="floatingInput"
+                                                        <input value="{{old('password')}}" required name="password" type="password" class=" form-control" id="floatingInput"
                                                             placeholder="Password">
+                                                            @error('password')
+                                                                <div class="alert alert-danger">{{ $message }}</div>
+                                                            @enderror
                                                     </div>
                                                 </div>
 
                                                 <div class="form-check d-flex justify-content-center mb-5">
-                                                    <input class="form-check-input me-2" type="checkbox" value=""
+                                                    <input required class="form-check-input me-2" type="checkbox" value=""
                                                         id="form2Example3c" />
-                                                    <label class="form-check-label" for="form2Example3">
+                                                    <label class="form-check-label" for="form2Example3c">
                                                         Saya menyutujui segala persyaratan<a href="#!"></a>
                                                     </label>
                                                 </div>
                                                 <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                                    <button type="button"
-                                                        class="btn btn-primary btn-lg">Submit</button>
+                                                    <button type="submit"
+                                                        class="btn" style="background:#146C94;color:#fff;">Submit</button>
                                                 </div>
                                             </form>
                                         </div>

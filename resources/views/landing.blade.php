@@ -54,19 +54,18 @@ https://templatemo.com/tm-586-scholar
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a href="/" class="logo">
-                            <p>Penerimaan Santri Baru</p>
+                            <p id="psb">Penerimaan Santri Baru</p>
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="#video">Video</a></li>
+                            <li class="scroll-to-section"><a href="#top" class="active">Beranda</a></li>
                             <li class="scroll-to-section"><a href="#visi">Visi/Misi</a></li>
-                            <li class="scroll-to-section"><a href="#courses">Jurusan</a></li>
-                            <li class="scroll-to-section"><a href="#kuota">Kuota</a></li>
+                            <li class="scroll-to-section"><a href="#courses">Program</a></li>
                             <li class="scroll-to-section"><a href="#ekstra">Ekstra</a></li>
-                            <li class="scroll-to-section"><a href="#flow">Alur Pendaftaran</a></li>
-
+                            <li class="scroll-to-section"><a href="#kuota">Kuota</a></li>
+                            <li class="scroll-to-section"><a href="#flow">Alur</a></li>
+                            <li class="scroll-to-section"><a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -142,51 +141,50 @@ https://templatemo.com/tm-586-scholar
                     <span id="visi" style="margin-top: -60px"></span>
                     <div class="accordion" id="accordionExample">
 
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Visi
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        Mencetak Generasi Muda yang Berkualitas di Bidang Ilmu Agama, Ilmu Umum, dan
-                                        Berkepribadian Akhlakul Karimah serta Menjalankan Syari’at Islam ala Ahlussunah
-                                        Wal
-                                        Jama’ah
-                                    </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Visi
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Mencetak Generasi Muda yang Berkualitas di Bidang Ilmu Agama, Ilmu Umum, dan
+                                    Berkepribadian Akhlakul Karimah serta Menjalankan Syari’at Islam ala Ahlussunah
+                                    Wal
+                                    Jama’ah
                                 </div>
                             </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
-                                        aria-controls="collapseTwo">
-                                        Misi
-                                    </button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse"
-                                    aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <ul style="list-style-position: outside;">
-                                            <li>&bull; Menanamkan nilai-nilai keislaman dalam aktivitas sehari-hari</li>
-                                            <li>&bull; Membangkitkan semangat santri untuk senantiasa aktif dalam
-                                                mengikuti
-                                                majelis
-                                                pengajian Al-qur’an maupun kitab di pondok</li>
-                                            <li>&bull; Menciptakan santri yang siap untuk terjun di masyarakat</li>
-                                            <li>&bull; Menciptakan suasana gotong-royong dan saling membantu antar
-                                                santri
-                                            </li>
-                                            <li>&bull; Menjalin hubungan baik dengan masyarakat serta berbagai pihak
-                                                dalam
-                                                pengembangan pesantren yang unggul dan agamis</li>
-                                        </ul>
-                                    </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Misi
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <ul style="list-style-position: outside;">
+                                        <li>&bull; Menanamkan nilai-nilai keislaman dalam aktivitas sehari-hari</li>
+                                        <li>&bull; Membangkitkan semangat santri untuk senantiasa aktif dalam
+                                            mengikuti
+                                            majelis
+                                            pengajian Al-qur’an maupun kitab di pondok</li>
+                                        <li>&bull; Menciptakan santri yang siap untuk terjun di masyarakat</li>
+                                        <li>&bull; Menciptakan suasana gotong-royong dan saling membantu antar
+                                            santri
+                                        </li>
+                                        <li>&bull; Menjalin hubungan baik dengan masyarakat serta berbagai pihak
+                                            dalam
+                                            pengembangan pesantren yang unggul dan agamis</li>
+                                    </ul>
                                 </div>
                             </div>
+                        </div>
 
                     </div>
                 </div>
@@ -221,7 +219,7 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-12 text-center">
                     <div class="section-heading">
                         {{-- <h6>Jurusan</h6> --}}
-                        <h2>JURUSAN</h2>
+                        <h2>PROGRAM</h2>
                     </div>
                 </div>
             </div>
@@ -231,7 +229,7 @@ https://templatemo.com/tm-586-scholar
                         <div class="icon">
                             <img src="assets/images/service-01.png" alt="online degrees">
                         </div>
-                        <div class="main-content" style="height: 450px">
+                        <div class="main-content">
                             <h4>Tahfidz Qur'an</h4>
                             <p style="text-align: justify; text-indent:1.2cm">Jurusan Tahfidz Qur'an merupakan program
                                 jurusan hafalan 30 juz Al Qur’an yang bersanad
@@ -248,7 +246,7 @@ https://templatemo.com/tm-586-scholar
                         <div class="icon">
                             <img src="assets/images/service-02.png" alt="short courses">
                         </div>
-                        <div class="main-content" style="height: 450px">
+                        <div class="main-content">
                             <h4>Kitab</h4>
                             <p style="text-align: justify; text-indent:1.2cm">Jurusan Kitab merupakan program jurusan
                                 yang difokuskan untuk mengkaji kitab kuning /
@@ -289,7 +287,7 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
                         <div class="thumb" style="height: 230px" style="height: 230px">
-                            <a href="#"><img src="img/rebana.jpg" alt=""></a>
+                            <img src="img/rebana.jpg" alt="">
                             <span class="category">Putra / Putri</span>
 
                         </div>
@@ -302,7 +300,7 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra ">
                     <div class="events_item">
                         <div class="thumb" style="height: 230px">
-                            <a href="#"><img src="img/kgs tv.jpg" alt=""></a>
+                            <img src="img/kgs tv.jpg" alt="">
                             <span class="category">Putra </span>
 
                         </div>
@@ -315,7 +313,7 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
                         <div class="thumb" style="height: 230px">
-                            <a href="#"><img src="img/kgs media.png" alt=""></a>
+                            <img src="img/kgs media.png" alt="">
                             <span class="category">Putra / Putri</span>
 
                         </div>
@@ -328,7 +326,7 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
                         <div class="thumb" style="height: 230px">
-                            <a href="#"><img src="img/devnet.jpg" alt=""></a>
+                            <img src="img/devnet.jpg" alt="">
                             <span class="category">Putra / Putri</span>
 
                         </div>
@@ -341,7 +339,7 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
                         <div class="thumb" style="height: 230px">
-                            <a href="#"><img src="img/puskes.jpg" alt=""></a>
+                            <img src="img/puskes.jpg" alt="">
                             <span class="category">Putra / Putri</span>
 
                         </div>
@@ -354,7 +352,7 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra">
                     <div class="events_item">
                         <div class="thumb" style="height: 230px">
-                            <a href="#"><img src="img/silat.jpg" alt=""></a>
+                            <img src="img/silat.jpg" alt="">
                             <span class="category">Putra</span>
 
                         </div>
@@ -368,7 +366,7 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
                         <div class="thumb" style="height: 230px">
-                            <a href="#"><img src="img/kaligrafi.jpg" alt=""></a>
+                            <img src="img/kaligrafi.jpg" alt=""></a>
                             <span class="category">Putra / Putri</span>
                             <span class="price">
                                 <h6>Baru</h6>
@@ -384,8 +382,8 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra">
                     <div class="events_item">
                         <div class="thumb" style="height: 230px">
-                            <a href="#"><img src="img/sound.jpg" alt=""></a>
-                            <span class="category">Putra </span>
+                            <img src="img/sound.jpg" alt="">
+                            < <span class="category">Putra </span>
 
                         </div>
                         <div class="down-content">
@@ -398,8 +396,7 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
                         <div class="thumb" style="height: 230px">
-                            <a href="#"><img src="img/rne.jpg" alt=""></a>
-                            <span class="category">Putra / Putri</span>
+                            <img src="img/rne.jpg" alt=""></ <span class="category">Putra / Putri</span>
                             <span class="price">
                                 <h6>Baru</h6>
                             </span>
@@ -527,7 +524,7 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-5 align-self-center">
                     <div class="section-heading">
                         <h6>Dawuh Guru</h6>
-                        <h2>Apa Kata mereka?</h2>
+                        <h2>Apa Kata Beliau?</h2>
                         <p>Kamu ingin belajar di Pondok Pesantren ? Tapi masih mikir mikir dulu ? Tenang, biar kamu bisa
                             memantapkan hatimu, yuk simak apa yang para guru sampaikan</p>
                     </div>
@@ -719,43 +716,77 @@ https://templatemo.com/tm-586-scholar
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Pembayaran</h1>
+                        <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #F08A5D">Info Pembayaran
+                        </h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                             aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <div class="row mt-2">
-                            <div class="col-4">
-                                <span class="category">
-                                    Santri putra</span>
-                            </div>
-                            <div class="col">
-                                <h5>5995-01-023943-53-8</h5>
-                                <h6>a/n Muhammad Ainun Ni`am (BRI)</h6>
+                        <div class="table-responsive">
+                            <table class="table table-hover table-stripped">
+                                <thead>
+                                    <tr>
+                                        <th class="category">
+                                            Santri
+                                        </th>
+                                        <th class="category">Biaya </th>
+                                        <th class="category">Cicilan </th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr>
+                                        <td>Santri Putra</td>
+
+                                        <td>Rp 1.630.XXX ,-</td>
+                                        <td>Pembayaran maksimal dicicil 2 kali, pembayaran pertama saat mendaftar
+                                            minimal
+                                            Rp 500.000, kemudian saat datang ke pondok wajib melunasi sisanya</td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>Santri Putri</td>
+                                        <td>Rp 2.350.XXX ,-</td>
+                                        <td>
+                                            Pembayaran bisa dicicil hingga bulan Desember 2023
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">Jumlah yang harus ditransferkan adalah biaya pendaftaran
+                                            ditambah 3 digit terakhir nomor pendaftaran
+                                            Contoh : biaya pendaftaran Rp 2.350.000, nomor pendaftaran anda P100020001
+                                            Berarti jumlah yang harus ditransfer adalah Rp 2.350.001</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">Santri Putra ditransfer ke</div>
+                            <div class="col-8">3680-01-024604-53-4 (BRI)
+                                a/n M.Irvan Muhandis
                             </div>
                         </div>
-
-                        <div class="row mt-2">
-                            <div class="col-4">
-                                <span class="category">Santri putri</span>
-                            </div>
-                            <div class="col">
-                                <h5>5918-01-017999-53-1</h5>
-                                <h6>a/n Saniyatin (BRI)</h6>
-                            </div>
-
+                        <div class="row">
+                            <div class="col-4">Santri Putri ditransfer ke</div>
+                            <div class="col-8">5918-01-017999-53-1 (BRI)
+                                a/n Saniyatin </div>
                         </div>
-
-
                         <div class="mt-3"><strong class="text-danger">* Upload bukti pembayaran dan konfirmasi ke
                                 nomor pengurus</strong></div>
-                        <p class="mt-3">
-                            Pembayaran dapat dicicil 3x dalam waktu 1 tahun
-                            Minimal pembayaran pertama sebesar Rp 400.000,-
-                        </p>
+                        <span class="mt-3">
+                            Kontak : <a href="http://wa.me/6285280009949" target="_blank"
+                                rel="noopener noreferrer">085280009949
+                                (putra)</a> -
+                            <a href="http://wa.me/6285280009930" target="_blank"
+                                rel="noopener noreferrer">085280009930
+                                (putri)</a></a>
+                        </span>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn" style="color:white;background-color: #F08A5D"
@@ -791,7 +822,7 @@ https://templatemo.com/tm-586-scholar
     <footer>
         <div class="container">
             <div class="col-lg-12">
-                <p>Dibuat dengan &hearts; oleh KGS Devnet. &nbsp;&nbsp;&nbsp; Contact: <a
+                <p>Dibuat dengan &hearts; oleh KGS Devnet. &nbsp;&nbsp;&nbsp; Kontak : <a
                         href="http://wa.me/6285280009949" target="_blank" rel="noopener noreferrer">085280009949
                         (putra)</a> -
                     <a href="http://wa.me/6285280009930" target="_blank" rel="noopener noreferrer">085280009930
@@ -800,6 +831,48 @@ https://templatemo.com/tm-586-scholar
             </div>
         </div>
     </footer>
+
+  <!-- Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <div class="modal-body">
+            <h4 class="text-center mb-5">Login</h4>
+            <form class="mx-1 mx-md-4" action="{{route('login')}}" method="POST">
+                @csrf
+                <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-file fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                        <input value="{{old('no_regis')}}" required name="no_regis" type="text" class=" form-control" id="floatingInput"
+                            placeholder="Nomor Pendaftaran">
+                            @error('no_regis')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                    </div>
+                </div>
+                <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                        <input value="{{old('password')}}" required name="password" type="password" class=" form-control" id="floatingInput"
+                            placeholder="Password">
+                            @error('password')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                    <button type="submit"
+                        class="btn" style="background:#146C94;color:#fff;">Login</button>
+                </div>
+            </form>
+            <div>Belum punya akun? Daftar <a href="daftar">Disini</a> </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
 
     <!-- Scripts -->
     <!-- Bootstrap core JavaScript -->
