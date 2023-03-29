@@ -202,7 +202,7 @@ body {
 }
 
 .section-heading {
-    margin-bottom: 60px !important;
+    margin-bottom: 0;
 }
 
 .section-heading h2 {
@@ -1405,7 +1405,7 @@ Events Style
 */
 
 .events .section-heading {
-    margin-bottom: 100px;
+    margin-bottom: 0;
 }
 
 .events .item {
