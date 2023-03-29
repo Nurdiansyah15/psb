@@ -539,8 +539,9 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-12 text-center">
                     <div class="section-heading">
                         {{-- <h6>Timeline</h6> --}}
-                        <h2>Jadwal Penerimaan Santri</h2>
+                        <h2>Alur Administrasi Penerimaan Santri</h2>
                     </div>
+                    <img src="assets/images/flow.png" alt="" srcset="">
                 </div>
                 <div class="col-lg-12 col-md-6">
                     <div class="item">
@@ -742,7 +743,7 @@ https://templatemo.com/tm-586-scholar
                                     <tr>
                                         <td>Santri Putra</td>
 
-                                        <td>Rp 1.630.XXX ,-</td>
+                                        <td>Rp 1.630.XXX</td>
                                         <td>Pembayaran maksimal dicicil 2 kali, pembayaran pertama saat mendaftar
                                             minimal
                                             Rp 500.000, kemudian saat datang ke pondok wajib melunasi sisanya</td>
@@ -751,7 +752,7 @@ https://templatemo.com/tm-586-scholar
 
                                     <tr>
                                         <td>Santri Putri</td>
-                                        <td>Rp 2.350.XXX ,-</td>
+                                        <td>Rp 2.350.XXX </td>
                                         <td>
                                             Pembayaran bisa dicicil hingga bulan Desember 2023
                                         </td>
