@@ -18,7 +18,7 @@ class RegisterController extends Controller
             'X-API-KEY' => 'siponapikey',
         ])->get('http://sipon.kyaigalangsewu.net/api/v1/psb/setActive');
 
-        return view('user.formregister',[
+        return view('register.startregister',[
             "data"=>$response['data'],
         ]);
     }
@@ -66,7 +66,7 @@ class RegisterController extends Controller
         }
 
 
-        return view('user.formregister1',[
+        return view('register.formregister',[
             "data"=>$response['data'],
             "next"=>$next,
             "option"=>$request->option,
@@ -90,11 +90,11 @@ class RegisterController extends Controller
         $response = Http::withHeaders([
             'Accept' => 'aplication/json',
             'X-API-KEY' => 'siponapikey',
-        ])->get('http://sipon.kyaigalangsewu.net/api/v1/psb/register',$request->all());
+        ])->post('http://sipon.kyaigalangsewu.net/api/v1/psb/register',$request->all());
 
-
+        $url="/daftar/".$response->json()['data']['id'];
         if(@$response['message']=='Success'){
-            return redirect('/')->with('status', 'Berhasil melakukan pendaftaran');
+            return redirect($url)->with('status', 'Berhasil melakukan pendaftaran');
         }else{
             return back()->withInput()
             ->withErrors($response['errors']);
@@ -106,7 +106,16 @@ class RegisterController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $response = Http::withHeaders([
+            'Accept' => 'aplication/json',
+            'X-API-KEY' => 'siponapikey',
+        ])->get('http://sipon.kyaigalangsewu.net/api/v1/psb/register');
+
+        return view('register.endregister',[
+            "data"=>$response['data'],
+            "id"=>$id,
+
+        ]);
     }
 
     /**

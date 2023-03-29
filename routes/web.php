@@ -42,9 +42,11 @@ use SebastianBergmann\Template\Template;
 
 
 Route::get('/login', [AuthController::class, 'index']);
+Route::post('/auth', [AuthController::class, 'login'])->name('login');
 
 Route::get('/', [LandingController::class, 'index']);
 
 Route::get('/daftar', [RegisterController::class, 'index']);
 Route::post('/daftar/step2', [RegisterController::class, 'step2']);
+Route::get('/daftar/{id}', [RegisterController::class, 'show']);
 Route::post('/daftar', [RegisterController::class, 'store'])->name('daftar.store');
