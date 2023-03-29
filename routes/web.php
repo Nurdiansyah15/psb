@@ -31,9 +31,9 @@ use SebastianBergmann\Template\Template;
 // Route::get('/4', function () {
 //     return view('daftarsantri');
 // });
-// Route::get('/5', function () {
-//     return view('user');
-// });
+Route::get('/5', function () {
+    return view('dashboard-user.dashboard-user');
+});
 
 // Route::get('/page', function () {
 //     return view('landing');

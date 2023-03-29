@@ -1,0 +1,146 @@
+/* navbar */
+.header-area {
+    border-radius: 0 0 20px 20px;
+}
+.logo {
+    border: none;
+    width: 500px;
+    margin-top: 0 !important;
+    display: flex;
+    align-items: center;
+}
+.logo p {
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    margin-top: 18px;
+}
+
+/* content */
+section.content {
+    margin-top: 120px;
+    padding-bottom: 50px;
+    min-height: 75vh;
+}
+
+.left-section {
+    margin-right: 20px;
+}
+.short-profile {
+    background: #f8f9ff;
+    border-radius: 10px;
+    padding: 10px;
+}
+.photo-profile img {
+    border-radius: 100px;
+    width: 80px;
+    box-shadow: 1px 1px 5px #0000002d;
+}
+
+.name-register .name {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 5px 0 5px 0;
+}
+.name-register .number {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.menu {
+    margin-top: 20px;
+    background: #f8f9ff;
+    border-radius: 10px;
+    padding: 10px 10px 20px 10px;
+}
+
+.menu .menu-link {
+    margin-top: 8px;
+    height: 35px;
+    border-bottom: solid 1px #d8d8d8;
+    display: flex;
+    justify-content: start;
+}
+.menu .menu-link:hover p {
+    font-weight: 500;
+}
+
+.menu .menu-link p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.content-menu {
+    background: #f8f9ff;
+    border-radius: 10px;
+    padding: 10px 10px 20px 10px;
+}
+
+.title {
+    height: 80px;
+    font-size: 24px;
+    font-weight: 500;
+    border-bottom: solid 1px #d8d8d8;
+    display: flex;
+    align-items: center;
+}
+
+.profile-menu .menu-link {
+    display: flex;
+    justify-content: start;
+    margin-top: 8px;
+    height: 35px;
+    border-bottom: solid 1px #d8d8d8;
+}
+.profile-menu .menu-link:hover p {
+    font-weight: 500;
+}
+.profile-menu .menu-link p {
+    font-weight: 600;
+}
+
+.self-title {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 10px 0 10px 0;
+}
+
+.item-profile {
+    margin: 8px 0 8px 0;
+}
+.item-profile .content-item {
+    font-size: 16px;
+    font-weight: 300;
+    color: rgb(128, 128, 128);
+}
+.item-profile input {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+/* hal lain */
+#pembayaran-2 {
+    display: none;
+}
+#dokumen-2 {
+    display: none;
+}
+#cetak-2 {
+    display: none;
+}
+
+#pribadi-2 {
+    display: none;
+}
+#kontak-2 {
+    display: none;
+}
+#kependudukan-2 {
+    display: none;
+}
+#pendidikan-2 {
+    display: none;
+}
+#orang-tua-2 {
+    display: none;
+}
