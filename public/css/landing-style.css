@@ -11,7 +11,7 @@
 }
 .logo p {
     color: white;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 500;
     margin-top: 18px;
 }
@@ -42,6 +42,7 @@
 
 .title-ponpes p {
     color: white;
+    line-heigh:1;
     font-size: 50px;
     font-weight: 700;
     text-shadow: 2px 2px 5px #0000006c;
