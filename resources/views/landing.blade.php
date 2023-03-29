@@ -65,7 +65,8 @@ https://templatemo.com/tm-586-scholar
                             <li class="scroll-to-section"><a href="#ekstra">Ekstra</a></li>
                             <li class="scroll-to-section"><a href="#kuota">Kuota</a></li>
                             <li class="scroll-to-section"><a href="#flow">Alur</a></li>
-                            <li class="scroll-to-section"><a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
+                            <li class="scroll-to-section"><a href="#" data-bs-toggle="modal"
+                                    data-bs-target="#loginModal">Login</a></li>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -83,7 +84,7 @@ https://templatemo.com/tm-586-scholar
                     <div class="title-content">
                         <div class="title-ponpes">
                             <span>Pondok Pesantren </span>
-                            <p>Kyai Galang Sewu {{session('id')}}</p>
+                            <p>Kyai Galang Sewu {{ session('id') }}</p>
                             <span>Ala Ahlussunnah Wal Jama'ah </span>
                         </div>
                         <div class="sub-title-ponpes">
@@ -128,7 +129,7 @@ https://templatemo.com/tm-586-scholar
                     <div class="section-heading">
                         {{-- <h6>EKSTRA</h6> --}}
                         <h2>VIDEO PERKENALAN <i class="fa-brands fa-youtube"></i></h2>
-                        <iframe width="850" height="500" src="https://www.youtube.com/embed/FXc8zE2Hr6Q">
+                        <iframe style="border: dashed 2px #146C94;padding:5px" width="850" height="500" src="https://www.youtube.com/embed/FXc8zE2Hr6Q">
                         </iframe>
                     </div>
                 </div>
@@ -168,20 +169,42 @@ https://templatemo.com/tm-586-scholar
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <ul style="list-style-position: outside;">
-                                        <li>&bull; Menanamkan nilai-nilai keislaman dalam aktivitas sehari-hari</li>
-                                        <li>&bull; Membangkitkan semangat santri untuk senantiasa aktif dalam
+                                    <div class="row">
+                                        <div class="col-1">&bull;</div>
+                                        <div class="col-11">Menanamkan nilai-nilai keislaman dalam aktivitas
+                                            sehari-hari</div>
+
+
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="col-1">&bull;</div>
+                                        <div class="col-11">Membangkitkan semangat santri untuk senantiasa aktif dalam
                                             mengikuti
                                             majelis
-                                            pengajian Al-qur’an maupun kitab di pondok</li>
-                                        <li>&bull; Menciptakan santri yang siap untuk terjun di masyarakat</li>
-                                        <li>&bull; Menciptakan suasana gotong-royong dan saling membantu antar
+                                            pengajian Al-qur’an maupun kitab di pondok</div>
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="col-1">&bull;</div>
+                                        <div class="col-11">Menciptakan santri yang siap untuk terjun di masyarakat
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="col-1">&bull;</div>
+                                        <div class="col-11">Menciptakan suasana gotong-royong dan saling membantu antar
                                             santri
-                                        </li>
-                                        <li>&bull; Menjalin hubungan baik dengan masyarakat serta berbagai pihak
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-1">&bull;</div>
+                                        <div class="col-11">Menjalin hubungan baik dengan masyarakat serta berbagai
+                                            pihak
                                             dalam
-                                            pengembangan pesantren yang unggul dan agamis</li>
-                                    </ul>
+                                            pengembangan pesantren yang unggul dan agamis</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -382,7 +405,7 @@ https://templatemo.com/tm-586-scholar
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra">
                     <div class="events_item">
                         <div class="thumb" style="height: 230px">
-                            <img src="img/sound.jpg" alt="">
+                            <img src="assets/images/sound.jpeg" alt="">
                             < <span class="category">Putra </span>
 
                         </div>
@@ -833,59 +856,58 @@ https://templatemo.com/tm-586-scholar
         </div>
     </footer>
 
-@if (session('failed'))
-    <script>
-        alert("Gagal login, coba lagi");
-    </script>
-@endif
-@if (session('id'))
+    @if (session('failed'))
+        <script>
+            alert("Gagal login, coba lagi");
+        </script>
+    @endif
+    @if (session('id'))
+        <script>
+            alert("Berhasil login");
+        </script>
+    @endif
+    <!-- Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
 
-    <script>
-        alert("Berhasil login");
-    </script>
-@endif
-  <!-- Modal -->
-  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
+                <div class="modal-body">
+                    <h4 class="text-center mb-5">Login</h4>
+                    <form class="mx-1 mx-md-4" action="{{ route('login') }}" method="POST">
+                        @csrf
+                        <div class="d-flex flex-row align-items-center mb-4">
+                            <i class="fas fa-file fa-lg me-3 fa-fw"></i>
+                            <div class="form-outline flex-fill mb-0">
+                                <input value="{{ old('no_regis') }}" required name="no_regis" type="text"
+                                    class=" form-control" id="floatingInput" placeholder="Nomor Pendaftaran">
+                                @error('no_regis')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row align-items-center mb-4">
+                            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                            <div class="form-outline flex-fill mb-0">
+                                <input value="{{ old('password') }}" required name="password" type="password"
+                                    class=" form-control" id="floatingInput" placeholder="Password">
+                                @error('password')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                        </div>
 
-        <div class="modal-body">
-            <h4 class="text-center mb-5">Login</h4>
-            <form class="mx-1 mx-md-4" action="{{route('login')}}" method="POST">
-                @csrf
-                <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-file fa-lg me-3 fa-fw"></i>
-                    <div class="form-outline flex-fill mb-0">
-                        <input value="{{old('no_regis')}}" required name="no_regis" type="text" class=" form-control" id="floatingInput"
-                            placeholder="Nomor Pendaftaran">
-                            @error('no_regis')
-                                <div class="alert alert-danger">{{ $message }}</div>
-                            @enderror
-                    </div>
-                </div>
-                <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                    <div class="form-outline flex-fill mb-0">
-                        <input value="{{old('password')}}" required name="password" type="password" class=" form-control" id="floatingInput"
-                            placeholder="Password">
-                            @error('password')
-                                <div class="alert alert-danger">{{ $message }}</div>
-                            @enderror
-                    </div>
+                        <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                            <button type="submit" class="btn"
+                                style="background:#146C94;color:#fff;">Login</button>
+                        </div>
+                    </form>
+                    <div>Belum punya akun? Daftar <a href="{{ url('daftar') }}">Disini</a> </div>
+                    <div>Lupa Password? Klik <a href="{{ url('forgot') }}">Disini</a> </div>
                 </div>
 
-                <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                    <button type="submit"
-                        class="btn" style="background:#146C94;color:#fff;">Login</button>
-                </div>
-            </form>
-            <div>Belum punya akun? Daftar <a href="{{url('daftar')}}">Disini</a> </div>
-            <div>Lupa Password? Klik <a href="{{url('forgot')}}">Disini</a> </div>
+            </div>
         </div>
-
-      </div>
     </div>
-  </div>
 
     <!-- Scripts -->
     <!-- Bootstrap core JavaScript -->
