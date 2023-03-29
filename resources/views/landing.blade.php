@@ -92,7 +92,7 @@ https://templatemo.com/tm-586-scholar
                         </div>
                         <div class="buttons mt-2">
                             <div class="main-button">
-                                <a href="daftar">Pendaftaran</a>
+                                <a href="#daftar">Pendaftaran</a>
                             </div>
                         </div>
                     </div>
@@ -556,7 +556,7 @@ https://templatemo.com/tm-586-scholar
         </div>
     </div>
 
-    <div class="section events" id="flow">
+    <div class="section events" style="padding-bottom:50px " id="flow">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -598,7 +598,7 @@ https://templatemo.com/tm-586-scholar
                                         <h6>----------></h6>
                                     </li>
                                 </ul>
-                                <a href="#"><i class="fa fa-angle-right"></i></a>
+                                <a id="daftar" href="daftar"><i class="fa fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>

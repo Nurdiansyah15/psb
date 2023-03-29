@@ -10,4 +10,5 @@
     @endforeach
     <p class="text-danger">*catatlah agar tidak lupa!</p>
 </div>
+<div class="" style="margin-bottom: 200px"></div>
 @endsection

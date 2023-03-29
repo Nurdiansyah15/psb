@@ -184,6 +184,7 @@ Global Styles
 html,
 body {
     font-family: "Poppins", sans-serif;
+    position:relative;
 }
 
 ::selection {
@@ -1725,7 +1726,10 @@ Footer Style
 
 footer {
     margin-top: 10px;
-    position: relative;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right:0;
     background-color: #146C94;
     vertical-align: middle;
     min-height: 10px;
@@ -1734,7 +1738,7 @@ footer {
 
 footer p {
     text-align: center;
-    line-height: 70px;
+    line-height: 50px;
     color: #fff;
     font-weight: 400;
 }
