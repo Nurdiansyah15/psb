@@ -5,42 +5,20 @@
 
     $id=$data['id'];
     $nama=$data['name'];
-    $awal=$data['start_period'];
-    $akhir=$data['end_period'];
-    $tahfidhpa=$data['quota_tahfidh_pa'];
-    $tahfidhpi=$data['quota_tahfidh_pi'];
-    $kitabpa=$data['quota_kitab_pa'];
-    $kitabpi=$data['quota_kitab_pi'];
-    $pa=intval($tahfidhpa)+intval($kitabpa);
-    $pi=intval($tahfidhpi)+intval($kitabpi);
-
-    $today=date('Y-m-d');
-    // $today='2023-03-29';
 
 ?>
 
 
-@if ($today<$awal)
-<div style="margin-top:10%;margin-bottom:15%">
-    <h3>Perhatian !</h3>
-    <p>Maaf, pendaftaran Gelombang ini belum dibuka</p>
-    <p>Info lebih lanjut, hubungi <a href="http://wa.me/6285280009949" target="_blank" rel="noopener noreferrer">085280009949 (putra)</a> -
-        <a href="http://wa.me/6285280009930" target="_blank" rel="noopener noreferrer">085280009930 (putri)</a></p>
-</div>
-@endif
-@if ($today>$akhir)
-<div style="margin-top:10%;margin-bottom:15%">
-    <h3>Perhatian !</h3>
-    <p>Maaf, pendaftaran Gelombang ini sudah ditutup, nantikan gelombang berikutnya</p>
-    <p>Info lebih lanjut, hubungi <a href="http://wa.me/6285280009949" target="_blank" rel="noopener noreferrer">085280009949 (putra)</a> -
-        <a href="http://wa.me/6285280009930" target="_blank" rel="noopener noreferrer">085280009930 (putri)</a></p>
-</div>
-@endif
-{{-- <h3>Perhatian !!!</h3>
-<p>Maaf, Kuota yang anda pilih sudah penuh!!!!</p>
-<p>Nantikan gelombang selanjutnya!!!!</p> --}}
+@if ($next=='n')
+<div style="margin-top:15%;margin-bottom:15%">
+     <h3>Maaf, Kuota sudah penuh !</h3>
 
-@if ($today>=$awal && $today<=$akhir)
+</div>
+@endif
+
+
+
+@if ($next=='y')
 <h3>Pendaftaran Santri Tahun {{$nama}}</h3>
     <div class="d-flex">
         <div class="container-fluid">
@@ -115,13 +93,13 @@
                                                 <div class="form-check d-flex justify-content-center mb-5">
                                                     <input required class="form-check-input me-2" type="checkbox" value=""
                                                         id="form2Example3c" />
-                                                    <label class="form-check-label" for="form2Example3">
+                                                    <label class="form-check-label" for="form2Example3c">
                                                         Saya menyutujui segala persyaratan<a href="#!"></a>
                                                     </label>
                                                 </div>
                                                 <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                                                     <button type="submit"
-                                                        class="btn btn-primary btn-lg">Submit</button>
+                                                        class="btn" style="background:#146C94;color:#fff;">Submit</button>
                                                 </div>
                                             </form>
                                         </div>

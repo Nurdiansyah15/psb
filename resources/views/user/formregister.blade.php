@@ -6,12 +6,6 @@
     $nama=$data['name'];
     $awal=$data['start_period'];
     $akhir=$data['end_period'];
-    $tahfidhpa=$data['quota_tahfidh_pa'];
-    $tahfidhpi=$data['quota_tahfidh_pi'];
-    $kitabpa=$data['quota_kitab_pa'];
-    $kitabpi=$data['quota_kitab_pi'];
-    $pa=intval($tahfidhpa)+intval($kitabpa);
-    $pi=intval($tahfidhpi)+intval($kitabpi);
 
     $today=date('Y-m-d');
 
@@ -19,19 +13,15 @@
 
 
 @if ($today<$awal)
-<div style="margin-top:10%;margin-bottom:15%">
+<div style="margin-top:15%;margin-bottom:15%">
     <h3>Perhatian !</h3>
     <p>Maaf, pendaftaran Gelombang ini belum dibuka</p>
-    <p>Info lebih lanjut, hubungi <a href="http://wa.me/6285280009949" target="_blank" rel="noopener noreferrer">085280009949 (putra)</a> -
-        <a href="http://wa.me/6285280009930" target="_blank" rel="noopener noreferrer">085280009930 (putri)</a></p>
 </div>
 @endif
 @if ($today>$akhir)
-<div style="margin-top:10%;margin-bottom:15%">
+<div style="margin-top:15%;margin-bottom:15%">
     <h3>Perhatian !</h3>
     <p>Maaf, pendaftaran Gelombang ini sudah ditutup, nantikan gelombang berikutnya</p>
-    <p>Info lebih lanjut, hubungi <a href="http://wa.me/6285280009949" target="_blank" rel="noopener noreferrer">085280009949 (putra)</a> -
-        <a href="http://wa.me/6285280009930" target="_blank" rel="noopener noreferrer">085280009930 (putri)</a></p>
 </div>
 @endif
 {{-- <h3>Perhatian !!!</h3>
@@ -77,7 +67,7 @@
                                                 </div>
                                                 <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                                                     <button type="submit"
-                                                        class="btn btn-primary btn-lg">Cek</button>
+                                                        class="btn" style="background:#146C94;color:#fff;">Cek</button>
                                                 </div>
                                             </form>
                                         </div>

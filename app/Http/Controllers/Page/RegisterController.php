@@ -30,8 +30,45 @@ class RegisterController extends Controller
             'X-API-KEY' => 'siponapikey',
         ])->get('http://sipon.kyaigalangsewu.net/api/v1/psb/setActive');
 
+        $pendaftar = Http::withHeaders([
+            'X-API-KEY' => config('app.api_key'),
+            'Accept' => 'application/json'
+        ])->get('https://sipon.kyaigalangsewu.net/api/v1/psb/register');
+
+        $aktif=$response['data']['id'];
+        $kuotaPa=intval($response['data']['quota_tahfidh_pa'])+intval($response['data']['quota_kitab_pa']);
+        $kuotaPi=intval($response['data']['quota_tahfidh_pi'])+intval($response['data']['quota_kitab_pi']);
+        $totalPa=40;
+        $totalPi=40;
+        foreach($pendaftar['data'] as $rows =>$r){
+            if($r['option']=='1' && $r['setting_id']==$aktif){
+                $totalPa++;
+            }
+        }
+        foreach($pendaftar['data'] as $rows =>$r){
+            if($r['option']=='2' && $r['setting_id']==$aktif){
+                $totalPi++;
+            }
+        }
+
+        if($request->option=='1'){
+            if($totalPa>$kuotaPa){
+                $next="n";
+            }else{
+                $next="y";
+            }
+        }else{
+            if($totalPi>$kuotaPi){
+                $next="n";
+            }else{
+                $next="y";
+            }
+        }
+
+
         return view('user.formregister1',[
             "data"=>$response['data'],
+            "next"=>$next,
             "option"=>$request->option,
             "program"=>$request->program,
         ]);
