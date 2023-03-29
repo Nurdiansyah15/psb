@@ -181,6 +181,7 @@
         });
     }
 
+
     // Page loading animation
     $(window).on("load", function () {
         if ($(".cover").length) {
