@@ -1,105 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-
-    <title>PSB | PP. Kyai Galang Sewu</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="    https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <link rel="stylesheet" href="assets/css/template.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="css/landing-style.css">
-    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!--
-
-
-
-TemplateMo 586 Scholar
-
-https://templatemo.com/tm-586-scholar
-
--->
-</head>
-
-<body>
-
-    <!-- ***** Preloader Start ***** -->
-    <div id="js-preloader" class="js-preloader">
-        <div class="preloader-inner">
-            <span class="dot"></span>
-            <div class="dots">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </div>
-    <!-- ***** Preloader End ***** -->
-
-    <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky background-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="main-nav">
-                        <!-- ***** Logo Start ***** -->
-                        <a href="/" class="logo">
-                            <p id="psb">Penerimaan Santri Baru</p>
-                        </a>
-                        <!-- ***** Logo End ***** -->
-                        <!-- ***** Menu Start ***** -->
-                        <ul class="nav">
-                            <li class="scroll-to-section"><a href="#top" class="active">Beranda</a></li>
-                            <li class="scroll-to-section"><a href="#visi">Visi/Misi</a></li>
-                            <li class="scroll-to-section"><a href="#courses">Program</a></li>
-                            <li class="scroll-to-section"><a href="#ekstra">Ekstra</a></li>
-                            <li class="scroll-to-section"><a href="#kuota">Kuota</a></li>
-                            <li class="scroll-to-section"><a href="#flow">Alur</a></li>
-                            @if (session('id'))
-                                <li class="dropdown">
-                                        <a class="btn dropdown-toggle" href="#" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            {{ session('no_regis') }}
-                                        </a>
-
-                                        <ul class="dropdown-menu text-center p-0" style="background-color:#146C94">
-                                            <li class="p-0"><a class="dropdown-item "  href="/user">Profil</a>
-                                               
-                                            </li>
-
-                                            <li class="p-0"><a class="dropdown-item "  href="/logout">Logout</a></li>
-                                        </ul>
-
-                                </li>
-                            @else
-                                <li class="scroll-to-section"><a href="#" data-bs-toggle="modal"
-                                        data-bs-target="#loginModal">Login</a></li>
-                            @endif
-                        </ul>
-                        <a class='menu-trigger'>
-                            <span>Menu</span>
-                        </a>
-                        <!-- ***** Menu End ***** -->
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
-
+@extends('template.global')
+@section('content')
     <div class="banner mt-0 " id="top">
         <div class="container-fluid">
             <div class="row background" style="background-image: url({{ asset('/img/banner2.jpg') }})">
@@ -622,7 +522,7 @@ https://templatemo.com/tm-586-scholar
                                         <h6>----------></h6>
                                     </li>
                                 </ul>
-                                <a id="daftar" href="daftar"><i class="fa fa-angle-right"></i></a>
+                                {{-- <a href="daftar"><i class="fa fa-angle-right"></i></a> --}}
                             </div>
                         </div>
                     </div>
@@ -760,6 +660,35 @@ https://templatemo.com/tm-586-scholar
             </div>
         </div>
 
+        {{-- <div class="container to-registration" style="height: 80vh" id="daftar">
+            <div class="col-xxl-8 px-4 py-5">
+                <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                    <div class="col-10 col-sm-8 col-lg-6">
+                        <img src="bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
+                            width="700" height="500" loading="lazy">
+                    </div>
+                    <div class="col-lg-6">
+                        <h1 class="display-5 fw-bold lh-1 mb-3">Responsive left-aligned hero with image</h1>
+                        <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap,
+                            the world’s most popular front-end open source toolkit, featuring Sass variables and mixins,
+                            responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
+                            <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="container to-registration" style="height: 80vh" id="daftar">
+            <div class="row d-flex justify-content-center">
+                <div class="col-5 mx-2"></div>
+                <div class="col-5 mx-2"></div>
+            </div>
+
+        </div> --}}
+
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -769,8 +698,7 @@ https://templatemo.com/tm-586-scholar
                     <div class="modal-header">
                         <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #F08A5D">Info Pembayaran
                         </h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                            aria-label="Close"></button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <div class="table-responsive">
@@ -831,8 +759,7 @@ https://templatemo.com/tm-586-scholar
                             Kontak : <a href="http://wa.me/6285280009949" target="_blank"
                                 rel="noopener noreferrer">085280009949
                                 (putra)</a> -
-                            <a href="http://wa.me/6285280009930" target="_blank"
-                                rel="noopener noreferrer">085280009930
+                            <a href="http://wa.me/6285280009930" target="_blank" rel="noopener noreferrer">085280009930
                                 (putri)</a></a>
                         </span>
                     </div>
@@ -865,95 +792,4 @@ https://templatemo.com/tm-586-scholar
             </div>
         </div>
     </div> --}}
-
-
-    <footer>
-        <div class="container">
-            <div class="col-lg-12">
-                <p>Dibuat dengan &hearts; oleh KGS Devnet. &nbsp;&nbsp;&nbsp; Kontak : <a
-                        href="http://wa.me/6285280009949" target="_blank" rel="noopener noreferrer">085280009949
-                        (putra)</a> -
-                    <a href="http://wa.me/6285280009930" target="_blank" rel="noopener noreferrer">085280009930
-                        (putri)</a></a>
-                </p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    @if (session('failed'))
-        <script>
-            Swal.fire({
-                position: 'top-end',
-                icon: 'error',
-                title: 'Gagal Login!',
-                showConfirmButton: false,
-                timer: 3000
-            })
-        </script>
-    @endif
-    {{-- @if (session('id'))
-        <script>
-            alert("Berhasil login");
-        </script>
-    @endif --}}
-
-    <!-- Modal -->
-    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-
-                <div class="modal-body">
-                    <h4 class="text-center mb-5">Login</h4>
-                    <form class="mx-1 mx-md-4" action="{{ route('login') }}" method="POST">
-                        @csrf
-                        <div class="d-flex flex-row align-items-center mb-4">
-                            <i class="fas fa-file fa-lg me-3 fa-fw"></i>
-                            <div class="form-outline flex-fill mb-0">
-                                <input value="{{ old('no_regis') }}" required name="no_regis" type="text"
-                                    class=" form-control" id="floatingInput" placeholder="Nomor Pendaftaran">
-                                @error('no_regis')
-                                    <div class="alert alert-danger">{{ $message }}</div>
-                                @enderror
-                            </div>
-                        </div>
-                        <div class="d-flex flex-row align-items-center mb-4">
-                            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                            <div class="form-outline flex-fill mb-0">
-                                <input value="{{ old('password') }}" required name="password" type="password"
-                                    class=" form-control" id="floatingInput" placeholder="Password">
-                                @error('password')
-                                    <div class="alert alert-danger">{{ $message }}</div>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                            <button type="submit" class="btn"
-                                style="background:#146C94;color:#fff;">Login</button>
-                        </div>
-                    </form>
-                    <div>Belum punya akun? Daftar <a href="{{ url('daftar') }}">Disini</a> </div>
-                    <div>Lupa Password? Klik <a href="{{ url('forgot') }}">Disini</a> </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- Scripts -->
-    <!-- Bootstrap core JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-    </script>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/isotope.min.js"></script>
-    <script src="assets/js/owl-carousel.js"></script>
-    <script src=" assets/js/counter.js"></script>
-    <script src="assets/js/custom.js"></script>
-
-</body>
-
-</html>
+@endsection

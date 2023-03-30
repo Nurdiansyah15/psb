@@ -24,7 +24,7 @@ class DashboardController extends Controller
         $data = $response->json()['data'];
 
 
-        return view('dashboard-user.dashboard-user', [
+        return view('user-page.dashboard-user', [
             'data' => $data
         ]);
     }
@@ -199,7 +199,7 @@ class DashboardController extends Controller
         ])->get('https://sipon.kyaigalangsewu.net/api/v1/psb/register/' .  Crypt::decryptString($id));
         $data = $response->json()['data'];
 
-        return view('print-form.form', [
+        return view('user-page.print-form.form', [
             'data' => $data
         ]);
     }
