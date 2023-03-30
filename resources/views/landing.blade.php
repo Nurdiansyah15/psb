@@ -69,21 +69,23 @@ https://templatemo.com/tm-586-scholar
                             <li class="scroll-to-section"><a href="#ekstra">Ekstra</a></li>
                             <li class="scroll-to-section"><a href="#kuota">Kuota</a></li>
                             <li class="scroll-to-section"><a href="#flow">Alur</a></li>
-                            @if(session('id'))
-                            <li class="nav-item dropdown scroll-to-section">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    {{session('no_regis')}}
-                                  </a>
-                                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item scroll-to-section" href="/user">Profil</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item scroll-to-section" href="/logout">Logout</a></li>
-                                  </ul>
-                            </li>
-
+                            @if (session('id'))
+                                <li class="nav-item dropdown scroll-to-section">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        {{ session('no_regis') }}
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item scroll-to-section" href="/user">Profil</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item scroll-to-section" href="/logout">Logout</a></li>
+                                    </ul>
+                                </li>
                             @else
-                            <li class="scroll-to-section"><a href="#" data-bs-toggle="modal"
-                                    data-bs-target="#loginModal">Login</a></li>
+                                <li class="scroll-to-section"><a href="#" data-bs-toggle="modal"
+                                        data-bs-target="#loginModal">Login</a></li>
                             @endif
                         </ul>
                         <a class='menu-trigger'>
@@ -147,7 +149,8 @@ https://templatemo.com/tm-586-scholar
                     <div class="section-heading">
                         {{-- <h6>EKSTRA</h6> --}}
                         <h2>VIDEO PERKENALAN <i class="fa-brands fa-youtube"></i></h2>
-                        <iframe style="border: dashed 2px #146C94;padding:5px" width="850" height="500" src="https://www.youtube.com/embed/FXc8zE2Hr6Q">
+                        <iframe style="border: dashed 2px #146C94;padding:5px" width="850" height="500"
+                            src="https://www.youtube.com/embed/FXc8zE2Hr6Q">
                         </iframe>
                     </div>
                 </div>

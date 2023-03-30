@@ -16,7 +16,7 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $id = 2;
+        $id = session('id');
         $response = Http::withHeaders([
             'X-API-KEY' => config('app.api_key'),
             'Accept' => 'application/json'
