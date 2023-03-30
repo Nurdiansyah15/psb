@@ -150,7 +150,7 @@
                 icon: 'error',
                 title: 'Gagal Login!',
                 showConfirmButton: false,
-                timer: 6000
+                timer: 3000
             })
         </script>
     @endif
@@ -161,7 +161,7 @@
                 icon: 'success',
                 title: 'Berhasil Login!',
                 showConfirmButton: false,
-                timer: 6000
+                timer: 3000
             })
         </script>
     @endif
@@ -172,7 +172,7 @@
                 icon: 'success',
                 title: 'Berhasil Logout!',
                 showConfirmButton: false,
-                timer: 6000
+                timer: 3000
             })
         </script>
     @endif

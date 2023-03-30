@@ -8,34 +8,44 @@
     $akhir=$data['end_period'];
 
     $today=date('Y-m-d');
-
+// $today='2023-12-28'
 ?>
 
 
 @if ($today<$awal)
-<div style="margin-top:15%;margin-bottom:15%">
-    <h3>Perhatian !</h3>
-    <p>Maaf, pendaftaran Gelombang ini belum dibuka</p>
+<div class="d-flex" style="margin-top:100px">
+    <div class="container-fluid">
+        <section class="vh-100">
+            <div class=" container h-50 mt-5">
+                <h3>Perhatian !</h3>
+                <p>Maaf, pendaftaran Gelombang ini belum dibuka</p>
+            </div>
+        </section>
+    </div>
 </div>
 @endif
 @if ($today>$akhir)
-<div style="margin-top:15%;margin-bottom:15%">
-    <h3>Perhatian !</h3>
-    <p>Maaf, pendaftaran Gelombang ini sudah ditutup, nantikan gelombang berikutnya</p>
+<div class="d-flex" style="margin-top:100px">
+    <div class="container-fluid">
+        <section class="vh-100">
+            <div class=" container h-50 mt-5">
+                <h3>Perhatian !</h3>
+                <p>Maaf, pendaftaran Gelombang ini sudah ditutup, nantikan gelombang berikutnya</p>
+            </div>
+        </section>
+    </div>
 </div>
 @endif
-{{-- <h3>Perhatian !!!</h3>
-<p>Maaf, Kuota yang anda pilih sudah penuh!!!!</p>
-<p>Nantikan gelombang selanjutnya!!!!</p> --}}
+
 
 @if ($today>=$awal && $today<=$akhir)
-<h3>Pendaftaran Santri Tahun {{$nama}}</h3>
-    <div class="d-flex">
-        <div class="container-fluid">
-            <section class="vh-100 ">
-                <div class=" container h-50 mt-5">
-                    <div class="row d-flex justify-content-center align-items-center h-100">
-                        <div class="col-lg-12 col-xl-11">
+<div class="d-flex" style="margin-top:50px;">
+    <div class="container-fluid">
+        <section class="vh-100 ">
+            <div class=" container h-50 mt-5">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-lg-12 col-xl-11">
+                            <h3 style="margin-bottom:30px;">Pendaftaran Santri Tahun {{$nama}}</h3>
                             <div class="card text-black">
                                 <div class="card-header" style="background:#146C94;color:#fff;">
                                     Step 1
@@ -65,7 +75,7 @@
                                                         <option value="Tahfidh">Tahfidh</option>
                                                     </select>
                                                 </div>
-                                                <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                                                <div class="d-flex justify-content-center mx-4 mb-lg-4">
                                                     <button type="submit"
                                                         class="btn" style="background:#146C94;color:#fff;">Cek</button>
                                                 </div>
