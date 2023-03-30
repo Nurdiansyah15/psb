@@ -78,7 +78,6 @@ https://templatemo.com/tm-586-scholar
 
                                         <ul class="dropdown-menu text-center p-0" style="background-color:#146C94">
                                             <li class="p-0"><a class="dropdown-item "  href="/user">Profil</a>
-                                               
                                             </li>
 
                                             <li class="p-0"><a class="dropdown-item "  href="/logout">Logout</a></li>
