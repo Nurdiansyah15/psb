@@ -57,7 +57,8 @@
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a href="/" class="logo">
-                            <p id="psb">Penerimaan Santri Baru</p>
+                            <p class="psb-f" id="psb">Penerimaan Santri Baru</p>
+                            <p class="psb">PSB</p>
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->

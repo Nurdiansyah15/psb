@@ -9,6 +9,25 @@
     display: flex;
     align-items: center;
 }
+
+.psb{
+display:none;
+}
+
+.psb-f{
+    display:inline-block;
+}
+
+@media only screen and (max-width: 765px) {
+    .psb{
+        display:inline-block;
+        }
+
+        .psb-f{
+            display:none;
+        }
+  }
+
 .logo p {
     color: white;
     font-size: 20px;
