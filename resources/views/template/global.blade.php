@@ -153,7 +153,7 @@
                 icon: 'error',
                 title: session('data-failed'),
                 showConfirmButton: false,
-                timer: 6000
+                timer: 3000
             })
         </script>
     @endif
@@ -164,7 +164,7 @@
                 icon: 'success',
                 title: session('data-success'),
                 showConfirmButton: false,
-                timer: 6000
+                timer: 3000
             })
         </script>
     @endif
@@ -176,7 +176,7 @@
                 icon: 'warning',
                 title: 'Berhasil Logout!',
                 showConfirmButton: false,
-                timer: 6000
+                timer: 3000
             })
         </script>
     @endif
