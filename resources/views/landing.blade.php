@@ -866,6 +866,7 @@ https://templatemo.com/tm-586-scholar
             alert("Berhasil login");
         </script>
     @endif
+
     <!-- Modal -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">

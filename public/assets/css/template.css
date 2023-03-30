@@ -1724,6 +1724,10 @@ Footer Style
 ---------------------------------------------
 */
 
+.hide{
+    
+}
+
 footer {
     margin-top: 10px;
     position: absolute;
