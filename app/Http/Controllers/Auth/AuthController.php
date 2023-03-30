@@ -29,7 +29,8 @@ class AuthController extends Controller
             if($r['no_regis']==$request->no_regis && Hash::check($request->password,$r['password'] )){
 
                 $request->session()->put('id',$r['id']);
-                return redirect()->intended('/5');
+                $request->session()->put('no_regis',$r['no_regis']);
+                return redirect()->intended('/');
             }
         }
 
