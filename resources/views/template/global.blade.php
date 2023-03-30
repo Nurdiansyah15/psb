@@ -63,36 +63,41 @@ https://templatemo.com/tm-586-scholar
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li class="scroll-to-section"><a href="#top" class="active">Beranda</a></li>
-                            <li class="scroll-to-section"><a href="#visi">Visi/Misi</a></li>
-                            <li class="scroll-to-section"><a href="#courses">Program</a></li>
-                            <li class="scroll-to-section"><a href="#ekstra">Ekstra</a></li>
-                            <li class="scroll-to-section"><a href="#kuota">Kuota</a></li>
-                            <li class="scroll-to-section"><a href="#flow">Alur</a></li>
-                            @if (session('id'))
-                                <li class="dropdown">
-                                    <a class="btn dropdown-toggle" href="#" role="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                        {{ session('no_regis') }}
-                                    </a>
-
-                                    <ul class="dropdown-menu text-center p-0" style="background-color:#146C94">
-                                        <li class="p-0"><a class="dropdown-item " href="/user">Profil</a>
-
-                                        </li>
-
-                                        <li class="p-0"><a class="dropdown-item " href="/logout">Logout</a></li>
-                                    </ul>
-
-                                </li>
+                            @if (\Illuminate\Support\Facades\Request::url() != url('/'))
+                                <li class="scroll-to-section"><a href="/" class="active">Beranda</a></li>
                             @else
-                                <li class="scroll-to-section"><a href="#" data-bs-toggle="modal"
-                                        data-bs-target="#loginModal">Login</a></li>
-                            @endif
+                                <li class="scroll-to-section"><a href="#top" class="active">Beranda</a></li>
+                                <li class="scroll-to-section"><a href="#visi">Visi/Misi</a></li>
+                                <li class="scroll-to-section"><a href="#courses">Program</a></li>
+                                <li class="scroll-to-section"><a href="#ekstra">Ekstra</a></li>
+                                <li class="scroll-to-section"><a href="#kuota">Kuota</a></li>
+                                <li class="scroll-to-section"><a href="#flow">Alur</a></li>
+                                @if (session('id'))
+                                    <li class="dropdown">
+                                        <a class="btn dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            {{ session('no_regis') }}
+                                        </a>
+
+                                        <ul class="dropdown-menu text-center p-0" style="background-color:#146C94">
+                                            <li class="p-0"><a class="dropdown-item " href="/user">Profil</a>
+
+                                            </li>
+
+                                            <li class="p-0"><a class="dropdown-item " href="/logout">Logout</a>
+                                            </li>
+                                        </ul>
+
+                                    </li>
+                                @else
+                                    <li class="scroll-to-section"><a href="#" data-bs-toggle="modal"
+                                            data-bs-target="#loginModal">Login</a></li>
+                                @endif
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
                         </a>
+                        @endif
                         <!-- ***** Menu End ***** -->
                     </nav>
                 </div>

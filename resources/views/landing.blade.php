@@ -540,7 +540,7 @@
                                 <ul>
                                     <li>
                                         <span class="category">online</span>
-                                        <h4>Verifikasi Berkas</h4>
+                                        <h4>Verifikasi Berkas (Admin)</h4>
                                     </li>
                                     <li>
                                         <span>Tanggal:</span>
