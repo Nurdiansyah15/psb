@@ -1,4 +1,4 @@
-@extends("template.user")
+@extends("template.global")
 @section("content")
 <div class="text-center ">
 <?php

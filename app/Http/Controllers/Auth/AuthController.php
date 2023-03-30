@@ -24,17 +24,17 @@ class AuthController extends Controller
             'X-API-KEY' => config('app.api_key'),
             'Accept' => 'application/json'
         ])->get('https://sipon.kyaigalangsewu.net/api/v1/psb/register');
-        foreach($pendaftar['data'] as $row =>$r){
+        foreach ($pendaftar['data'] as $row => $r) {
 
-            if($r['no_regis']==$request->no_regis && Hash::check($request->password,$r['password'] )){
+            if ($r['no_regis'] == $request->no_regis && Hash::check($request->password, $r['password'])) {
 
-                $request->session()->put('id',$r['id']);
-                $request->session()->put('no_regis',$r['no_regis']);
-                return redirect()->intended('/');
+                $request->session()->put('id', $r['id']);
+                $request->session()->put('no_regis', $r['no_regis']);
+                return redirect()->intended('/')->with('success', 'Login berhasil');
             }
         }
 
-        return back()->with('failed' , 'Login Failed');
+        return back()->with('failed', 'Login Failed');
     }
     public function logout(Request $request)
     {

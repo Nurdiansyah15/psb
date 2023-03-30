@@ -13,7 +13,7 @@ class ForgotController extends Controller
      */
     public function index()
     {
-        return view('forgotpassword.index');
+        return view('user-page.forgotpassword.index');
     }
 
     /**

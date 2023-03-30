@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Page;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Crypt;
 
 class RegisterController extends Controller
 {
@@ -92,7 +93,8 @@ class RegisterController extends Controller
             'X-API-KEY' => 'siponapikey',
         ])->post('http://sipon.kyaigalangsewu.net/api/v1/psb/register',$request->all());
 
-        $url="/daftar/".$response->json()['data']['id'];
+        $id=$response->json()['data']['id'];
+        $url="/daftar/".Crypt::encryptString($id);
         if(@$response['message']=='Success'){
             return redirect($url)->with('status', 'Berhasil melakukan pendaftaran');
         }else{
@@ -109,11 +111,10 @@ class RegisterController extends Controller
         $response = Http::withHeaders([
             'Accept' => 'aplication/json',
             'X-API-KEY' => 'siponapikey',
-        ])->get('http://sipon.kyaigalangsewu.net/api/v1/psb/register');
+        ])->get('http://sipon.kyaigalangsewu.net/api/v1/psb/register/'.Crypt::decryptString($id));
 
         return view('register.endregister',[
             "data"=>$response['data'],
-            "id"=>$id,
 
         ]);
     }
