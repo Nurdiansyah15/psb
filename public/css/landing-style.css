@@ -42,7 +42,7 @@
 
 .title-ponpes p {
     color: white;
-    line-height:1;
+    line-height: 1;
     font-size: 50px;
     font-weight: 700;
     text-shadow: 2px 2px 5px #0000006c;
@@ -71,3 +71,15 @@
     font-size: 20px;
 }
 /* footer */
+
+.to-registration .banner-img {
+    border-radius: 10px;
+}
+.button-daftar .main-button a {
+    background: #146c94;
+    color: white;
+}
+.button-daftar .main-button a:hover {
+    background: white;
+    color: #146c94;
+}
