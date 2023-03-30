@@ -1,7 +1,7 @@
 @extends('template.global')
 @section('content')
     <section class="content">
-        <div class="container">
+        <div class="container" style="margin-bottom: 350px">
             @if (session()->has('success'))
                 <div class="col-10 mx-auto alert alert-success" role="alert">
                     {{ session('success') }}
@@ -16,8 +16,8 @@
                 <div class="col-lg-4 left-section">
                     <div class="row short-profile">
                         <div class="col-3 photo-profile">
-                            <div id="edit-button" class="btn edit-button"><i class="fa-regular fa-pen-to-square"></i>
-                            </div>
+                            <a href="#" onclick="return func(0)" id="edit-button" class= "edit-button"><i class="fa-regular fa-pen-to-square"></i>
+                            </a>
                             <img src="storage/uploads/photo/{{ isset($data['path_photo']) ? $data['path_photo'] : 'user-icon.png' }}"
                                 class="img-fluid" alt="pp">
                         </div>
@@ -539,7 +539,7 @@
                                         Scan Surat Pernyataan, KTP, dan KK ( Dalam 1 dokumen PDF )
                                     </div>
                                     <div class="content-item">
-                                        <input required name="path_doc" class="form-control" type="file"
+                                        <input required name="path_doc" class="form-control inp" type="file"
                                             id="formFile">
                                     </div>
                                     <button type="submit" class="my-3 btn btn-success">Simpan</button>
@@ -598,7 +598,7 @@
                                         Bukti Pembayaran
                                     </div>
                                     <div class="content-item">
-                                        <input required name="path_bill" class="form-control" type="file"
+                                        <input required name="path_bill" class="form-control inp" type="file"
                                             id="formFile">
                                     </div>
                                     <button type="submit" class="my-3 btn btn-success">Simpan</button>
@@ -655,7 +655,7 @@
                                 <form action="/photo/{{ $data['id'] }}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <div class="content-item">
-                                        <input name="path_photo" class="form-control" type="file" id="formFile"
+                                        <input name="path_photo" class="form-control inp" type="file" id="formFile"
                                             required>
                                     </div>
                                     <button type="submit" class="my-3 btn btn-success">Simpan</button>
