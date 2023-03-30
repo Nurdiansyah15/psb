@@ -466,7 +466,7 @@ Header Style
     display: block;
     padding-left: 20px;
     padding-right: 20px;
-    border-radius: 20px;
+    border-radius: 8px;
     font-weight: 300;
     font-size: 14px;
     height: 40px;
@@ -493,7 +493,7 @@ Header Style
 }
 
 .background-header .main-nav .nav li {
-    height: 80px;
+    //height: 80px;
     line-height: 80px;
 }
 
@@ -1723,6 +1723,10 @@ Contact Style
 Footer Style
 ---------------------------------------------
 */
+
+.hide{
+
+}
 
 footer {
     margin-top: 10px;
