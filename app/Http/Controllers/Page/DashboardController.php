@@ -72,11 +72,10 @@ class DashboardController extends Controller
             'Accept' => 'application/json'
         ])->put('https://sipon.kyaigalangsewu.net/api/v1/psb/register/' . $id, $request->all());
         $data = $response->status();
-
         if ($data !== 201) {
-            return back()->with('failed', 'Gagal memperbaharui data. Silakan periksa kembali isian anda.');
+            return back()->with('data-failed', 'Gagal memperbaharui data. Silakan periksa kembali isian anda.');
         }
-        return back()->with('success', 'Data berhasil diperbaharui!');
+        return back()->with('data-success', 'Data berhasil diperbaharui!');
     }
 
     /**
@@ -100,6 +99,10 @@ class DashboardController extends Controller
 
         $file = $request->file('path_photo');
         $ektensi = $file->extension();
+        if ($ektensi != 'png' && $ektensi != 'jpg') {
+            return redirect('/user')->with('data-failed', 'Gagal memperbaharui foto, ekstensi file tidak benar.');
+        }
+
         $nameFIle = $data['no_regis'] . '_photo'  . '.' . $ektensi;
 
         Storage::putFileAs('public/uploads/photo', $request->file('path_photo'), $nameFIle);
@@ -115,9 +118,9 @@ class DashboardController extends Controller
 
 
         if ($data !== 201) {
-            return redirect('/user')->with('failed', 'Gagal memperbaharui foto.');
+            return redirect('/user')->with('data-failed', 'Gagal memperbaharui foto.');
         }
-        return  redirect('/user')->with('success', 'Foto berhasil diperbaharui!');
+        return  redirect('/user')->with('data-success', 'Foto berhasil diperbaharui!');
     }
     /**
      * upload the specified resource from storage.
@@ -134,7 +137,7 @@ class DashboardController extends Controller
         $ektensi = $file->extension();
 
         if ($ektensi != 'pdf') {
-            return redirect('/user')->with('failed', 'Gagal memperbaharui berkas, ekstensi file tidak benar.');
+            return redirect('/user')->with('data-failed', 'Gagal memperbaharui berkas, ekstensi file tidak benar.');
         }
 
         $nameFIle = $data['no_regis'] . '_doc'  . '.' . $ektensi;
@@ -152,9 +155,9 @@ class DashboardController extends Controller
 
 
         if ($data !== 201) {
-            return redirect('/user')->with('failed', 'Gagal memperbaharui berkas.');
+            return redirect('/user')->with('data-failed', 'Gagal memperbaharui berkas.');
         }
-        return  redirect('/user')->with('success', 'Berkas berhasil diperbaharui!');
+        return  redirect('/user')->with('data-success', 'Berkas berhasil diperbaharui!');
     }
     /**
      * upload the specified resource from storage.
@@ -183,9 +186,9 @@ class DashboardController extends Controller
         $data = $response2->status();
 
         if ($data !== 201) {
-            return redirect('/user')->with('failed', 'Gagal memperbaharui dokumen.');
+            return redirect('/user')->with('data-failed', 'Gagal memperbaharui dokumen.');
         }
-        return  redirect('/user')->with('success', 'Dokumen berhasil diperbaharui!');
+        return  redirect('/user')->with('data-success', 'Dokumen berhasil diperbaharui!');
     }
     /**
      * upload the specified resource from storage.
@@ -203,7 +206,7 @@ class DashboardController extends Controller
 
 
         if ($ektensi != 'pdf') {
-            return redirect('/user')->with('failed', 'Gagal memperbaharui berkas, ekstensi file tidak benar.');
+            return redirect('/user')->with('data-failed', 'Gagal memperbaharui berkas, ekstensi file tidak benar.');
         }
 
         $nameFIle = $data['no_regis'] . '_mutasi'  . '.' . $ektensi;
@@ -222,9 +225,9 @@ class DashboardController extends Controller
         $data = $response2->status();
 
         if ($data !== 201) {
-            return redirect('/user')->with('failed', 'Gagal memperbaharui surat mutasi.');
+            return redirect('/user')->with('data-failed', 'Gagal memperbaharui surat mutasi.');
         }
-        return  redirect('/user')->with('success', 'Dokumen emis diperbaharui!');
+        return  redirect('/user')->with('data-success', 'Dokumen emis diperbaharui!');
     }
 
     /**

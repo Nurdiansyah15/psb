@@ -82,4 +82,5 @@
 .button-daftar .main-button a:hover {
     background: white;
     color: #146c94;
+    border: solid 1px #146c94;
 }

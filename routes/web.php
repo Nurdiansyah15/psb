@@ -65,6 +65,7 @@ Route::group(['middleware' => ['user']], function () {
     Route::post('/user/{id}', [DashboardController::class, 'update']);
     Route::post('/photo/{id}', [DashboardController::class, 'photo']);
     Route::post('/doc/{id}', [DashboardController::class, 'doc']);
+    Route::post('/bill/{id}', [DashboardController::class, 'bill']);
     Route::post('/mutasi/{id}', [DashboardController::class, 'mutasi']);
     Route::get('/print/{id}', [DashboardController::class, 'print']);
 });

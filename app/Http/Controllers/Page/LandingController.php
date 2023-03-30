@@ -55,10 +55,22 @@ class LandingController extends Controller
             'putri' => $jmlTahfidhPutri + $jmlKitabPutri
         );
 
+        if (session('id') != null) {
+            $id = session('id');
+            $response = Http::withHeaders([
+                'X-API-KEY' => config('app.api_key'),
+                'Accept' => 'application/json'
+            ])->get('https://sipon.kyaigalangsewu.net/api/v1/psb/register/' . $id);
+            $data = $response->json()['data'];
+        } else {
+            $data = null;
+        }
+
 
         return view('landing', [
             'setting' => $setting,
-            'count' => $count
+            'count' => $count,
+            'data' => $data
         ]);
     }
 

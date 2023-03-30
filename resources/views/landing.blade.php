@@ -660,30 +660,7 @@
             </div>
         </div>
 
-        <div class="container to-registration" style="height: 80vh" id="daftar">
-            <div class="col-xxl-12 px-4 py-5">
-                <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-                    <div class="col-10 col-sm-8 col-lg-6">
-                        <img src="{{ asset('img/banner3.jpg') }}" class="banner-img d-block mx-lg-auto img-fluid"
-                            alt="Bootstrap Themes" width="700" height="500" loading="lazy">
-                    </div>
-                    <div class="col-lg-6">
-                        <h1 class="display-5 fw-bold lh-1 mb-3">Segera Daftarkan Dirimu, Menjadi Bagian Dari Kami</h1>
-                        <p class="lead"><b>Di jaman sekarang mau mondok itu adalah nikmat yang sangat besar. Maka, perlu
-                                untuk disyukuri.</b> <br>
-                            Bapak Ust. Muhammad Ulin Nuha ABA, M.Si.(Pengasuh Ponpes)</p>
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-start button-daftar">
-                            <div class="buttons mt-2">
-                                <div class="main-button">
-                                    <a href="/daftar">Daftar Sekarang</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-        </div>
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -762,6 +739,30 @@
                         <button type="button" class="btn" style="color:white;background-color: #F08A5D"
                             data-bs-dismiss="modal">Close</button>
 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container to-registration" style="height: 80vh" id="daftar">
+        <div class="col-xxl-12 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <img src="{{ asset('img/banner3.jpg') }}" class="banner-img d-block mx-lg-auto img-fluid"
+                        alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+                </div>
+                <div class="col-lg-6">
+                    <h1 class="display-5 fw-bold lh-1 mb-3">Segera Daftarkan Dirimu, Menjadi Bagian Dari Kami</h1>
+                    <p class="lead"><b>Di jaman sekarang mau mondok itu adalah nikmat yang sangat besar. Maka, perlu
+                            untuk disyukuri.</b> <br>
+                        Bapak Ust. Muhammad Ulin Nuha ABA, M.Si.(Pengasuh Ponpes)</p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start button-daftar">
+                        <div class="buttons mt-2">
+                            <div class="main-button">
+                                <a href="/daftar">Daftar Sekarang</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

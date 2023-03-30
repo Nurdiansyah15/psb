@@ -2,21 +2,22 @@
 @section('content')
     <section class="content">
         <div class="container" style="margin-bottom: 350px">
-            @if (session()->has('success'))
+            @if (session()->has('data-success'))
                 <div class="col-10 mx-auto alert alert-success" role="alert">
-                    {{ session('success') }}
+                    {{ session('data-success') }}
                 </div>
             @endif
-            @if (session()->has('failed'))
+            @if (session()->has('data-failed'))
                 <div class="col-10 mx-auto alert alert-danger" role="alert">
-                    {{ session('failed') }}
+                    {{ session('data-failed') }}
                 </div>
             @endif
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-4 left-section">
                     <div class="row short-profile">
                         <div class="col-3 photo-profile">
-                            <a href="#" onclick="return func(0)" id="edit-button" class= "edit-button"><i class="fa-regular fa-pen-to-square"></i>
+                            <a href="#" onclick="return func(0)" id="edit-button" class="edit-button"><i
+                                    class="fa-regular fa-pen-to-square"></i>
                             </a>
                             <img src="storage/uploads/photo/{{ isset($data['path_photo']) ? $data['path_photo'] : 'user-icon.png' }}"
                                 class="img-fluid" alt="pp">
@@ -606,7 +607,7 @@
                             </form>
                             @if ($data['path_bill'] !== null)
                                 <iframe id="iframepdf" style="width: 100%; height:100vh"
-                                    src="storage/uploads/doc/{{ $data['path_bill'] }}"></iframe>
+                                    src="storage/uploads/bill/{{ $data['path_bill'] }}"></iframe>
                             @endif
                         </div>
                     </div>
@@ -650,7 +651,7 @@
                             </div>
                             <div class="item-profile">
                                 <div class="title-item">
-                                    Upload Foto
+                                    Upload Foto (Harus PNG atau JPG)
                                 </div>
                                 <form action="/photo/{{ $data['id'] }}" method="POST" enctype="multipart/form-data">
                                     @csrf

@@ -67,13 +67,9 @@
                                         <div class="photo-profile dropdown-toggle" style="height: 40px" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
                                             <img src="storage/uploads/photo/{{ isset($data['path_photo']) ? $data['path_photo'] : 'user-icon.png' }}"
-                                                class="img-fluid nav-img" alt="pp" style="width: 40px; height: 40px">
+                                                class="img-fluid nav-img" alt="pp"
+                                                style="width: 40px; height: 40px">
                                         </div>
-                                        {{-- <a class="btn dropdown-toggle" href="#" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            {{ session('no_regis') }}
-                                        </a> --}}
-
                                         <ul class="dropdown-menu text-center p-0" style="background-color:#146C94">
                                             <li class="p-0"><a class="dropdown-item " href="/user">Profil</a>
 
@@ -92,12 +88,19 @@
                                 <li class="scroll-to-section"><a href="#ekstra">Ekstra</a></li>
                                 <li class="scroll-to-section"><a href="#kuota">Kuota</a></li>
                                 <li class="scroll-to-section"><a href="#flow">Alur</a></li>
+                                <li class="scroll-to-section"><a href="#daftar">Daftar</a></li>
                                 @if (session('id'))
                                     <li class="dropdown">
-                                        <a class="btn dropdown-toggle" href="#" role="button"
+                                        {{-- <a class="btn dropdown-toggle" href="#" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
                                             {{ session('no_regis') }}
-                                        </a>
+                                        </a> --}}
+                                        <div class="photo-profile dropdown-toggle" style="height: 40px" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <img src="storage/uploads/photo/{{ isset($data['path_photo']) ? $data['path_photo'] : 'user-icon.png' }}"
+                                                class="img-fluid nav-img" alt="pp"
+                                                style="width: 40px; height: 40px">
+                                        </div>
 
                                         <ul class="dropdown-menu text-center p-0" style="background-color:#146C94">
                                             <li class="p-0"><a class="dropdown-item " href="/user">Profil</a>
@@ -143,18 +146,41 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
-    @if (session()->has('failed'))
+    @if (session()->has('data-failed'))
         <script>
             Swal.fire({
                 position: 'center',
                 icon: 'error',
-                title: 'Gagal Login!',
+                title: session('data-failed'),
                 showConfirmButton: false,
                 timer: 6000
             })
         </script>
     @endif
-    @if (session()->has('login'))
+    @if (session()->has('data-success'))
+        <script>
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: session('data-success'),
+                showConfirmButton: false,
+                timer: 6000
+            })
+        </script>
+    @endif
+
+    @if (session()->has('logout-success'))
+        <script>
+            Swal.fire({
+                position: 'center',
+                icon: 'warning',
+                title: 'Berhasil Logout!',
+                showConfirmButton: false,
+                timer: 6000
+            })
+        </script>
+    @endif
+    @if (session()->has('login-success'))
         <script>
             Swal.fire({
                 position: 'center',
@@ -165,12 +191,12 @@
             })
         </script>
     @endif
-    @if (session()->has('logout'))
+    @if (session()->has('login-failed'))
         <script>
             Swal.fire({
                 position: 'center',
-                icon: 'success',
-                title: 'Berhasil Logout!',
+                icon: 'error',
+                title: 'Gagal Login!',
                 showConfirmButton: false,
                 timer: 6000
             })
