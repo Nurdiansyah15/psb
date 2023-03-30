@@ -10,6 +10,8 @@
 
     <title>PSB | PP. Kyai Galang Sewu</title>
 
+    <link rel="shortcut icon" href="{{ asset('img/logo.png') }}">
+
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -88,7 +90,9 @@
                                 <li class="scroll-to-section"><a href="#ekstra">Ekstra</a></li>
                                 <li class="scroll-to-section"><a href="#kuota">Kuota</a></li>
                                 <li class="scroll-to-section"><a href="#flow">Alur</a></li>
-                                <li class="scroll-to-section"><a href="#daftar">Daftar</a></li>
+                                @if (session('id') === null)
+                                    <li class="scroll-to-section"><a href="#daftar">Daftar</a></li>
+                                @endif
                                 @if (session('id'))
                                     <li class="dropdown">
                                         {{-- <a class="btn dropdown-toggle" href="#" role="button"

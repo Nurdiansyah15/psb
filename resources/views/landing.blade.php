@@ -15,7 +15,9 @@
                         </div>
                         <div class="buttons mt-2">
                             <div class="main-button">
-                                <a href="#daftar">Pendaftaran</a>
+                                @if (session('id') === null)
+                                    <a href="#daftar">Pendaftaran</a>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -760,7 +762,9 @@
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start button-daftar">
                         <div class="buttons mt-2">
                             <div class="main-button">
-                                <a href="/daftar">Daftar Sekarang</a>
+                                @if (session('id') === null)
+                                    <a href="/daftar">Daftar Sekarang</a>
+                                @endif
                             </div>
                         </div>
                     </div>
