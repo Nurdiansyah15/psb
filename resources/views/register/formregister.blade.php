@@ -20,13 +20,13 @@
 
 
         @if ($next == 'y')
-        <div class="d-flex" style="margin-top:50px;">
+        <div class="d-flex">
             <div class="container-fluid">
                 <section class="vh-100 ">
                     <div class=" container h-50 mt-5 vh-100">
                         <div class="row d-flex justify-content-center align-items-center h-100">
                             <div class="col-lg-12 col-xl-11">
-                                    <h3 style="margin-bottom:30px;">Pendaftaran Santri Tahun {{ $nama }}</h3>
+                                    <h3 style="margin-top:40px">Pendaftaran Santri Tahun {{ $nama }}</h3>
                                     <div class="card text-black">
                                         <div class="card-header" style="background:#146C94;color:#fff;">
                                             Step 2
@@ -34,7 +34,7 @@
                                         <div class="card-body ">
                                             <div class="row justify-content-center">
                                                 <div class="col-md-10 col-lg-12 col-xl-5 order-2 order-lg-1">
-                                                    <p class="text-center h5 fw-bold mt-3 mx-1 mx-md-4">Daftar</p>
+                                                    <p class="text-center h5 fw-bold mx-1 mx-md-4">Daftar</p>
                                                     <form class="mx-1 mx-md-6" action="{{ route('daftar.store') }}"
                                                         method="POST">
                                                         @csrf
@@ -100,7 +100,7 @@
                                                             </div>
                                                         </div>
 
-                                                        <div class="form-check d-flex justify-content-center mb-5">
+                                                        <div class="form-check d-flex justify-content-center ">
                                                             <input required class="form-check-input me-2" type="checkbox"
                                                                 value="" id="form2Example3c" />
                                                             <label class="form-check-label" for="form2Example3c">
