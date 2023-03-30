@@ -69,21 +69,25 @@ https://templatemo.com/tm-586-scholar
                             <li class="scroll-to-section"><a href="#ekstra">Ekstra</a></li>
                             <li class="scroll-to-section"><a href="#kuota">Kuota</a></li>
                             <li class="scroll-to-section"><a href="#flow">Alur</a></li>
-                            @if(session('id'))
-                            <li class="nav-item dropdown scroll-to-section">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    {{session('no_regis')}}
-                                  </a>
-                                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item scroll-to-section" href="/user">Profil</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item scroll-to-section" href="/logout">Logout</a></li>
-                                  </ul>
-                            </li>
+                            @if (session('id'))
+                                <li class="dropdown">
+                                        <a class="btn dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            {{ session('no_regis') }}
+                                        </a>
 
+                                        <ul class="dropdown-menu text-center p-0" style="background-color:#146C94">
+                                            <li class="p-0"><a class="dropdown-item "  href="/user">Profil</a>
+                                               
+                                            </li>
+
+                                            <li class="p-0"><a class="dropdown-item "  href="/logout">Logout</a></li>
+                                        </ul>
+
+                                </li>
                             @else
-                            <li class="scroll-to-section"><a href="#" data-bs-toggle="modal"
-                                    data-bs-target="#loginModal">Login</a></li>
+                                <li class="scroll-to-section"><a href="#" data-bs-toggle="modal"
+                                        data-bs-target="#loginModal">Login</a></li>
                             @endif
                         </ul>
                         <a class='menu-trigger'>
@@ -95,6 +99,7 @@ https://templatemo.com/tm-586-scholar
             </div>
         </div>
     </header>
+
     <div class="banner mt-0 " id="top">
         <div class="container-fluid">
             <div class="row background" style="background-image: url({{ asset('/img/banner2.jpg') }})">
@@ -147,7 +152,8 @@ https://templatemo.com/tm-586-scholar
                     <div class="section-heading">
                         {{-- <h6>EKSTRA</h6> --}}
                         <h2>VIDEO PERKENALAN <i class="fa-brands fa-youtube"></i></h2>
-                        <iframe style="border: dashed 2px #146C94;padding:5px" width="850" height="500" src="https://www.youtube.com/embed/FXc8zE2Hr6Q">
+                        <iframe style="border: dashed 2px #146C94;padding:5px" width="850" height="500"
+                            src="https://www.youtube.com/embed/FXc8zE2Hr6Q">
                         </iframe>
                     </div>
                 </div>
@@ -892,6 +898,7 @@ https://templatemo.com/tm-586-scholar
             alert("Berhasil login");
         </script>
     @endif --}}
+
     <!-- Modal -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -937,6 +944,9 @@ https://templatemo.com/tm-586-scholar
 
     <!-- Scripts -->
     <!-- Bootstrap core JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/isotope.min.js"></script>
