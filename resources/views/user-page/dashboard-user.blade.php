@@ -1,7 +1,7 @@
 @extends('template.global')
 @section('content')
     <section class="content">
-        <div class="container">
+        <div class="container" style="margin-bottom: 350px">
             @if (session()->has('success'))
                 <div class="col-10 mx-auto alert alert-success" role="alert">
                     {{ session('success') }}
@@ -527,7 +527,7 @@
                                         Scan Surat Pernyataan, KTP, dan KK ( Dalam 1 dokumen PDF )
                                     </div>
                                     <div class="content-item">
-                                        <input required name="path_doc" class="form-control" type="file"
+                                        <input required name="path_doc" class="form-control inp" type="file"
                                             id="formFile">
                                     </div>
                                     <button type="submit" class="my-3 btn btn-success">Simpan</button>
@@ -557,7 +557,7 @@
                                         Bukti Pembayaran
                                     </div>
                                     <div class="content-item">
-                                        <input required name="path_bill" class="form-control" type="file"
+                                        <input required name="path_bill" class="form-control inp" type="file"
                                             id="formFile">
                                     </div>
                                     <button type="submit" class="my-3 btn btn-success">Simpan</button>
@@ -614,7 +614,7 @@
                                 <form action="/photo/{{ $data['id'] }}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <div class="content-item">
-                                        <input name="path_photo" class="form-control" type="file" id="formFile"
+                                        <input name="path_photo" class="form-control inp" type="file" id="formFile"
                                             required>
                                     </div>
                                     <button type="submit" class="my-3 btn btn-success">Simpan</button>

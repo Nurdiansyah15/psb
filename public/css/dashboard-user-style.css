@@ -123,7 +123,6 @@ section.content {
 .item-profile input {
     font-size: 14px;
     font-weight: 300;
-    height: 25px;
 }
 
 .edit-button {
@@ -139,6 +138,10 @@ section.content {
     padding-bottom: 3px;
     padding-right: 7px;
     padding-top: 3px;
+}
+
+.inp {
+    height: 35px;
 }
 
 .nav-img {
