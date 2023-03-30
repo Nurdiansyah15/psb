@@ -66,6 +66,7 @@ class DashboardController extends Controller
      */
     public function update(Request $request, string $id)
     {
+
         $response = Http::withHeaders([
             'X-API-KEY' => config('app.api_key'),
             'Accept' => 'application/json'
@@ -185,6 +186,45 @@ class DashboardController extends Controller
             return redirect('/user')->with('failed', 'Gagal memperbaharui dokumen.');
         }
         return  redirect('/user')->with('success', 'Dokumen berhasil diperbaharui!');
+    }
+    /**
+     * upload the specified resource from storage.
+     */
+    public function mutasi(Request $request, string $id)
+    {
+        $response = Http::withHeaders([
+            'X-API-KEY' => config('app.api_key'),
+            'Accept' => 'application/json'
+        ])->get('https://sipon.kyaigalangsewu.net/api/v1/psb/register/' . $id);
+        $data = $response->json()['data'];
+
+        $file = $request->file('path_mutasi_emis');
+        $ektensi = $file->extension();
+
+
+        if ($ektensi != 'pdf') {
+            return redirect('/user')->with('failed', 'Gagal memperbaharui berkas, ekstensi file tidak benar.');
+        }
+
+        $nameFIle = $data['no_regis'] . '_mutasi'  . '.' . $ektensi;
+
+        Storage::putFileAs('public/uploads/mutasi', $request->file('path_mutasi_emis'), $nameFIle);
+
+
+        $response2 = Http::withHeaders([
+            'X-API-KEY' => config('app.api_key'),
+            'Accept' => 'application/json'
+        ])->put('https://sipon.kyaigalangsewu.net/api/v1/psb/register/' . $id, [
+            'path_mutasi_emis' => $nameFIle,
+            'previous_pondok_name' => $request->previous_pondok_name,
+            'previous_pondok_address' => $request->previous_pondok_address,
+        ]);
+        $data = $response2->status();
+
+        if ($data !== 201) {
+            return redirect('/user')->with('failed', 'Gagal memperbaharui surat mutasi.');
+        }
+        return  redirect('/user')->with('success', 'Dokumen emis diperbaharui!');
     }
 
     /**

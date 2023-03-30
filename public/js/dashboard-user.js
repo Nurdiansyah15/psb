@@ -22,6 +22,8 @@ var kembali2 = document.querySelector("#kembali-edit-foto");
 var profileMenu = document.getElementById("profile-menu");
 var editPhoto = document.getElementById("edit-button");
 var editPhoto2 = document.getElementById("edit-photo");
+var mutasi = document.getElementById("mutasi");
+var mutasi2 = document.getElementById("mutasi-2");
 
 dataDiri.onclick = function () {
     dataDiri2.style.display = "block";
@@ -37,10 +39,20 @@ dataDiri.onclick = function () {
     kependudukan2.style.display = "none";
     pendidikan2.style.display = "none";
     orangTua2.style.display = "none";
+    mutasi2.style.display = "none";
 };
 dokumen.onclick = function () {
     dataDiri2.style.display = "none";
     dokumen2.style.display = "block";
+    pembayaran2.style.display = "none";
+    cetak2.style.display = "none";
+    editPhoto2.style.display = "none";
+    mutasi2.style.display = "none";
+};
+mutasi.onclick = function () {
+    dataDiri2.style.display = "none";
+    dokumen2.style.display = "none";
+    mutasi2.style.display = "block";
     pembayaran2.style.display = "none";
     cetak2.style.display = "none";
     editPhoto2.style.display = "none";
@@ -51,6 +63,7 @@ pembayaran.onclick = function () {
     pembayaran2.style.display = "block";
     cetak2.style.display = "none";
     editPhoto2.style.display = "none";
+    mutasi2.style.display = "none";
 };
 cetak.onclick = function () {
     dataDiri2.style.display = "none";
@@ -59,6 +72,7 @@ cetak.onclick = function () {
     cetak2.style.display = "block";
     dataDiri2.style.display = "none";
     editPhoto2.style.display = "none";
+    mutasi2.style.display = "none";
 };
 
 pribadi.onclick = function () {
@@ -122,6 +136,7 @@ editPhoto.onclick = function () {
     dokumen2.style.display = "none";
     pembayaran2.style.display = "none";
     cetak2.style.display = "none";
+    mutasi2.style.display = "none";
 };
 
 kembali2.onclick = function () {
@@ -130,6 +145,7 @@ kembali2.onclick = function () {
     dokumen2.style.display = "none";
     pembayaran2.style.display = "none";
     cetak2.style.display = "none";
+    mutasi2.style.display = "none";
 
     profileMenu.style.display = "block";
     pribadi2.style.display = "none";

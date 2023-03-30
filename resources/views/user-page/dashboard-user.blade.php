@@ -36,6 +36,9 @@
                         <div class="col-12 menu-link btn" id="data-diri">
                             <p>Data Diri</p>
                         </div>
+                        <div class="col-12 menu-link btn" id="mutasi">
+                            <p>Mutasi Emis <span class="badge bg-secondary mx-3">Bagi yang pernah mondok</span></p>
+                        </div>
                         <div class="col-12 menu-link btn" id="dokumen">
                             <p>Dokumen</p>
                         </div>
@@ -284,7 +287,8 @@
                                 </div>
                                 <div class="item-profile">
                                     <div class="title-item">
-                                        Nomor Kartu Indonesia Pintar ( KIP, 6 digit )
+                                        Nomor Kartu Indonesia Pintar ( KIP, 6 digit )<span
+                                            class="badge bg-secondary mx-3 mb-2">Bagi yang memiliki</span>
                                     </div>
                                     <div class="content-item">
                                         <input max="10" name="no_kip" type="text" class="form-control"
@@ -293,7 +297,8 @@
                                 </div>
                                 <div class="item-profile">
                                     <div class="title-item">
-                                        Nomor Kartu Keluarga Sejahtera ( KKS, 6 digit )
+                                        Nomor Kartu Keluarga Sejahtera ( KKS, 6 digit )<span
+                                            class="badge bg-secondary mx-3 mb-2">Bagi yang memiliki</span>
                                     </div>
                                     <div class="content-item">
                                         <input max="20" name="no_kks" type="text" class="form-control"
@@ -302,7 +307,8 @@
                                 </div>
                                 <div class="item-profile">
                                     <div class="title-item">
-                                        Nomor Program Keluarga Harapan ( PKH, 6 digit )
+                                        Nomor Program Keluarga Harapan ( PKH, 6 digit )<span
+                                            class="badge bg-secondary mx-3 mb-2">Bagi yang memiliki</span>
                                     </div>
                                     <div class="content-item">
                                         <input max="10" name="no_pkh" type="text" class="form-control"
@@ -453,7 +459,8 @@
                                 </div>
                                 <div class="item-profile">
                                     <div class="title-item">
-                                        Nama Wali
+                                        Nama Wali <span class="badge bg-secondary mx-3 mb-2">Bagi yang tinggal bersama
+                                            wali</span>
                                     </div>
                                     <div class="content-item">
                                         <input name="guardian" type="text" class="form-control"
@@ -462,7 +469,8 @@
                                 </div>
                                 <div class="item-profile">
                                     <div class="title-item">
-                                        Nomor Whatsapp / HP Wali
+                                        Nomor Whatsapp / HP Wali <span class="badge bg-secondary mx-3 mb-2">Bagi yang
+                                            tinggal bersama wali</span>
                                     </div>
                                     <div class="content-item">
                                         <input name="guardian_pn" type="text" class="form-control"
@@ -471,7 +479,8 @@
                                 </div>
                                 <div class="item-profile">
                                     <div class="title-item">
-                                        Nomor NIK Wali
+                                        Nomor NIK Wali <span class="badge bg-secondary mx-3 mb-2">Bagi yang tinggal bersama
+                                            wali</span>
                                     </div>
                                     <div class="content-item">
                                         <input name="guardian_nik" type="text" class="form-control"
@@ -480,7 +489,8 @@
                                 </div>
                                 <div class="item-profile">
                                     <div class="title-item">
-                                        Pekerjaan Wali
+                                        Pekerjaan Wali <span class="badge bg-secondary mx-3 mb-2">Bagi yang tinggal bersama
+                                            wali</span>
                                     </div>
                                     <div class="content-item">
                                         <input name="guardian_job" type="text" class="form-control"
@@ -489,7 +499,8 @@
                                 </div>
                                 <div class="item-profile">
                                     <div class="title-item">
-                                        Pendidikan Wali
+                                        Pendidikan Wali <span class="badge bg-secondary mx-3 mb-2">Bagi yang tinggal
+                                            bersama wali</span>
                                     </div>
                                     <div class="content-item">
                                         <input name="guardian_graduate" type="text" class="form-control"
@@ -498,7 +509,8 @@
                                 </div>
                                 <div class="item-profile">
                                     <div class="title-item">
-                                        Pendapatan Wali
+                                        Pendapatan Wali <span class="badge bg-secondary mx-3 mb-2">Bagi yang tinggal
+                                            bersama wali</span>
                                     </div>
                                     <div class="content-item">
                                         <input name="guardian_income" type="text" class="form-control"
@@ -538,6 +550,35 @@
                                     src="storage/uploads/doc/{{ $data['path_doc'] }}"></iframe>
                             @endif
 
+                        </div>
+                    </div>
+                    {{-- end content dokumen --}}
+                    {{-- content dokumen --}}
+                    <div class="row content-menu" id="mutasi-2">
+                        <div class="col-12 title">
+                            Mutasi Emis
+                        </div>
+                        <div class="col-12 self-profile">
+                            <div class="self-title">
+                                Masukan Surat Mutasi Emis
+                            </div>
+                            <form action="/mutasi/{{ $data['id'] }}" method="POST" enctype="multipart/form-data">
+                                @csrf
+                                <div class="item-profile">
+                                    <div class="title-item">
+                                        Surat Mutasi Emis (pdf)
+                                    </div>
+                                    <div class="content-item">
+                                        <input required name="path_mutasi_emis" class="form-control" type="file"
+                                            id="formFile">
+                                    </div>
+                                    <button type="submit" class="my-3 btn btn-success">Simpan</button>
+                                </div>
+                            </form>
+                            @if ($data['path_mutasi_emis'] !== null)
+                                <iframe id="iframepdf" style="width: 100%; height:100vh"
+                                    src="storage/uploads/mutasi/{{ $data['path_mutasi_emis'] }}"></iframe>
+                            @endif
                         </div>
                     </div>
                     {{-- end content dokumen --}}
