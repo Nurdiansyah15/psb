@@ -1,83 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-
-    <title>PSB | PP. Kyai Galang Sewu</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="    https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <link rel="stylesheet" href="assets/css/template.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="css/dashboard-user-style.css">
-    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-    <!--
-
-TemplateMo 586 Scholar
-
-https://templatemo.com/tm-586-scholar
-
--->
-</head>
-
-<body>
-
-    <!-- ***** Preloader Start ***** -->
-    <div id="js-preloader" class="js-preloader">
-        <div class="preloader-inner">
-            <span class="dot"></span>
-            <div class="dots">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </div>
-    <!-- ***** Preloader End ***** -->
-
-    <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky background-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="main-nav">
-                        <!-- ***** Logo Start ***** -->
-                        <a href="/" class="logo">
-                            <p id="psb">Penerimaan Santri Baru</p>
-                        </a>
-                        <!-- ***** Logo End ***** -->
-                        <!-- ***** Menu Start ***** -->
-                        <ul class="nav">
-                            <li class="scroll-to-section"><a href="#top" class="active">Beranda</a></li>
-                            <li class="scroll-to-section"><a href="#visi">Visi/Misi</a></li>
-                            <li class="scroll-to-section"><a href="#courses">Program</a></li>
-                            <li class="scroll-to-section"><a href="#ekstra">Ekstra</a></li>
-                            <li class="scroll-to-section"><a href="#kuota">Kuota</a></li>
-                            <li class="scroll-to-section"><a href="#flow">Alur</a></li>
-                            <li class="scroll-to-section"><a href="#" data-bs-toggle="modal"
-                                    data-bs-target="#loginModal">Login</a></li>
-                        </ul>
-                        <a class='menu-trigger'>
-                            <span>Menu</span>
-                        </a>
-                        <!-- ***** Menu End ***** -->
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
-
+@extends('template.global')
+@section('content')
     <section class="content">
         <div class="container">
             @if (session()->has('success'))
@@ -689,8 +611,7 @@ https://templatemo.com/tm-586-scholar
                                 <div class="title-item">
                                     Upload Foto
                                 </div>
-                                <form action="/photo/{{ $data['id'] }}" method="POST"
-                                    enctype="multipart/form-data">
+                                <form action="/photo/{{ $data['id'] }}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <div class="content-item">
                                         <input name="path_photo" class="form-control" type="file" id="formFile"
@@ -707,31 +628,4 @@ https://templatemo.com/tm-586-scholar
         </div>
 
     </section>
-
-
-    <footer>
-        <div class="container">
-            <div class="col-lg-12">
-                <p>Dibuat dengan &hearts; oleh KGS Devnet. &nbsp;&nbsp;&nbsp; Contact: <a
-                        href="http://wa.me/6285280009949" target="_blank" rel="noopener noreferrer">085280009949
-                        (putra)</a> -
-                    <a href="http://wa.me/6285280009930" target="_blank" rel="noopener noreferrer">085280009930
-                        (putri)</a></a>
-                </p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <!-- Bootstrap core JavaScript -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/isotope.min.js"></script>
-    <script src="assets/js/owl-carousel.js"></script>
-    <script src=" assets/js/counter.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <script src="js/dashboard-user.js"></script>
-
-</body>
-
-</html>
+@endsection

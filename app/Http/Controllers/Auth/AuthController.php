@@ -30,7 +30,7 @@ class AuthController extends Controller
 
                 $request->session()->put('id', $r['id']);
                 $request->session()->put('no_regis', $r['no_regis']);
-                return redirect()->intended('/')->with('success', 'Login berhasil');
+                return redirect()->intended('/user')->with('login', 'Login berhasil');
             }
         }
 

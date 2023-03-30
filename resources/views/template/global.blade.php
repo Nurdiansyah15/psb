@@ -21,18 +21,15 @@
     <link rel="stylesheet" href="{{ asset('assets/css/owl.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
     <link rel="stylesheet" href="{{ asset('css/landing-style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/dashboard-user-style.css') }}">
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!--
+
+    {{-- TemplateMo 586 Scholar
+    https://templatemo.com/tm-586-scholar --}}
 
 
-
-TemplateMo 586 Scholar
-
-https://templatemo.com/tm-586-scholar
-
--->
 </head>
 
 <body>
@@ -129,7 +126,7 @@ https://templatemo.com/tm-586-scholar
             })
         </script>
     @endif
-    @if (session()->has('success'))
+    @if (session()->has('login'))
         <script>
             Swal.fire({
                 position: 'center',
@@ -206,6 +203,7 @@ https://templatemo.com/tm-586-scholar
     <script src="{{ asset('assets/js/owl-carousel.js') }}"></script>
     <script src="{{ asset('assets/js/counter.js') }}"></script>
     <script src="{{ asset('assets/js/custom.js') }}"></script>
+    <script src="{{ asset('js/dashboard-user.js') }}"></script>
 
 </body>
 

@@ -20,7 +20,7 @@
 section.content {
     margin-top: 120px;
     padding-bottom: 50px;
-    min-height: 75vh;
+    min-height: 85vh;
 }
 
 .left-section {
@@ -83,7 +83,7 @@ section.content {
     padding: 10px 10px 20px 10px;
 }
 
-.title {
+.content-menu .title {
     height: 80px;
     font-size: 24px;
     font-weight: 500;
