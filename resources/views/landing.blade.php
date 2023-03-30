@@ -22,7 +22,11 @@
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="css/landing-style.css">
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!--
+
+
 
 TemplateMo 586 Scholar
 
@@ -65,8 +69,24 @@ https://templatemo.com/tm-586-scholar
                             <li class="scroll-to-section"><a href="#ekstra">Ekstra</a></li>
                             <li class="scroll-to-section"><a href="#kuota">Kuota</a></li>
                             <li class="scroll-to-section"><a href="#flow">Alur</a></li>
-                            <li class="scroll-to-section"><a href="#" data-bs-toggle="modal"
-                                    data-bs-target="#loginModal">Login</a></li>
+                            @if (session('id'))
+                                <li class="nav-item dropdown scroll-to-section">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        {{ session('no_regis') }}
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item scroll-to-section" href="/user">Profil</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item scroll-to-section" href="/logout">Logout</a></li>
+                                    </ul>
+                                </li>
+                            @else
+                                <li class="scroll-to-section"><a href="#" data-bs-toggle="modal"
+                                        data-bs-target="#loginModal">Login</a></li>
+                            @endif
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -84,7 +104,7 @@ https://templatemo.com/tm-586-scholar
                     <div class="title-content">
                         <div class="title-ponpes">
                             <span>Pondok Pesantren </span>
-                            <p>Kyai Galang Sewu {{ session('id') }}</p>
+                            <p>Kyai Galang Sewu</p>
                             <span>Ala Ahlussunnah Wal Jama'ah </span>
                         </div>
                         <div class="sub-title-ponpes">
@@ -129,7 +149,8 @@ https://templatemo.com/tm-586-scholar
                     <div class="section-heading">
                         {{-- <h6>EKSTRA</h6> --}}
                         <h2>VIDEO PERKENALAN <i class="fa-brands fa-youtube"></i></h2>
-                        <iframe style="border: dashed 2px #146C94;padding:5px" width="850" height="500" src="https://www.youtube.com/embed/FXc8zE2Hr6Q">
+                        <iframe style="border: dashed 2px #146C94;padding:5px" width="850" height="500"
+                            src="https://www.youtube.com/embed/FXc8zE2Hr6Q">
                         </iframe>
                     </div>
                 </div>
@@ -856,17 +877,25 @@ https://templatemo.com/tm-586-scholar
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     @if (session('failed'))
         <script>
-            alert("Gagal login, coba lagi");
+            Swal.fire({
+                position: 'top-end',
+                icon: 'error',
+                title: 'Gagal Login!',
+                showConfirmButton: false,
+                timer: 3000
+            })
         </script>
     @endif
-    @if (session('id'))
+    {{-- @if (session('id'))
         <script>
             alert("Berhasil login");
         </script>
-    @endif
-
+    @endif --}}
+    
     <!-- Modal -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
