@@ -31,14 +31,14 @@
                                         <div class="card-header" style="background:#146C94;color:#fff;">
                                             Step 2
                                         </div>
-                                        <div class="card-body p-md-5">
+                                        <div class="card-body ">
                                             <div class="row justify-content-center">
                                                 <div class="col-md-10 col-lg-12 col-xl-5 order-2 order-lg-1">
-                                                    <p class="text-center h5 fw-bold mb-5 mx-1 mx-md-4">Daftar</p>
+                                                    <p class="text-center h5 fw-bold mt-3 mx-1 mx-md-4">Daftar</p>
                                                     <form class="mx-1 mx-md-6" action="{{ route('daftar.store') }}"
                                                         method="POST">
                                                         @csrf
-                                                        <div class="d-flex flex-row align-items-center mb-4">
+                                                        <div class="d-flex flex-row align-items-center mb-2">
                                                             <i class="fas fa-file fa-lg me-3 fa-fw"></i>
                                                             <div class="form-outline flex-fill mb-0">
                                                                 <input value="{{ old('nik') }}" required name="nik"
@@ -49,7 +49,7 @@
                                                                 @enderror
                                                             </div>
                                                         </div>
-                                                        <div class="d-flex flex-row align-items-center mb-4">
+                                                        <div class="d-flex flex-row align-items-center mb-2">
                                                             <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                                                             <div class="form-outline flex-fill mb-0">
                                                                 <input value="{{ old('fullname') }}" required
@@ -60,7 +60,7 @@
                                                                 @enderror
                                                             </div>
                                                         </div>
-                                                        <div class="d-flex flex-row align-items-center mb-4">
+                                                        <div class="d-flex flex-row align-items-center mb-2">
                                                             <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                                                             <div class="form-outline flex-fill mb-0">
                                                                 <input value="{{ old('email') }}" required name="email"
@@ -71,7 +71,7 @@
                                                                 @enderror
                                                             </div>
                                                         </div>
-                                                        <div class="d-flex flex-row align-items-center mb-4">
+                                                        <div class="d-flex flex-row align-items-center mb-2">
                                                             <i class="fas fa-phone fa-lg me-3 fa-fw"></i>
                                                             <div class="form-outline flex-fill mb-0">
                                                                 <input value="{{ old('phone') }}" required
@@ -88,7 +88,7 @@
                                                                     value="{{ $id }}">
                                                             </div>
                                                         </div>
-                                                        <div class="d-flex flex-row align-items-center mb-4">
+                                                        <div class="d-flex flex-row align-items-center mb-2">
                                                             <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                                                             <div class="form-outline flex-fill mb-0">
                                                                 <input value="{{ old('password') }}" required
