@@ -16,8 +16,8 @@
                 <div class="col-lg-4 left-section">
                     <div class="row short-profile">
                         <div class="col-3 photo-profile">
-                            <div id="edit-button" class="btn edit-button"><i class="fa-regular fa-pen-to-square"></i>
-                            </div>
+                            <a href="#" onclick="return func(0)" id="edit-button" class= "edit-button"><i class="fa-regular fa-pen-to-square"></i>
+                            </a>
                             <img src="storage/uploads/photo/{{ isset($data['path_photo']) ? $data['path_photo'] : 'user-icon.png' }}"
                                 class="img-fluid" alt="pp">
                         </div>

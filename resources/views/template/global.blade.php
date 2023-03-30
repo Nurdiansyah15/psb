@@ -67,7 +67,7 @@
                                         <div class="photo-profile dropdown-toggle" style="height: 40px" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
                                             <img src="storage/uploads/photo/{{ isset($data['path_photo']) ? $data['path_photo'] : 'user-icon.png' }}"
-                                                class="img-fluid" alt="pp" style="width: 40px; height: 40px">
+                                                class="img-fluid nav-img" alt="pp" style="width: 40px; height: 40px">
                                         </div>
                                         {{-- <a class="btn dropdown-toggle" href="#" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
