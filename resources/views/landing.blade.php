@@ -236,7 +236,7 @@
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
                         <div class="thumb" style="height: 230px" style="height: 230px">
-                            <img src="img/rebana.jpg" alt="">
+                            <img src="img/rebana.JPG" alt="">
                             <span class="category">Putra / Putri</span>
 
                         </div>
@@ -249,7 +249,7 @@
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra ">
                     <div class="events_item">
                         <div class="thumb" style="height: 230px">
-                            <img src="img/kgs tv.jpg" alt="">
+                            <img src="img/kgs tv.JPG" alt="">
                             <span class="category">Putra </span>
 
                         </div>
@@ -262,7 +262,7 @@
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
                         <div class="thumb" style="height: 230px">
-                            <img src="img/kgs media.png" alt="">
+                            <img src="img/kgs media.PNG" alt="">
                             <span class="category">Putra / Putri</span>
 
                         </div>
@@ -288,7 +288,7 @@
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
                         <div class="thumb" style="height: 230px">
-                            <img src="img/puskes.jpg" alt="">
+                            <img src="img/puskes.JPG" alt="">
                             <span class="category">Putra / Putri</span>
 
                         </div>
@@ -301,7 +301,7 @@
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra">
                     <div class="events_item">
                         <div class="thumb" style="height: 230px">
-                            <img src="img/silat.jpg" alt="">
+                            <img src="img/silat.JPG" alt="">
                             <span class="category">Putra</span>
 
                         </div>
@@ -751,7 +751,7 @@
         <div class="col-xxl-12 px-4 py-5">
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
                 <div class="col-10 col-sm-8 col-lg-6">
-                    <img src="{{ asset('img/banner3.jpg') }}" class="banner-img d-block mx-lg-auto img-fluid"
+                    <img src="{{ asset('img/banner3.JPG') }}" class="banner-img d-block mx-lg-auto img-fluid"
                         alt="Bootstrap Themes" width="700" height="500" loading="lazy">
                 </div>
                 <div class="col-lg-6">

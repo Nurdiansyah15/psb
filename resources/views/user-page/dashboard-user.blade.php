@@ -537,7 +537,8 @@
                                 @csrf
                                 <div class="item-profile">
                                     <div class="title-item">
-                                        Scan Surat Pernyataan, KTP, dan KK ( Dalam 1 dokumen PDF )
+                                        Scan Surat Pernyataan, KTP, dan KK <span class="text-danger">(Dalam 1 dokumen PDF
+                                            serta maksimal 500 kb)</span>
                                     </div>
                                     <div class="content-item">
                                         <input required name="path_doc" class="form-control inp" type="file"
@@ -567,7 +568,8 @@
                                 @csrf
                                 <div class="item-profile">
                                     <div class="title-item">
-                                        Surat Mutasi Emis (pdf)
+                                        Surat Mutasi Emis <span class="text-danger">(Harus PDF serta maksimal size 500
+                                            kb)</span>
                                     </div>
                                     <div class="content-item">
                                         <input required name="path_mutasi_emis" class="form-control" type="file"
@@ -596,7 +598,7 @@
                                 @csrf
                                 <div class="item-profile">
                                     <div class="title-item">
-                                        Bukti Pembayaran
+                                        Bukti Pembayaran <span class="text-danger">(Maksimal 200 kb)</span>
                                     </div>
                                     <div class="content-item">
                                         <input required name="path_bill" class="form-control inp" type="file"
@@ -651,7 +653,7 @@
                             </div>
                             <div class="item-profile">
                                 <div class="title-item">
-                                    Upload Foto (Harus PNG atau JPG)
+                                    Upload Foto <span class="text-danger">(Harus PNG atau JPG serta maksimal 200 kb)</span>
                                 </div>
                                 <form action="/photo/{{ $data['id'] }}" method="POST" enctype="multipart/form-data">
                                     @csrf
