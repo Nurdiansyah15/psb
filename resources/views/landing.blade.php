@@ -3,7 +3,7 @@
     <div class="banner mt-3 " id="top">
         <div class="container-fluid">
             <div class="row background" style="background-image: url({{ asset('/img/banner2.jpg') }})">
-                <div class="col-md-5 d-flex align-items-center justify-content-center logo-pondok">
+                <div class="psb-f col-md-5 d-flex align-items-center justify-content-center logo-pondok">
                     <img src="assets/images/logo.png" alt="logo" srcset="">
                 </div>
                 <div class="col-md-5 d-flex align-items-center justify-content-center title">
@@ -508,7 +508,7 @@
                                     </li>
                                     <li>
                                         <span><strong> Link Pendaftaran </strong></span>
-                                        <h6>----------></h6>
+                                        <h6>----></h6>
                                     </li>
                                 </ul>
                                 <a href="daftar"><i class="fa fa-angle-right"></i></a>
@@ -568,7 +568,7 @@
                                     </li>
                                     <li>
                                         <span><strong> Metode Pembayaran </strong></span>
-                                        <h6>----------></h6>
+                                        <h6>----></h6>
                                     </li>
                                     <a href="#" onclick="return func(0)" data-bs-toggle="modal"
                                         data-bs-target="#exampleModal"><i class="fa fa-angle-right"></i></a>
@@ -601,7 +601,7 @@
                                     </li>
                                     <li>
                                         <span><strong> Cek Lokasi </strong></span>
-                                        <h6>----------></h6>
+                                        <h6>----></h6>
                                     </li>
                                     <a target="_blank" href="https://goo.gl/maps/3jCsuCYQzofVRm3CA">
                                         <i class="fa-solid fa-location-dot"></i>
@@ -634,7 +634,7 @@
                                     </li>
                                     <li>
                                         <span><strong> Cek Lokasi</strong></span>
-                                        <h6>----------></h6>
+                                        <h6>----></h6>
                                     </li>
 
                                     <a target="_blank" href="https://goo.gl/maps/3jCsuCYQzofVRm3CA">

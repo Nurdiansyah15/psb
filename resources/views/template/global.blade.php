@@ -65,20 +65,24 @@
                         <ul id="ul-nav" class="nav">
                             @if (\Illuminate\Support\Facades\Request::url() != url('/'))
                                 <li><a href="/" class="active">Beranda</a></li>
+                                <li class="psb"><a class="dropdown-item " href="/user">Profil</a></li>
+
+                                <li class="psb"><a class="dropdown-item " href="/logout">Logout</a>
+                                </li>
                                 @if (session('id'))
-                                    <li class="dropdown">
+                                    <li class="dropdown psb-f">
                                         <div class="photo-profile dropdown-toggle" style="height: 40px" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
                                             <img src="storage/uploads/photo/{{ isset($data['path_photo']) ? $data['path_photo'] : 'user-icon.png' }}"
                                                 class="img-fluid nav-img" alt="pp"
                                                 style="width: 40px; height: 40px">
                                         </div>
-                                        <ul class="dropdown-menu text-center p-0" style="background-color:#146C94">
-                                            <li class="p-0"><a class="dropdown-item " href="/user">Profil</a>
+                                        <ul class="dropdown-menu text-center p-0">
+                                            <li class="p-0"><a class="dropdown-item " style="color:#146C94" href="/user">Profil</a>
 
                                             </li>
 
-                                            <li class="p-0"><a class="dropdown-item " href="/logout">Logout</a>
+                                            <li class="p-0"><a class="dropdown-item " style="color:#146C94" href="/logout">Logout</a>
                                             </li>
                                         </ul>
 
@@ -92,11 +96,17 @@
                                 <li class="scroll-to-section"><a href="#ekstra">Ekstra</a></li>
                                 <li class="scroll-to-section"><a href="#kuota">Kuota</a></li>
                                 <li class="scroll-to-section"><a href="#flow">Alur</a></li>
+
+
                                 @if (session('id') === null)
                                     <li class="scroll-to-section"><a href="#daftar">Daftar</a></li>
                                 @endif
                                 @if (session('id'))
-                                    <li class="dropdown">
+                                    <li class="psb"><a class="dropdown-item " href="/user">Profil</a></li>
+
+                                    <li class="psb"><a class="dropdown-item " href="/logout">Logout</a>
+                                    </li>
+                                    <li class="dropdown psb-f">
                                         {{-- <a class="btn dropdown-toggle" href="#" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
                                             {{ session('no_regis') }}
@@ -108,12 +118,12 @@
                                                 style="width: 40px; height: 40px">
                                         </div>
 
-                                        <ul class="dropdown-menu text-center p-0" style="background-color:#146C94">
-                                            <li class="p-0"><a class="dropdown-item " href="/user">Profil</a>
+                                        <ul class="dropdown-menu text-center p-0 " style="color:#146C94">
+                                            <li class="p-0"><a class="dropdown-item " style="color:#146C94" href="/user">Profil</a>
 
                                             </li>
 
-                                            <li class="p-0"><a class="dropdown-item " href="/logout">Logout</a>
+                                            <li class="p-0"><a class="dropdown-item " style="color:#146C94" href="/logout">Logout</a>
                                             </li>
                                         </ul>
 
