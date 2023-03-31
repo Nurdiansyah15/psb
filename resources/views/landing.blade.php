@@ -1,6 +1,6 @@
 @extends('template.global')
 @section('content')
-    <div class="banner mt-0 " id="top">
+    <div class="banner mt-3 " id="top">
         <div class="container-fluid">
             <div class="row background" style="background-image: url({{ asset('/img/banner2.jpg') }})">
                 <div class="col-5 title">
@@ -54,9 +54,13 @@
                     <div class="section-heading">
                         {{-- <h6>EKSTRA</h6> --}}
                         <h2>VIDEO PERKENALAN <i class="fa-brands fa-youtube"></i></h2>
-                        <iframe style="border: dashed 2px #146C94;padding:5px" width="850" height="500"
-                            src="https://www.youtube.com/embed/FXc8zE2Hr6Q">
-                        </iframe>
+                        <div class="video-container">
+                            <iframe style="border: dashed 2px #146C94;padding:5px" width="100%" height="40%"
+                                src="https://www.youtube.com/embed/FXc8zE2Hr6Q">
+                            </iframe>
+
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -747,7 +751,7 @@
         </div>
     </div>
 
-    <div class="container to-registration" style="height: 90vh" id="daftar">
+    <div class="container to-registration" style="height: 100vh" id="daftar">
         <div class="col-xxl-12 px-4 py-5">
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
                 <div class="col-10 col-sm-8 col-lg-6">

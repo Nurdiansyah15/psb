@@ -1,7 +1,5 @@
 /* navbar */
-.header-area {
-    border-radius: 0 0 20px 20px;
-}
+
 .logo {
     border: none;
     width: 500px;
@@ -141,7 +139,7 @@ section.content {
 }
 
 .inp {
-   
+
 }
 
 .nav-img {
