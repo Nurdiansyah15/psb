@@ -34,7 +34,7 @@
 
 </head>
 
-<body>
+<body class="vh-100">
 
     <!-- ***** Preloader Start ***** -->
     <div id="js-preloader" class="js-preloader">
@@ -50,7 +50,7 @@
     <!-- ***** Preloader End ***** -->
 
     <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky background-header">
+    <header id="nav-head" class="header-area header-sticky background-header">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -62,9 +62,9 @@
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
-                        <ul class="nav">
+                        <ul id="ul-nav" class="nav">
                             @if (\Illuminate\Support\Facades\Request::url() != url('/'))
-                                <li class="scroll-to-section"><a href="/" class="active">Beranda</a></li>
+                                <li><a href="/" class="active">Beranda</a></li>
                                 @if (session('id'))
                                     <li class="dropdown">
                                         <div class="photo-profile dropdown-toggle" style="height: 40px" role="button"
@@ -83,6 +83,7 @@
                                         </ul>
 
                                     </li>
+                                @else
                                 @endif
                             @else
                                 <li class="scroll-to-section"><a href="#top" class="active">Beranda</a></li>
@@ -121,16 +122,19 @@
                                     <li class="scroll-to-section"><a href="#" data-bs-toggle="modal"
                                             data-bs-target="#loginModal">Login</a></li>
                                 @endif
+
+
+                            @endif
+                            <!-- ***** Menu End ***** -->
+
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
                         </a>
-                        @endif
-                        <!-- ***** Menu End ***** -->
                     </nav>
                 </div>
             </div>
-        </div>
+
     </header>
 
     @yield('content')
@@ -150,7 +154,19 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    <script>
+        const topDiv = document.getElementById("ul-nav");
 
+        // Check if the display property is set to "block"
+        if (topDiv.style.display === "block") {
+
+            // Get the second div element with an ID of "two"
+            const twoDiv = document.getElementById("nav-head");
+
+            // Set the border radius of the second div to 0
+            twoDiv.style.borderRadius = "0 0 0 0";
+        }
+    </script>
     @if (session()->has('data-failed'))
         <script>
             Swal.fire({
