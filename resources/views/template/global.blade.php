@@ -62,7 +62,7 @@
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             @if (\Illuminate\Support\Facades\Request::url() != url('/'))
-                                <li class="scroll-to-section"><a href="/" class="active">Beranda</a></li>
+                                <li><a href="/" class="active">Beranda</a></li>
                                 @if (session('id'))
                                     <li class="dropdown">
                                         <div class="photo-profile dropdown-toggle" style="height: 40px" role="button"

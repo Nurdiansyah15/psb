@@ -7,11 +7,13 @@
                 <div class=" container h-100 mt-5">
                     <h5 class="btn" style="background:#146C94;color:#fff;">Nomor Registrasi Anda : {{ $data['no_regis'] }}</h5>
                     <p class="text-danger">*catatlah agar tidak lupa!</p>
+
+                    <a href="/" class="active btn btn-secondary">Beranda</a>
                 </div>
             </section>
         </div>
     </div>
 
 
-    
+
 @endsection
