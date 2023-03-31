@@ -3,7 +3,10 @@
     <div class="banner mt-3 " id="top">
         <div class="container-fluid">
             <div class="row background" style="background-image: url({{ asset('/img/banner2.jpg') }})">
-                <div class="col-5 title">
+                <div class="col-md-5 d-flex align-items-center justify-content-center logo-pondok">
+                    <img src="assets/images/logo.png" alt="logo" srcset="">
+                </div>
+                <div class="col-md-5 d-flex align-items-center justify-content-center title">
                     <div class="title-content">
                         <div class="title-ponpes">
                             <span>Pondok Pesantren </span>
@@ -22,28 +25,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-5 logo-pondok">
-                    <img src="assets/images/logo.png" alt="logo" srcset="">
-                </div>
-                {{-- <div class="col-lg-12">
-                    <div class="owl-carousel owl-banner">
-                        <div class="item item-1">
-                            <div class=" row">
-                                <div class="col">
-                                    <h2>Kyai Galang Sewu</h2>
-                                    <p>Tembalang, Kota Semarang, Jawa Tengah</p>
-
-                                </div>
-                                <div class="col d-flex align-items-center">
-                                    <img src="assets/images/logo.png" alt="" srcset="">
-                                </div>
 
 
-                            </div>
-                        </div>
-
-                    </div>
-                </div> --}}
             </div>
         </div>
     </div>

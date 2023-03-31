@@ -449,7 +449,7 @@ Header Style
     z-index: 999;
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 995px) {
     .header-area .main-nav ul.nav {
         border-radius: 0 0 50px 50px;
         flex-basis: 100%;
@@ -672,7 +672,7 @@ Header Style
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 995px) {
     .background-header .main-nav .nav,
     .header-area .main-nav .nav {
         background-color: #f1f0fe;
@@ -1817,7 +1817,7 @@ body {
     overflow-x: hidden;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 995px) {
     .header-area {
         top: 0px;
     }
