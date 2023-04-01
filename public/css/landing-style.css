@@ -1,7 +1,5 @@
 /* navbar */
-.header-area {
-    border-radius: 0 0 20px 20px;
-}
+
 .logo {
     border: none;
     width: 500px;
@@ -9,13 +7,31 @@
     display: flex;
     align-items: center;
 }
+
+.psb{
+display:none;
+}
+
+.psb-f{
+    display:inline-block;
+}
+
+@media only screen and (max-width: 765px) {
+    .psb{
+        display:inline-block;
+        }
+
+        .psb-f{
+            display:none;
+        }
+  }
+
 .logo p {
     color: white;
     font-size: 20px;
     font-weight: 500;
     margin-top: 18px;
 }
-/* main banner */
 .banner {
     height: 100vh;
     margin: 20px 0 0 0;
@@ -82,4 +98,5 @@
 .button-daftar .main-button a:hover {
     background: white;
     color: #146c94;
+    border: solid 1px #146c94;
 }

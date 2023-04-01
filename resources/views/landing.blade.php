@@ -1,10 +1,12 @@
-
 @extends('template.global')
 @section('content')
-    <div class="banner mt-0 " id="top">
+    <div class="banner mt-3 " id="top">
         <div class="container-fluid">
             <div class="row background" style="background-image: url({{ asset('/img/banner2.jpg') }})">
-                <div class="col-5 title">
+                <div class="psb-f col-md-5 d-flex align-items-center justify-content-center logo-pondok">
+                    <img src="assets/images/logo.png" alt="logo" srcset="">
+                </div>
+                <div class="col-md-5 d-flex align-items-center justify-content-center title">
                     <div class="title-content">
                         <div class="title-ponpes">
                             <span>Pondok Pesantren </span>
@@ -16,33 +18,15 @@
                         </div>
                         <div class="buttons mt-2">
                             <div class="main-button">
-                                <a href="#daftar">Pendaftaran</a>
+                                @if (session('id') === null)
+                                    <a href="#daftar">Pendaftaran</a>
+                                @endif
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-5 logo-pondok">
-                    <img src="assets/images/logo.png" alt="logo" srcset="">
-                </div>
-                {{-- <div class="col-lg-12">
-                    <div class="owl-carousel owl-banner">
-                        <div class="item item-1">
-                            <div class=" row">
-                                <div class="col">
-                                    <h2>Kyai Galang Sewu</h2>
-                                    <p>Tembalang, Kota Semarang, Jawa Tengah</p>
-
-                                </div>
-                                <div class="col d-flex align-items-center">
-                                    <img src="assets/images/logo.png" alt="" srcset="">
-                                </div>
 
 
-                            </div>
-                        </div>
-
-                    </div>
-                </div> --}}
             </div>
         </div>
     </div>
@@ -53,9 +37,13 @@
                     <div class="section-heading">
                         {{-- <h6>EKSTRA</h6> --}}
                         <h2>VIDEO PERKENALAN <i class="fa-brands fa-youtube"></i></h2>
-                        <iframe style="border: dashed 2px #146C94;padding:5px" width="850" height="500"
-                            src="https://www.youtube.com/embed/FXc8zE2Hr6Q">
-                        </iframe>
+                        <div class="video-container">
+                            <iframe style="border: dashed 2px #146C94;padding:5px" width="100%" height="40%"
+                                src="https://www.youtube.com/embed/FXc8zE2Hr6Q">
+                            </iframe>
+
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -235,7 +223,7 @@
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
                         <div class="thumb" style="height: 230px" style="height: 230px">
-                            <img src="img/rebana.jpg" alt="">
+                            <img src="img/rebana.JPG" alt="">
                             <span class="category">Putra / Putri</span>
 
                         </div>
@@ -248,7 +236,7 @@
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra ">
                     <div class="events_item">
                         <div class="thumb" style="height: 230px">
-                            <img src="img/kgs tv.jpg" alt="">
+                            <img src="img/kgs tv.JPG" alt="">
                             <span class="category">Putra </span>
 
                         </div>
@@ -261,7 +249,7 @@
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
                         <div class="thumb" style="height: 230px">
-                            <img src="img/kgs media.png" alt="">
+                            <img src="img/kgs media.PNG" alt="">
                             <span class="category">Putra / Putri</span>
 
                         </div>
@@ -287,7 +275,7 @@
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra putri">
                     <div class="events_item">
                         <div class="thumb" style="height: 230px">
-                            <img src="img/puskes.jpg" alt="">
+                            <img src="img/puskes.JPG" alt="">
                             <span class="category">Putra / Putri</span>
 
                         </div>
@@ -300,7 +288,7 @@
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 putra">
                     <div class="events_item">
                         <div class="thumb" style="height: 230px">
-                            <img src="img/silat.jpg" alt="">
+                            <img src="img/silat.JPG" alt="">
                             <span class="category">Putra</span>
 
                         </div>
@@ -520,7 +508,7 @@
                                     </li>
                                     <li>
                                         <span><strong> Link Pendaftaran </strong></span>
-                                        <h6>----------></h6>
+                                        <h6>----></h6>
                                     </li>
                                 </ul>
                                 <a href="daftar"><i class="fa fa-angle-right"></i></a>
@@ -540,7 +528,7 @@
                                 <ul>
                                     <li>
                                         <span class="category">online</span>
-                                        <h4>Verifikasi Berkas</h4>
+                                        <h4>Verifikasi Berkas (Admin)</h4>
                                     </li>
                                     <li>
                                         <span>Tanggal:</span>
@@ -580,7 +568,7 @@
                                     </li>
                                     <li>
                                         <span><strong> Metode Pembayaran </strong></span>
-                                        <h6>----------></h6>
+                                        <h6>----></h6>
                                     </li>
                                     <a href="#" onclick="return func(0)" data-bs-toggle="modal"
                                         data-bs-target="#exampleModal"><i class="fa fa-angle-right"></i></a>
@@ -613,7 +601,7 @@
                                     </li>
                                     <li>
                                         <span><strong> Cek Lokasi </strong></span>
-                                        <h6>----------></h6>
+                                        <h6>----></h6>
                                     </li>
                                     <a target="_blank" href="https://goo.gl/maps/3jCsuCYQzofVRm3CA">
                                         <i class="fa-solid fa-location-dot"></i>
@@ -646,7 +634,7 @@
                                     </li>
                                     <li>
                                         <span><strong> Cek Lokasi</strong></span>
-                                        <h6>----------></h6>
+                                        <h6>----></h6>
                                     </li>
 
                                     <a target="_blank" href="https://goo.gl/maps/3jCsuCYQzofVRm3CA">
@@ -661,30 +649,7 @@
             </div>
         </div>
 
-        <div class="container to-registration" style="height: 80vh" id="daftar">
-            <div class="col-xxl-8 px-4 py-5">
-                <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-                    <div class="col-10 col-sm-8 col-lg-6">
-                        <img src="{{ asset('img/banner3.jpg') }}" class="banner-img d-block mx-lg-auto img-fluid"
-                            alt="Bootstrap Themes" width="700" height="500" loading="lazy">
-                    </div>
-                    <div class="col-lg-6">
-                        <h1 class="display-5 fw-bold lh-1 mb-3">Segera Daftarkan Dirimu, Menjadi Bagian Dari Kami</h1>
-                        <p class="lead"><b>Di jaman sekarang mau mondok itu adalah nikmat yang sangat besar. Maka, perlu
-                                untuk disyukuri.</b> <br>
-                            Bapak Ust. Muhammad Ulin Nuha ABA, M.Si.(Pengasuh Ponpes)</p>
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-start button-daftar">
-                            <div class="buttons mt-2">
-                                <div class="main-button">
-                                    <a href="/daftar">Daftar Sekarang</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-        </div>
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -763,6 +728,32 @@
                         <button type="button" class="btn" style="color:white;background-color: #F08A5D"
                             data-bs-dismiss="modal">Close</button>
 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container to-registration" style="margin-bottom: 10px" id="daftar">
+        <div class="col-xxl-12 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <img src="{{ asset('img/banner3.JPG') }}" class="banner-img d-block mx-lg-auto img-fluid"
+                        alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+                </div>
+                <div class="col-lg-6">
+                    <h1 class="display-5 fw-bold lh-1 mb-3">Segera Daftarkan Dirimu, Menjadi Bagian Dari Kami</h1>
+                    <p class="lead"><b>Di jaman sekarang mau mondok itu adalah nikmat yang sangat besar. Maka, perlu
+                            untuk disyukuri.</b> <br>
+                        Bapak Ust. Muhammad Ulin Nuha ABA, M.Si.(Pengasuh Ponpes)</p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start button-daftar">
+                        <div class="buttons mt-2">
+                            <div class="main-button">
+                                @if (session('id') === null)
+                                    <a href="/daftar">Daftar Sekarang</a>
+                                @endif
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

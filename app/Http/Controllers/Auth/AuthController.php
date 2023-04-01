@@ -30,11 +30,11 @@ class AuthController extends Controller
 
                 $request->session()->put('id', $r['id']);
                 $request->session()->put('no_regis', $r['no_regis']);
-                return redirect()->intended('/')->with('success', 'Login berhasil');
+                return redirect()->intended('/user')->with('login-success', 'Login berhasil');
             }
         }
 
-        return back()->with('failed', 'Login Failed');
+        return back()->with('login-failed', 'Login Failed');
     }
     public function logout(Request $request)
     {
@@ -45,6 +45,6 @@ class AuthController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/')->with('logout', 'Logout berhasil!');
+        return redirect('/')->with('logout-success', 'Logout berhasil!');
     }
 }

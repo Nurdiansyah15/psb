@@ -1,7 +1,5 @@
 /* navbar */
-.header-area {
-    border-radius: 0 0 20px 20px;
-}
+
 .logo {
     border: none;
     width: 500px;
@@ -20,7 +18,7 @@
 section.content {
     margin-top: 120px;
     padding-bottom: 50px;
-    min-height: 75vh;
+    min-height: 85vh;
 }
 
 .left-section {
@@ -83,7 +81,7 @@ section.content {
     padding: 10px 10px 20px 10px;
 }
 
-.title {
+.content-menu .title {
     height: 80px;
     font-size: 24px;
     font-weight: 500;
@@ -123,14 +121,31 @@ section.content {
 .item-profile input {
     font-size: 14px;
     font-weight: 300;
-    height: 25px;
 }
+
 .edit-button {
-    font-size: 16px;
+    font-size: 12px;
     display: inline-block;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 50%;
     position: absolute;
     bottom: 0;
-    right: 0;
+    left: 0;
+    padding-left: 7px;
+    padding-bottom: 3px;
+    padding-right: 7px;
+    padding-top: 3px;
+}
+
+.inp {
+}
+
+.nav-img {
+    width: 40px;
+    height: 40px;
+    margin-top: -40px;
+    margin-left: 11px;
 }
 
 /* hal lain */
@@ -138,6 +153,9 @@ section.content {
     display: none;
 }
 #dokumen-2 {
+    display: none;
+}
+#mutasi-2 {
     display: none;
 }
 #cetak-2 {
@@ -158,4 +176,25 @@ section.content {
 }
 #orang-tua-2 {
     display: none;
+}
+
+/* // Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    .left-section {
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+    .short-profile {
+        border-radius: 0;
+    }
+    .menu {
+        border-radius: 0;
+        margin-top: 0;
+    }
+    .content-menu {
+        border-radius: 0;
+    }
+    body {
+        background: #f8f9ff;
+    }
 }
