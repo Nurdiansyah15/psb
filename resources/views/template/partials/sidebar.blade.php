@@ -30,7 +30,7 @@
     </symbol>
 </svg>
 <div class="b-example-divider"></div>
-<div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px; height:560px">
+<div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 250px; height:560px">
     <a href="#" class="d-flex align-items-center link-dark text-decoration-none">
         <img src="/assets/images/profil.jpg" alt="" width="32" height="32" class="rounded-circle me-2">
         <strong>Fahrul</strong>
@@ -39,7 +39,7 @@
     <ul class="nav nav-pills flex-column mb-auto">
         <li class="nav-item">
         <li>
-            <a href="{{url('/2')}}" class="nav-link link-dark">
+            <a href="{{url('/admin')}}" class="nav-link link-dark">
                 <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="#speedometer2" />
                 </svg>
@@ -47,7 +47,7 @@
             </a>
         </li>
         <li>
-            <a href="{{url('/4')}}" class="nav-link link-dark">
+            <a href="{{url('/daftarsantri')}}" class="nav-link link-dark">
                 <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="#grid" />
                 </svg>
@@ -55,11 +55,11 @@
             </a>
         </li>
         <li>
-            <a href="#" class="nav-link link-dark">
+            <a href="{{url('/gel')}}" class="nav-link link-dark">
                 <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="#table" />
                 </svg>
-                Kalander Akademik
+                Gelombang
             </a>
         </li>
         <a href="#" class="nav-link link-dark" aria-current="page">
@@ -69,14 +69,14 @@
             Notifikasi
         </a>
         </li>
-        <li>
+        <!-- <li>
             <a href="{{url('/5')}}" class="nav-link link-dark">
                 <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="#people-circle" />
                 </svg>
                 User
             </a>
-        </li>
+        </li> -->
     </ul>
     <hr>
 </div>

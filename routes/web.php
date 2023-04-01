@@ -25,23 +25,22 @@ use SebastianBergmann\Template\Template;
 // Route::get('/1', function () {
 //     return view('dashboarduser');
 // });
-Route::get('/2', function () {
-    return view('dashboaradmin');
-});
 // Route::get('/3', function () {
 //     return view('z');
 // });
-Route::get('/4', function () {
-    return view('daftarsantri');
-});
+
 // Route::get('/5', function () {
 //     return view('dashboard-user.dashboard-user');
 // });
-
-
-// Route::get('/page', function () {
-//     return view('landing');
-// });
+Route::get('/admin', function () {
+    return view('admin-page/dashboaradmin');
+});
+Route::get('/daftarsantri', function () {
+    return view('admin-page/daftarsantri');
+});
+Route::get('/gel', function () {
+    return view('admin-page/gelombang');
+});
 
 
 Route::get('/login', [AuthController::class, 'index']);
