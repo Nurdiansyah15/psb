@@ -30,7 +30,7 @@
     </symbol>
 </svg>
 <div class="b-example-divider"></div>
-<div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 250px; height:560px">
+<div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 250px; height:auto;">
     <a href="#" class="d-flex align-items-center link-dark text-decoration-none">
         <img src="/assets/images/profil.jpg" alt="" width="32" height="32" class="rounded-circle me-2">
         <strong>Fahrul</strong>

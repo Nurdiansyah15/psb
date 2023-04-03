@@ -4,9 +4,9 @@
 
 <body>
     <div class="container mt-3">
-        <h2>Data Calon Santri Baru</h2>
-        <button class="btn btn-primary">+tambah</button>
-        <br>
+        <h2>
+            <b>Data Calon Santri Baru</b>
+        </h2>
         <table class="table table-bordered mt-3">
             <thead>
                 <tr>
@@ -14,19 +14,29 @@
                     <th>Program</th>
                     <th>Nama Lengkap</th>
                     <th>Jenis Kelamin</th>
-                    <th>Verifikasi Berkas</th>
-                    <th>Verifikasi Pembayaran</th>
+                    <th>Verifikasi</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
+                @foreach ($data as $item)
                 <tr>
                     <td>
-                        <a href="#">1</a>
+                        {{ $item['no_regis'] }}
                     </td>
-                    <td>Tahfidz</td>
-                    <td>Irvan Muhandis</td>
-                    <td>Laki-laki</td>
+                    <td>
+                        {{ $item['program'] }}
+                    </td>
+                    <td>
+                        {{ $item['fullname'] }}
+                    </td>
+                    <td>
+                        @if($item['option']=='1')
+                        {{'Laki-laki'}}
+                        @else
+                        {{'Perempuan'}}
+                        @endif
+                    </td>
                     <td>
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
@@ -39,18 +49,16 @@
                             <div class="modal-dialog modal-dialog-scrollable">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="verifikasiberkasLabel">Verifikasi Berkas
+                                        <h1 class="modal-title fs-5" id="verifikasiberkasLabel">Verifikasi
+                                            Berkas
                                         </h1>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-
-                                        <img style="margin-left: 30%;width: 150px;height: 200px;"
-                                            src="assets/img/dokum.png">
-                                        <img src="assets/images/dokum.png" alt="" srcset="">
+                                        <iframe src="https://psb.kyaigalangsewu.net/storage/uploads/doc/{{$item['path_doc'] }}" width="100%"></iframe>
                                     </div>
-                                    <div class="modal-footer">
+                                    <div class=" modal-footer">
                                         <button type="button" class="btn btn-secondary"
                                             data-bs-dismiss="modal">Close</button>
                                         <button type="button" class="btn btn-primary">Setuju</button>
@@ -60,42 +68,14 @@
                         </div>
                     </td>
                     <td>
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#verifikasibayar">
-                            Verifikasi
-                        </button>
-                        <!-- Modal -->
-                        <div class="modal fade" id="verifikasibayar" tabindex="-1"
-                            aria-labelledby="verifikasibayarLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-scrollable">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="verifikasibayarLabel">Verifikasi Pembayaran
-                                        </h1>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        ...
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Setuju</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </td>
-                    <td>
-                        <a href="#" class="btn btn-primary">Edit</a>
-
-                        <a href="#" class="btn btn-danger">Delete</a>
-                        <a href="#" class="btn btn-success">Detail</a>
+                        <form action="{{ route('pendaftar.destroy', $item['id']) }}" method="POST">@csrf
+                            @method('DELETE')
+                            <button type="submit">Delete</button>
+                        </form><a href="#" class="btn btn-success">Detail</a>
                     </td>
 
                 </tr>
+                @endforeach
             </tbody>
         </table>
     </div>

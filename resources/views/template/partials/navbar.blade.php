@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav class="navbar" style="background-color: coral;">
+<nav class="navbar navbar-sticky" style="background-color: coral;">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
             <img src="../assets/images/logo-kgs.png" alt="Logo" width="30" height="30"

@@ -68,7 +68,7 @@
     @include('template.partials.navbar')
     <div class="d-flex">
         @include('template.partials.sidebar')
-        <div class="container-fluid p-0">
+        <div class="container-fluid  p-0">
             @yield('content')
 
         </div>

@@ -7,6 +7,8 @@ use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Page\DashboardController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\Template\Template;
+use App\Http\Controllers\Admin\DaftarController;
+use Illuminate\Support\Facades\Cookie;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,17 +33,19 @@ use SebastianBergmann\Template\Template;
 
 // Route::get('/5', function () {
 //     return view('dashboard-user.dashboard-user');
+// // });
+// Route::get('/admin', function () {
+//     return view('admin-page/dashboaradmin');
 // });
-Route::get('/admin', function () {
-    return view('admin-page/dashboaradmin');
-});
-Route::get('/daftarsantri', function () {
-    return view('admin-page/daftarsantri');
-});
+// Route::get('/daftarsantri', function () {
+//     return view('admin-page/daftarsantri');
+// });
 Route::get('/gel', function () {
     return view('admin-page/gelombang');
 });
-
+Route::get('/admin', [AuthController::class, 'admin']);
+Route::get('/pendaftar', [DaftarController::class, 'index']);
+Route::delete('/pendaftar/{id}', [DaftarController::class, 'destroy'])->name('pendaftar.destroy');
 
 Route::get('/login', [AuthController::class, 'index']);
 Route::get('/logout', [AuthController::class, 'logout']);
