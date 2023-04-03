@@ -54,6 +54,7 @@ Route::post('/auth', [AuthController::class, 'login'])->name('login');
 Route::get('/', [LandingController::class, 'index']);
 
 Route::get('/forgot', [ForgotController::class, 'index']);
+Route::post('/forgot', [ForgotController::class, 'store']);
 
 Route::get('/daftar', [RegisterController::class, 'index']);
 

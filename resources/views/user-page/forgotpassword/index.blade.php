@@ -1,10 +1,10 @@
 @extends('template.global')
 @section('content')
-    <div class="text-center" style="margin-top:0%;margin-bottom:15%">
+    <div class="text-center">
         <div class="d-flex">
             <div class="container-fluid">
                 <section class="vh-100 ">
-                    <div class=" container h-0 mt-5">
+                    <div class=" container h-50 vh-100">
                         <div class="row d-flex justify-content-center align-items-center h-100">
                             <div class="col-lg-5 col-md-5 col-xl-5">
                                 <div class="card text-black">
@@ -40,4 +40,26 @@
             </div>
         </div>
     </div>
+    @if (session()->has('success'))
+        <script>
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: {{session('success')}},
+                showConfirmButton: false,
+                timer: 3000
+            })
+        </script>
+    @endif
+    @if (session()->has('error'))
+        <script>
+            Swal.fire({
+                position: 'center',
+                icon: 'error',
+                title: {{session('error')}},
+                showConfirmButton: false,
+                timer: 3000
+            })
+        </script>
+    @endif
 @endsection

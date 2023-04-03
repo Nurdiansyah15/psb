@@ -88,19 +88,30 @@ class RegisterController extends Controller
      */
     public function store(Request $request)
     {
+        $data = Http::withHeaders([
+            'Accept' => 'aplication/json',
+            'X-API-KEY' => 'siponapikey',
+        ])->get('http://sipon.kyaigalangsewu.net/api/v1/psb/register');
+        foreach($data['data'] as $r => $d){
+            if($d['nik']==$request->nik){
+                return redirect('daftar')->with('status', 'NIK Anda sudah terdaftar');
+                return false;
+            }
+        }
         $response = Http::withHeaders([
             'Accept' => 'aplication/json',
             'X-API-KEY' => 'siponapikey',
         ])->post('http://sipon.kyaigalangsewu.net/api/v1/psb/register', $request->all());
 
-        $id = $response->json()['data']['id'];
-        $url = "/daftar/" . Crypt::encryptString($id);
-        if (@$response['message'] == 'Success') {
-            return redirect($url)->with('status', 'Berhasil melakukan pendaftaran');
-        } else {
+        if($response['code']==400){
             return back()->withInput()
                 ->withErrors($response['errors']);
+        }else{
+            $url = "/daftar/" . Crypt::encryptString($response->json()['data']['id']);
+            return redirect($url)->with('status', 'Berhasil melakukan pendaftaran');
         }
+
+
     }
 
     /**
