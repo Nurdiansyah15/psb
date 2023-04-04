@@ -20,7 +20,7 @@
                                     class="fa-regular fa-pen-to-square"></i>
                             </a>
                             <img src="storage/uploads/photo/{{ isset($data['path_photo']) ? $data['path_photo'] : 'user-icon.png' }}"
-                                class="img-fluid" alt="pp">
+                                class="img-fluid user-img" alt="pp">
                         </div>
                         <div class="col-md-9 name-register">
                             <div class="row">

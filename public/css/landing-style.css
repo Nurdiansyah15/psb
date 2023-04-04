@@ -16,11 +16,12 @@
     display: inline-block;
 }
 
-.navbar-photo-profile img {
-    border-radius: 100px;
+.nav-img {
     width: 40px;
     height: 40px;
-    box-shadow: 1px 1px 5px #0000002d;
+    margin-top: -40px;
+    margin-left: 11px;
+    border-radius: 100px;
     object-fit: cover;
 }
 

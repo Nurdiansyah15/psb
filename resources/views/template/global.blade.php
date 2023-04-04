@@ -71,8 +71,8 @@
                                 </li>
                                 @if (session('id'))
                                     <li class="dropdown psb-f">
-                                        <div class="navbar-photo-profile dropdown-toggle" style="height: 40px"
-                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <div class="dropdown-toggle" style="height: 40px" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
                                             <img src="storage/uploads/photo/{{ isset($data['path_photo']) ? $data['path_photo'] : 'user-icon.png' }}"
                                                 class="img-fluid nav-img" alt="pp">
                                         </div>
