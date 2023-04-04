@@ -138,6 +138,10 @@ section.content {
     padding-top: 3px;
 }
 
+#my-iframe img {
+    object-fit: fill;
+}
+
 .inp {
 }
 

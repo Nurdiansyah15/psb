@@ -3,11 +3,15 @@
 namespace App\Http\Controllers\Page;
 
 use Illuminate\Http\File;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Crypt;
+use function GuzzleHttp\Promise\all;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Crypt;
+
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Validator;
 
 class DashboardController extends Controller
 {
@@ -66,16 +70,38 @@ class DashboardController extends Controller
      */
     public function update(Request $request, string $id)
     {
+        $validator = Validator::make($request->all(), [
+            'nik' => 'nullable|size:16',
+            'no_kk' => 'nullable|size:16',
+            'nisn' => 'nullable|size:10',
+            'no_kip' => 'nullable|size:6',
+            'no_kks' => 'nullable|size:6',
+            'no_pkh' => 'nullable|size:6',
+        ], [
+            'nik.size' => 'Jumlah angka harus tepat 16',
+            'no_kk.size' => 'Jumlah angka harus tepat 16',
+            'nisn.size' => 'Jumlah angka harus tepat 10',
+            'no_kip.size' => 'Jumlah angka/huruf harus tepat 6',
+            'no_kks.size' => 'Jumlah angka/huruf harus tepat 6',
+            'no_pkh.size' => 'Jumlah angka/huruf harus tepat 6',
+        ]);
 
-        $response = Http::withHeaders([
-            'X-API-KEY' => config('app.api_key'),
-            'Accept' => 'application/json'
-        ])->put('https://sipon.kyaigalangsewu.net/api/v1/psb/register/' . $id, $request->all());
-        $data = $response->status();
-        if ($data !== 201) {
-            return back()->with('data-failed', 'Gagal memperbaharui data. Silakan periksa kembali isian anda.');
+        if ($validator->fails()) {
+            return redirect()->back()
+                ->withErrors($validator)
+                ->with('data-failed', 'Gagal memperbaharui data. Silakan periksa kembali isian anda.')
+                ->withInput();
+        } else {
+            $response = Http::withHeaders([
+                'X-API-KEY' => config('app.api_key'),
+                'Accept' => 'application/json'
+            ])->put('https://sipon.kyaigalangsewu.net/api/v1/psb/register/' . $id, $request->all());
+            $data = $response->status();
+            if ($data !== 201) {
+                return back()->with('data-failed', 'Kesalahan pada server. Gagal memperbaharui data. Silakan ulang beberapa saat lagi.');
+            }
+            return back()->with('data-success', 'Data berhasil diperbaharui!');
         }
-        return back()->with('data-success', 'Data berhasil diperbaharui!');
     }
 
     /**
@@ -91,143 +117,208 @@ class DashboardController extends Controller
      */
     public function photo(Request $request, string $id)
     {
-        $response = Http::withHeaders([
-            'X-API-KEY' => config('app.api_key'),
-            'Accept' => 'application/json'
-        ])->get('https://sipon.kyaigalangsewu.net/api/v1/psb/register/' . $id);
-        $data = $response->json()['data'];
-
-        $file = $request->file('path_photo');
-        $ektensi = $file->extension();
-        if ($ektensi != 'png' && $ektensi != 'jpg') {
-            return redirect('/user')->with('data-failed', 'Gagal memperbaharui foto, ekstensi file tidak benar.');
-        }
-
-        $nameFIle = $data['no_regis'] . '_photo'  . '.' . $ektensi;
-
-        Storage::putFileAs('public/uploads/photo', $request->file('path_photo'), $nameFIle);
-
-
-        $response2 = Http::withHeaders([
-            'X-API-KEY' => config('app.api_key'),
-            'Accept' => 'application/json'
-        ])->put('https://sipon.kyaigalangsewu.net/api/v1/psb/register/' . $id, [
-            'path_photo' => $nameFIle
+        $validator = Validator::make($request->all(), [
+            'path_photo' => 'bail|nullable|file|mimes:jpg,png,jpeg,JPG,PNG,JPEG|max:1048', //1 Mb
+        ], [
+            'path_photo.max' => 'Ukuran file harus dibawah 1 Mb.',
+            'path_photo.file' => 'Masukan yang dikirim harus berupa objek file.',
+            'path_photo.mimes' => 'Ekstensi file harus png, jpg, jpeg, PNG, JPG, atau JPEG.',
         ]);
-        $data = $response2->status();
+
+        if ($validator->fails()) {
+            return redirect()->back()
+                ->withErrors($validator)
+                ->with('data-failed', 'Gagal memperbaharui foto. Silakan periksa kembali persyaratannya.')
+                ->withInput();
+        } else {
+            $response = Http::withHeaders([
+                'X-API-KEY' => config('app.api_key'),
+                'Accept' => 'application/json'
+            ])->get('https://sipon.kyaigalangsewu.net/api/v1/psb/register/' . $id);
+            $data = $response->json()['data'];
+
+            $file = $request->file('path_photo');
+            $ektensi = $file->getClientOriginalExtension();
+            $uniqueString = Str::random(9);
+            $nameFIle = $data['no_regis'] . '_' . $uniqueString . '_photo'  . '.' . $ektensi;
+
+            if (Storage::exists('public/uploads/photo/' . $data['path_photo'])) {
+                Storage::delete('public/uploads/photo/' . $data['path_photo']);
+            }
+
+            Storage::putFileAs('public/uploads/photo', $request->file('path_photo'), $nameFIle);
+
+            $response2 = Http::withHeaders([
+                'X-API-KEY' => config('app.api_key'),
+                'Accept' => 'application/json'
+            ])->put('https://sipon.kyaigalangsewu.net/api/v1/psb/register/' . $id, [
+                'path_photo' => $nameFIle
+            ]);
+            $data = $response2->status();
 
 
-        if ($data !== 201) {
-            return redirect('/user')->with('data-failed', 'Gagal memperbaharui foto.');
+            if ($data !== 201) {
+                return redirect('/user')->with('data-failed', 'Kesalahan Server, Gagal memperbaharui foto. Silakan coba kembali nanti');
+            }
+            return  redirect('/user')->with('data-success', 'Foto berhasil diperbaharui!');
         }
-        return  redirect('/user')->with('data-success', 'Foto berhasil diperbaharui!');
     }
     /**
      * upload the specified resource from storage.
      */
     public function doc(Request $request, string $id)
     {
-        $response = Http::withHeaders([
-            'X-API-KEY' => config('app.api_key'),
-            'Accept' => 'application/json'
-        ])->get('https://sipon.kyaigalangsewu.net/api/v1/psb/register/' . $id);
-        $data = $response->json()['data'];
+        $validator = Validator::make($request->all(), [
+            'path_doc' => 'bail|nullable|file|mimes:pdf|max:1048', //1 Mb
 
-        $file = $request->file('path_doc');
-        $ektensi = $file->extension();
-
-        if ($ektensi != 'pdf') {
-            return redirect('/user')->with('data-failed', 'Gagal memperbaharui berkas, ekstensi file tidak benar.');
-        }
-
-        $nameFIle = $data['no_regis'] . '_doc'  . '.' . $ektensi;
-
-        Storage::putFileAs('public/uploads/doc', $request->file('path_doc'), $nameFIle);
-
-
-        $response2 = Http::withHeaders([
-            'X-API-KEY' => config('app.api_key'),
-            'Accept' => 'application/json'
-        ])->put('https://sipon.kyaigalangsewu.net/api/v1/psb/register/' . $id, [
-            'path_doc' => $nameFIle
+        ], [
+            'path_doc.max' => 'Ukuran file harus dibawah 1 Mb.',
+            'path_doc.file' => 'Masukan yang dikirim harus berupa objek file.',
+            'path_doc.mimes' => 'Ekstensi file harus pdf.',
         ]);
-        $data = $response2->status();
+
+        if ($validator->fails()) {
+            return redirect()->back()
+                ->withErrors($validator)
+                ->with('data-failed', 'Gagal memperbaharui berkas. Silakan periksa kembali persyaratannya.')
+                ->withInput();
+        } else {
+            $response = Http::withHeaders([
+                'X-API-KEY' => config('app.api_key'),
+                'Accept' => 'application/json'
+            ])->get('https://sipon.kyaigalangsewu.net/api/v1/psb/register/' . $id);
+            $data = $response->json()['data'];
+
+            $file = $request->file('path_doc');
+            $ektensi = $file->getClientOriginalExtension();
+            $uniqueString = Str::random(9);
+            $nameFIle = $data['no_regis'] . '_' . $uniqueString . '_doc'  . '.' . $ektensi;
 
 
-        if ($data !== 201) {
-            return redirect('/user')->with('data-failed', 'Gagal memperbaharui berkas.');
+            if (Storage::exists('public/uploads/doc/' . $data['path_doc'])) {
+                Storage::delete('public/uploads/doc/' . $data['path_doc']);
+            }
+
+            Storage::putFileAs('public/uploads/doc', $request->file('path_doc'), $nameFIle);
+
+            $response2 = Http::withHeaders([
+                'X-API-KEY' => config('app.api_key'),
+                'Accept' => 'application/json'
+            ])->put('https://sipon.kyaigalangsewu.net/api/v1/psb/register/' . $id, [
+                'path_doc' => $nameFIle
+            ]);
+            $data = $response2->status();
+
+            if ($data !== 201) {
+                return redirect('/user')->with('data-failed', 'Kesalahan Server, Gagal memperbaharui berkas. Silakan coba kembali nanti');
+            }
+            return  redirect('/user')->with('data-success', 'Berkas berhasil diperbaharui!');
         }
-        return  redirect('/user')->with('data-success', 'Berkas berhasil diperbaharui!');
     }
     /**
      * upload the specified resource from storage.
      */
     public function bill(Request $request, string $id)
     {
-        $response = Http::withHeaders([
-            'X-API-KEY' => config('app.api_key'),
-            'Accept' => 'application/json'
-        ])->get('https://sipon.kyaigalangsewu.net/api/v1/psb/register/' . $id);
-        $data = $response->json()['data'];
-
-        $file = $request->file('path_bill');
-        $ektensi = $file->extension();
-        $nameFIle = $data['no_regis'] . '_bill'  . '.' . $ektensi;
-
-        Storage::putFileAs('public/uploads/bill', $request->file('path_bill'), $nameFIle);
-
-
-        $response2 = Http::withHeaders([
-            'X-API-KEY' => config('app.api_key'),
-            'Accept' => 'application/json'
-        ])->put('https://sipon.kyaigalangsewu.net/api/v1/psb/register/' . $id, [
-            'path_bill' => $nameFIle
+        $validator = Validator::make($request->all(), [
+            'path_bill' => 'bail|nullable|file|mimes:pdf,jpg,png,jpeg,JPG,PNG,JPEG|max:1048', //1 Mb
+        ], [
+            'path_bill.max' => 'Ukuran file harus dibawah 1 Mb.',
+            'path_bill.file' => 'Masukan yang dikirim harus berupa objek file.',
+            'path_bill.mimes' => 'Ekstensi file harus pdf, jpg, png, jpeg, JPG, PNG, atau JPEG.',
         ]);
-        $data = $response2->status();
 
-        if ($data !== 201) {
-            return redirect('/user')->with('data-failed', 'Gagal memperbaharui dokumen.');
+        if ($validator->fails()) {
+            return redirect()->back()
+                ->withErrors($validator)
+                ->with('data-failed', 'Gagal memperbaharui bukti pendaftaran. Silakan periksa kembali persyaratannya.')
+                ->withInput();
+        } else {
+            $response = Http::withHeaders([
+                'X-API-KEY' => config('app.api_key'),
+                'Accept' => 'application/json'
+            ])->get('https://sipon.kyaigalangsewu.net/api/v1/psb/register/' . $id);
+            $data = $response->json()['data'];
+
+            $file = $request->file('path_bill');
+            $ektensi = $file->getClientOriginalExtension();
+            $uniqueString = Str::random(9);
+            $nameFIle = $data['no_regis'] . '_' . $uniqueString . '_bill'  . '.' . $ektensi;
+
+            if (Storage::exists('public/uploads/bill/' . $data['path_bill'])) {
+                Storage::delete('public/uploads/bill/' . $data['path_bill']);
+            }
+
+            Storage::putFileAs('public/uploads/bill', $request->file('path_bill'), $nameFIle);
+
+
+            $response2 = Http::withHeaders([
+                'X-API-KEY' => config('app.api_key'),
+                'Accept' => 'application/json'
+            ])->put('https://sipon.kyaigalangsewu.net/api/v1/psb/register/' . $id, [
+                'path_bill' => $nameFIle
+            ]);
+            $data = $response2->status();
+
+            if ($data !== 201) {
+                return redirect('/user')->with('data-failed', 'Kesalahan Server, Gagal memperbaharui bukti pendaftaran. Silakan coba kembali nanti');
+            }
+            return  redirect('/user')->with('data-success', 'Bukti pendaftaran berhasil diperbaharui!');
         }
-        return  redirect('/user')->with('data-success', 'Dokumen berhasil diperbaharui!');
     }
     /**
      * upload the specified resource from storage.
      */
     public function mutasi(Request $request, string $id)
     {
-        $response = Http::withHeaders([
-            'X-API-KEY' => config('app.api_key'),
-            'Accept' => 'application/json'
-        ])->get('https://sipon.kyaigalangsewu.net/api/v1/psb/register/' . $id);
-        $data = $response->json()['data'];
+        $validator = Validator::make($request->all(), [
+            'path_mutasi_emis' => 'bail|nullable|file|mimes:pdf|max:1048', //1 Mb
 
-        $file = $request->file('path_mutasi_emis');
-        $ektensi = $file->extension();
-
-
-        if ($ektensi != 'pdf') {
-            return redirect('/user')->with('data-failed', 'Gagal memperbaharui berkas, ekstensi file tidak benar.');
-        }
-
-        $nameFIle = $data['no_regis'] . '_mutasi'  . '.' . $ektensi;
-
-        Storage::putFileAs('public/uploads/mutasi', $request->file('path_mutasi_emis'), $nameFIle);
-
-
-        $response2 = Http::withHeaders([
-            'X-API-KEY' => config('app.api_key'),
-            'Accept' => 'application/json'
-        ])->put('https://sipon.kyaigalangsewu.net/api/v1/psb/register/' . $id, [
-            'path_mutasi_emis' => $nameFIle,
-            'previous_pondok_name' => $request->previous_pondok_name,
-            'previous_pondok_address' => $request->previous_pondok_address,
+        ], [
+            'path_mutasi_emis.max' => 'Ukuran file harus dibawah 1 Mb.',
+            'path_mutasi_emis.file' => 'Masukan yang dikirim harus berupa objek file.',
+            'path_mutasi_emis.mimes' => 'Ekstensi file harus pdf.',
         ]);
-        $data = $response2->status();
 
-        if ($data !== 201) {
-            return redirect('/user')->with('data-failed', 'Gagal memperbaharui surat mutasi.');
+        if ($validator->fails()) {
+            return redirect()->back()
+                ->withErrors($validator)
+                ->with('data-failed', 'Gagal memperbaharui berkas mutasi. Silakan periksa kembali persyaratannya.')
+                ->withInput();
+        } else {
+            $response = Http::withHeaders([
+                'X-API-KEY' => config('app.api_key'),
+                'Accept' => 'application/json'
+            ])->get('https://sipon.kyaigalangsewu.net/api/v1/psb/register/' . $id);
+            $data = $response->json()['data'];
+
+            $file = $request->file('path_mutasi_emis');
+            $ektensi = $file->getClientOriginalExtension();
+            $uniqueString = Str::random(9);
+            $nameFIle = $data['no_regis'] . '_' . $uniqueString . '_mutasi'  . '.' . $ektensi;
+
+            if (Storage::exists('public/uploads/mutasi/' . $data['path_mutasi_emis'])) {
+                Storage::delete('public/uploads/mutasi/' . $data['path_mutasi_emis']);
+            }
+
+            Storage::putFileAs('public/uploads/mutasi', $request->file('path_mutasi_emis'), $nameFIle);
+
+
+            $response2 = Http::withHeaders([
+                'X-API-KEY' => config('app.api_key'),
+                'Accept' => 'application/json'
+            ])->put('https://sipon.kyaigalangsewu.net/api/v1/psb/register/' . $id, [
+                'path_mutasi_emis' => $nameFIle,
+                'previous_pondok_name' => $request->previous_pondok_name,
+                'previous_pondok_address' => $request->previous_pondok_address,
+            ]);
+            $data = $response2->status();
+
+            if ($data !== 201) {
+                return redirect('/user')->with('data-failed', 'Kesalahan Server. Gagal memperbaharui surat mutasi. Silakan coba kembali nanti');
+            }
+            return  redirect('/user')->with('data-success', 'Berkas mutasi emis diperbaharui!');
         }
-        return  redirect('/user')->with('data-success', 'Dokumen emis diperbaharui!');
     }
 
     /**

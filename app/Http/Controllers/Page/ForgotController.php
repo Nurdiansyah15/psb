@@ -24,7 +24,6 @@ class ForgotController extends Controller
      */
     public function create()
     {
-
     }
 
     /**
@@ -39,31 +38,29 @@ class ForgotController extends Controller
 
         foreach ($pendaftar['data'] as $rows => $r) {
             if ($r['email'] == $request->email) {
-                $id=$r['id'];
-                $email=$r['email'];
-                $password=Str::random(8);
+                $id = $r['id'];
+                $email = $r['email'];
+                $password = Str::random(8);
 
                 $response = Http::withHeaders([
                     'X-API-KEY' => config('app.api_key'),
                     'Accept' => 'application/json'
                 ])->put('https://sipon.kyaigalangsewu.net/api/v1/psb/register/' . $id, [
-                    'password'=>$password,
+                    'password' => $password,
                 ]);
 
                 Mail::to('mmgrup17@gmail.com')->send(new ResetPassword());
 
-                return view('user-page.forgotpassword.index')->with(['success'=>'Berhasil reset password']);
-            }else{
-$data=[
-    'newpass'=>'123'
-];
+                return view('user-page.forgotpassword.index')->with(['success' => 'Berhasil reset password']);
+            } else {
+                $data = [
+                    'newpass' => '123'
+                ];
                 Mail::to('mmgrup17@gmail.com')->send(new ResetPassword($data));
 
-                return view('user-page.forgotpassword.index')->with(['error'=>'Email tidak ditemukan']);
+                return view('user-page.forgotpassword.index')->with(['error' => 'Email tidak ditemukan']);
             }
         }
-
-
     }
 
     /**

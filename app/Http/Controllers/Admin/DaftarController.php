@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
+
 use Illuminate\Support\Facades\Http;
 use App\Helpers\RegNumGenerator;
 use App\Models\User;
@@ -97,12 +98,11 @@ class DaftarController extends Controller
      */
     public function destroy(string $id)
     {
-$token = json_decode(Cookie::get('sipon_session'))->token;
-    echo $pendaftar = Http::withHeaders([
-        'Authorization' => 'Bearer '.$token,
-        'Accept' => 'application/json'
-    ])->delete('https://sipon.kyaigalangsewu.net/api/v1/psb/register/'.$id);
-    // return back()->with('status', 'Data berhasil dihapus');
+        $token = json_decode(Cookie::get('sipon_session'))->token;
+        echo $pendaftar = Http::withHeaders([
+            'Authorization' => 'Bearer ' . $token,
+            'Accept' => 'application/json'
+        ])->delete('https://sipon.kyaigalangsewu.net/api/v1/psb/register/' . $id);
+        // return back()->with('status', 'Data berhasil dihapus');
     }
-
 }

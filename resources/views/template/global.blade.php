@@ -71,18 +71,19 @@
                                 </li>
                                 @if (session('id'))
                                     <li class="dropdown psb-f">
-                                        <div class="photo-profile dropdown-toggle" style="height: 40px" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                        <div class="navbar-photo-profile dropdown-toggle" style="height: 40px"
+                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             <img src="storage/uploads/photo/{{ isset($data['path_photo']) ? $data['path_photo'] : 'user-icon.png' }}"
-                                                class="img-fluid nav-img" alt="pp"
-                                                style="width: 40px; height: 40px">
+                                                class="img-fluid nav-img" alt="pp">
                                         </div>
                                         <ul class="dropdown-menu text-center p-0">
-                                            <li class="p-0"><a class="dropdown-item " style="color:#146C94" href="/user">Profil</a>
+                                            <li class="p-0"><a class="dropdown-item " style="color:#146C94"
+                                                    href="/user">Profil</a>
 
                                             </li>
 
-                                            <li class="p-0"><a class="dropdown-item " style="color:#146C94" href="/logout">Logout</a>
+                                            <li class="p-0"><a class="dropdown-item " style="color:#146C94"
+                                                    href="/logout">Logout</a>
                                             </li>
                                         </ul>
 
@@ -119,11 +120,13 @@
                                         </div>
 
                                         <ul class="dropdown-menu text-center p-0 " style="color:#146C94">
-                                            <li class="p-0"><a class="dropdown-item " style="color:#146C94" href="/user">Profil</a>
+                                            <li class="p-0"><a class="dropdown-item " style="color:#146C94"
+                                                    href="/user">Profil</a>
 
                                             </li>
 
-                                            <li class="p-0"><a class="dropdown-item " style="color:#146C94" href="/logout">Logout</a>
+                                            <li class="p-0"><a class="dropdown-item " style="color:#146C94"
+                                                    href="/logout">Logout</a>
                                             </li>
                                         </ul>
 

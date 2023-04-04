@@ -78,7 +78,7 @@
                                         <p>Pendidikan</p>
                                     </div>
                                     <div class="col-12 menu-link btn" id="orang-tua">
-                                        <p>Data Orang Tua / Wali</p>
+                                        <p>Data Keluarga</p>
                                     </div>
                                 </div>
                             </div>
@@ -146,6 +146,15 @@
                                 </div>
                                 <div class="item-profile">
                                     <div class="title-item">
+                                        Motivasi Masuk Pondok
+                                    </div>
+                                    <div class="content-item">
+                                        <input name="motivation_entry" type="text" class="form-control"
+                                            id="exampleFormControlInput1" value="{{ $data['motivation_entry'] }}">
+                                    </div>
+                                </div>
+                                <div class="item-profile">
+                                    <div class="title-item">
                                         Tempat Lahir
                                     </div>
                                     <div class="content-item">
@@ -195,15 +204,6 @@
                                     <div class="content-item">
                                         <input name="phone" type="text" class="form-control"
                                             id="exampleFormControlInput1" value="{{ $data['phone'] }}">
-                                    </div>
-                                </div>
-                                <div class="item-profile">
-                                    <div class="title-item">
-                                        Kondisi Rumah
-                                    </div>
-                                    <div class="content-item">
-                                        <input name="home_status" type="text" class="form-control"
-                                            id="exampleFormControlInput1" value="{{ $data['home_status'] }}">
                                     </div>
                                 </div>
                                 <div class="item-profile">
@@ -264,8 +264,16 @@
                                         Nomor Induk Kependudukan ( NIK, 16 digit )
                                     </div>
                                     <div class="content-item">
-                                        <input max="20" name="nik" type="text" class="form-control"
-                                            id="exampleFormControlInput1" value="{{ $data['nik'] }}">
+                                        <input max="20" name="nik" type="text"
+                                            class="form-control @error('nik') is-invalid @enderror"
+                                            id="exampleFormControlInput1"
+                                            @error('nik') value="{{ old('nik') }}" @enderror
+                                            value="{{ $data['nik'] }}">
+                                        @error('nik')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="item-profile">
@@ -273,8 +281,16 @@
                                         Nomor Kartu Keluarga ( KK, 16 digit )
                                     </div>
                                     <div class="content-item">
-                                        <input max="20" name="no_kk" type="text" class="form-control"
-                                            id="exampleFormControlInput1" value="{{ $data['no_kk'] }}">
+                                        <input max="20" name="no_kk" type="text"
+                                            class="form-control @error('no_kk') is-invalid @enderror"
+                                            id="exampleFormControlInput1"
+                                            @error('no_kk') value="{{ old('no_kk') }}" @enderror
+                                            value="{{ $data['no_kk'] }}">
+                                        @error('no_kk')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="item-profile">
@@ -282,8 +298,16 @@
                                         Nomor Induk Siswa Nasional ( NISN, 10 digit )
                                     </div>
                                     <div class="content-item">
-                                        <input max="10" name="nisn" type="text" class="form-control"
-                                            id="exampleFormControlInput1" value="{{ $data['nisn'] }}">
+                                        <input max="10" name="nisn" type="text"
+                                            class="form-control @error('nisn') is-invalid @enderror"
+                                            id="exampleFormControlInput1"
+                                            @error('nisn') value="{{ old('nisn') }}" @enderror
+                                            value="{{ $data['nisn'] }}">
+                                        @error('nisn')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="item-profile">
@@ -292,8 +316,16 @@
                                             class="badge bg-secondary mx-3 mb-2">Bagi yang memiliki</span>
                                     </div>
                                     <div class="content-item">
-                                        <input max="10" name="no_kip" type="text" class="form-control"
-                                            id="exampleFormControlInput1" value="{{ $data['no_kip'] }}">
+                                        <input max="10" name="no_kip" type="text"
+                                            class="form-control @error('no_kip') is-invalid @enderror"
+                                            id="exampleFormControlInput1"
+                                            @error('no_kip') value="{{ old('no_kip') }}" @enderror
+                                            value="{{ $data['no_kip'] }}">
+                                        @error('no_kip')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="item-profile">
@@ -302,8 +334,16 @@
                                             class="badge bg-secondary mx-3 mb-2">Bagi yang memiliki</span>
                                     </div>
                                     <div class="content-item">
-                                        <input max="20" name="no_kks" type="text" class="form-control"
-                                            id="exampleFormControlInput1" value="{{ $data['no_kks'] }}">
+                                        <input max="20" name="no_kks" type="text"
+                                            class="form-control @error('no_kks') is-invalid @enderror"
+                                            id="exampleFormControlInput1"
+                                            @error('no_kks') value="{{ old('no_kks') }}" @enderror
+                                            value="{{ $data['no_kks'] }}">
+                                        @error('no_kks')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="item-profile">
@@ -312,8 +352,16 @@
                                             class="badge bg-secondary mx-3 mb-2">Bagi yang memiliki</span>
                                     </div>
                                     <div class="content-item">
-                                        <input max="10" name="no_pkh" type="text" class="form-control"
-                                            id="exampleFormControlInput1" value="{{ $data['no_pkh'] }}">
+                                        <input max="10" name="no_pkh" type="text"
+                                            class="form-control @error('no_pkh') is-invalid @enderror"
+                                            id="exampleFormControlInput1"
+                                            @error('no_pkh') value="{{ old('no_pkh') }}" @enderror
+                                            value="{{ $data['no_pkh'] }}">
+                                        @error('no_pkh')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-success">Simpan</button>
@@ -348,7 +396,37 @@
                             {{-- Orang Tua --}}
                             <div class="col-12 self-profile" id="orang-tua-2">
                                 <div class="self-title">
-                                    Data Orang Tua / Wali
+                                    Data Keluarga
+                                </div>
+                                <div class="item-profile">
+                                    <div class="title-item">
+                                        Kondisi Keluarga
+                                    </div>
+                                    <div class="content-item">
+                                        <select name="home_status" class="form-select"
+                                            aria-label="Default select example">
+                                            <option value="" @if ($data['home_status'] === null) selected @endif>Pilih
+                                                salah satu</option>
+                                            <option value="Tinggal bersama kedua orang tua"
+                                                @if ($data['home_status'] === 'Tinggal bersama kedua orang tua') selected @endif>Tinggal bersama kedua
+                                                orang tua
+                                            </option>
+                                            <option value="Tinggal bersama ayah saja"
+                                                @if ($data['home_status'] === 'Tinggal bersama ayah saja') selected @endif>Tinggal bersama ayah saja
+                                            </option>
+                                            <option value="Tinggal bersama ibu saja"
+                                                @if ($data['home_status'] === 'Tinggal bersama ibu saja') selected @endif>Tinggal bersama ibu saja
+                                            </option>
+                                            <option value="Tinggal bersama saudara/orang lain"
+                                                @if ($data['home_status'] === 'Tinggal bersama saudara/orang lain') selected @endif>Tinggal bersama
+                                                saudara/orang lain</option>
+                                            <option value="Sebatang kara"
+                                                @if ($data['home_status'] === 'Sebatang kara') selected @endif>Sebatang kara</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="self-title">
+                                    Ayah
                                 </div>
                                 <div class="item-profile">
                                     <div class="title-item">
@@ -404,6 +482,9 @@
                                             id="exampleFormControlInput1" value="{{ $data['father_income'] }}">
                                     </div>
                                 </div>
+                                <div class="self-title">
+                                    Ibu
+                                </div>
                                 <div class="item-profile">
                                     <div class="title-item">
                                         Nama Ibu
@@ -457,6 +538,9 @@
                                         <input name="mother_income" type="text" class="form-control"
                                             id="exampleFormControlInput1" value="{{ $data['mother_income'] }}">
                                     </div>
+                                </div>
+                                <div class="self-title">
+                                    Wali
                                 </div>
                                 <div class="item-profile">
                                     <div class="title-item">
@@ -538,17 +622,23 @@
                                 <div class="item-profile">
                                     <div class="title-item">
                                         Scan Surat Pernyataan, KTP, dan KK <span class="text-danger">(Dalam 1 dokumen PDF
-                                            serta maksimal 500 kb)</span>
+                                            serta maksimal 1 Mb)</span>
                                     </div>
                                     <div class="content-item">
-                                        <input required name="path_doc" class="form-control inp" type="file"
+                                        <input required name="path_doc"
+                                            class="form-control @error('path_doc') is-invalid @enderror" type="file"
                                             id="formFile">
+                                        @error('path_doc')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
                                     <button type="submit" class="my-3 btn btn-success">Simpan</button>
                                 </div>
                             </form>
                             @if ($data['path_doc'] !== null)
-                                <iframe id="iframepdf" style="width: 100%; height:100vh"
+                                <iframe id="my-iframe" style="width: 100%; height:100vh"
                                     src="storage/uploads/doc/{{ $data['path_doc'] }}"></iframe>
                             @endif
 
@@ -568,18 +658,24 @@
                                 @csrf
                                 <div class="item-profile">
                                     <div class="title-item">
-                                        Surat Mutasi Emis <span class="text-danger">(Harus PDF serta maksimal size 500
-                                            kb)</span>
+                                        Surat Mutasi Emis <span class="text-danger">(Harus PDF serta maksimal size 1
+                                            Mb)</span>
                                     </div>
                                     <div class="content-item">
-                                        <input required name="path_mutasi_emis" class="form-control" type="file"
-                                            id="formFile">
+                                        <input required name="path_mutasi_emis"
+                                            class="form-control @error('path_mutasi_emis') is-invalid @enderror"
+                                            type="file" id="formFile">
+                                        @error('path_mutasi_emis')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
                                     <button type="submit" class="my-3 btn btn-success">Simpan</button>
                                 </div>
                             </form>
                             @if ($data['path_mutasi_emis'] !== null)
-                                <iframe id="iframepdf" style="width: 100%; height:100vh"
+                                <iframe id="my-iframe" style="width: 100%; height:100vh"
                                     src="storage/uploads/mutasi/{{ $data['path_mutasi_emis'] }}"></iframe>
                             @endif
                         </div>
@@ -598,17 +694,23 @@
                                 @csrf
                                 <div class="item-profile">
                                     <div class="title-item">
-                                        Bukti Pembayaran <span class="text-danger">(Maksimal 200 kb)</span>
+                                        Bukti Pembayaran <span class="text-danger">(Maksimal 1 Mb)</span>
                                     </div>
                                     <div class="content-item">
-                                        <input required name="path_bill" class="form-control inp" type="file"
+                                        <input required name="path_bill"
+                                            class="form-control @error('path_bill') is-invalid @enderror" type="file"
                                             id="formFile">
+                                        @error('path_bill')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
                                     <button type="submit" class="my-3 btn btn-success">Simpan</button>
                                 </div>
                             </form>
                             @if ($data['path_bill'] !== null)
-                                <iframe id="iframepdf" style="width: 100%; height:100vh"
+                                <iframe id="my-iframe" style="width: 100%; height:100vh"
                                     src="storage/uploads/bill/{{ $data['path_bill'] }}"></iframe>
                             @endif
                         </div>
@@ -653,13 +755,19 @@
                             </div>
                             <div class="item-profile">
                                 <div class="title-item">
-                                    Upload Foto <span class="text-danger">(Harus PNG atau JPG serta maksimal 200 kb)</span>
+                                    Upload Foto <span class="text-danger">(Harus PNG atau JPG serta maksimal 1 Mb)</span>
                                 </div>
                                 <form action="/photo/{{ $data['id'] }}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <div class="content-item">
-                                        <input name="path_photo" class="form-control inp" type="file" id="formFile"
-                                            required>
+                                        <input name="path_photo"
+                                            class="form-control @error('path_photo') is-invalid @enderror" type="file"
+                                            id="formFile" required>
+                                        @error('path_photo')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
                                     <button type="submit" class="my-3 btn btn-success">Simpan</button>
                                 </form>
