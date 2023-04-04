@@ -231,7 +231,7 @@ class DashboardController extends Controller
         if ($validator->fails()) {
             return redirect()->back()
                 ->withErrors($validator)
-                ->with('data-failed', 'Gagal memperbaharui bukti pendaftaran. Silakan periksa kembali persyaratannya.')
+                ->with('data-failed', 'Gagal memperbaharui bukti pembayaran. Silakan periksa kembali persyaratannya.')
                 ->withInput();
         } else {
             $response = Http::withHeaders([
@@ -261,9 +261,9 @@ class DashboardController extends Controller
             $data = $response2->status();
 
             if ($data !== 201) {
-                return redirect('/user')->with('data-failed', 'Kesalahan Server, Gagal memperbaharui bukti pendaftaran. Silakan coba kembali nanti');
+                return redirect('/user')->with('data-failed', 'Kesalahan Server, Gagal memperbaharui bukti pembayaran. Silakan coba kembali nanti');
             }
-            return  redirect('/user')->with('data-success', 'Bukti pendaftaran berhasil diperbaharui!');
+            return  redirect('/user')->with('data-success', 'Bukti pembayaran berhasil diperbaharui!');
         }
     }
     /**

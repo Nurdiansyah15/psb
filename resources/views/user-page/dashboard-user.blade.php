@@ -15,14 +15,14 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-4 left-section">
                     <div class="row short-profile">
-                        <div class="col-md-3 photo-profile">
+                        <div class="col-4 photo-profile">
                             <a href="#" onclick="return func(0)" id="edit-button" class="edit-button"><i
                                     class="fa-regular fa-pen-to-square"></i>
                             </a>
                             <img src="storage/uploads/photo/{{ isset($data['path_photo']) ? $data['path_photo'] : 'user-icon.png' }}"
                                 class="img-fluid user-img" alt="pp">
                         </div>
-                        <div class="col-md-9 name-register">
+                        <div class="col-8 name-register">
                             <div class="row">
                                 <div class="col-12 name">
                                     {{ $data['fullname'] }}
