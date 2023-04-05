@@ -3,7 +3,7 @@
     <div class="banner mt-3 " id="top">
         <div class="container-fluid">
             <div class="row background" style="background-image: url({{ asset('/img/banner2.jpg') }})">
-                <div class="psb-f col-md-5 d-flex align-items-center justify-content-center logo-pondok">
+                <div class="psb-f mt-md-0 mt-5 col-md-5 d-flex align-items-center justify-content-center logo-pondok">
                     <img src="assets/images/logo.png" alt="logo" srcset="">
                 </div>
                 <div class="col-md-5 d-flex align-items-center justify-content-center title">
