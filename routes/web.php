@@ -8,6 +8,7 @@ use App\Http\Controllers\Page\DashboardController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\Template\Template;
 use App\Http\Controllers\Admin\DaftarController;
+use App\Http\Controllers\Download\DownloadController;
 use Illuminate\Support\Facades\Cookie;
 
 /*
@@ -73,3 +74,5 @@ Route::group(['middleware' => ['user']], function () {
     Route::post('/mutasi/{id}', [DashboardController::class, 'mutasi']);
     Route::get('/print/{id}', [DashboardController::class, 'print']);
 });
+
+Route::get('/download/{filename}', [DownloadController::class, 'download'])->name('download');

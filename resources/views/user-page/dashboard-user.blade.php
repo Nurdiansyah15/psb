@@ -38,10 +38,12 @@
                             <p>Data Diri</p>
                         </div>
                         <div class="col-12 menu-link btn" id="mutasi">
-                            <p>Mutasi Emis <span class="badge bg-secondary mx-3">Bagi yang pernah mondok</span></p>
+                            <p>Mutasi Emis <span style="font-size: 10px" class="badge bg-secondary mx-3">Bagi yang pernah
+                                    mondok</span></p>
                         </div>
                         <div class="col-12 menu-link btn" id="dokumen">
-                            <p>Dokumen</p>
+                            <p>Dokumen <span style="font-size: 10px" class="badge bg-secondary mx-3">Unduh surat
+                                    pernyataan</span></p>
                         </div>
                         <div class="col-12 menu-link btn" id="pembayaran">
                             <p>Pembayaran</p>
@@ -70,6 +72,11 @@
                                     </div>
                                     <div class="col-12 menu-link btn" id="kontak">
                                         <p>Kontak</p>
+                                    </div>
+                                    <div class="col-12 menu-link btn" id="pondok">
+                                        <p>Pondok Sebelumnya <span style="font-size: 10px"
+                                                class="badge bg-secondary mx-3">Bagi yang pernah
+                                                mondok</span></p>
                                     </div>
                                     <div class="col-12 menu-link btn" id="kependudukan">
                                         <p>Kependudukan</p>
@@ -254,6 +261,50 @@
                                 <button type="submit" class="btn btn-success">Simpan</button>
                             </div>
                             {{-- end kontak --}}
+                            {{-- Riwayat Pondok --}}
+                            <div class="col-12 self-profile" id="pondok-2">
+                                <div class="self-title">
+                                    Keterangan Pondok Sebelumnya
+                                </div>
+                                <div class="item-profile">
+                                    <div class="title-item">
+                                        Nama Pondok Sebelumnya
+                                    </div>
+                                    <div class="content-item">
+                                        <input name="previous_pondok_name" type="text" class="form-control"
+                                            id="exampleFormControlInput1" value="{{ $data['previous_pondok_name'] }}">
+                                    </div>
+                                </div>
+                                <div class="item-profile">
+                                    <div class="title-item">
+                                        Alamat Pondok Sebelumnya (Kota/Kabupaten)
+                                    </div>
+                                    <div class="content-item">
+                                        <input name="previous_pondok_address" type="text" class="form-control"
+                                            id="exampleFormControlInput1" value="{{ $data['previous_pondok_address'] }}">
+                                    </div>
+                                </div>
+                                <div class="item-profile">
+                                    <div class="title-item">
+                                        Jabatan di Pondok Sebelumnya
+                                    </div>
+                                    <div class="content-item">
+                                        <input name="previous_pondok_div" type="text" class="form-control"
+                                            id="exampleFormControlInput1" value="{{ $data['previous_pondok_div'] }}">
+                                    </div>
+                                </div>
+                                <div class="item-profile">
+                                    <div class="title-item">
+                                        Lama di Pondok Sebelumnya (bulan/tahun)
+                                    </div>
+                                    <div class="content-item">
+                                        <input name="previous_pondok_time" type="text" class="form-control"
+                                            id="exampleFormControlInput1" value="{{ $data['previous_pondok_time'] }}">
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-success">Simpan</button>
+                            </div>
+                            {{-- end riwayat pondok --}}
                             {{-- Kependudukan --}}
                             <div class="col-12 self-profile" id="kependudukan-2">
                                 <div class="self-title">
@@ -400,28 +451,37 @@
                                 </div>
                                 <div class="item-profile">
                                     <div class="title-item">
-                                        Kondisi Keluarga
+                                        Status Rumah
                                     </div>
                                     <div class="content-item">
                                         <select name="home_status" class="form-select"
                                             aria-label="Default select example">
                                             <option value="" @if ($data['home_status'] === null) selected @endif>Pilih
                                                 salah satu</option>
-                                            <option value="Tinggal bersama kedua orang tua"
-                                                @if ($data['home_status'] === 'Tinggal bersama kedua orang tua') selected @endif>Tinggal bersama kedua
-                                                orang tua
+                                            <option value="Tinggal bersama orang tua/wali"
+                                                @if ($data['home_status'] === 'Tinggal bersama orang tua/wali') selected @endif>Tinggal bersama orang
+                                                tua/wali
                                             </option>
-                                            <option value="Tinggal bersama ayah saja"
-                                                @if ($data['home_status'] === 'Tinggal bersama ayah saja') selected @endif>Tinggal bersama ayah saja
+                                            <option value="Ikut saudara/kerabat"
+                                                @if ($data['home_status'] === 'Ikut saudara/kerabat') selected @endif>Ikut saudara/kerabat
                                             </option>
-                                            <option value="Tinggal bersama ibu saja"
-                                                @if ($data['home_status'] === 'Tinggal bersama ibu saja') selected @endif>Tinggal bersama ibu saja
+                                            <option value="Kontrak/kost" @if ($data['home_status'] === 'Kontrak/kost') selected @endif>
+                                                Kontrak/kost
                                             </option>
-                                            <option value="Tinggal bersama saudara/orang lain"
-                                                @if ($data['home_status'] === 'Tinggal bersama saudara/orang lain') selected @endif>Tinggal bersama
-                                                saudara/orang lain</option>
-                                            <option value="Sebatang kara"
-                                                @if ($data['home_status'] === 'Sebatang kara') selected @endif>Sebatang kara</option>
+                                            <option value="Rumah singgah"
+                                                @if ($data['home_status'] === 'Rumah singgah') selected @endif>Rumah singgah
+                                            </option>
+                                            <option value="Panti asuhan"
+                                                @if ($data['home_status'] === 'Panti asuhan') selected @endif>Panti asuhan
+                                            </option>
+                                            <option value="Asrama bukan milik lembaga"
+                                                @if ($data['home_status'] === 'Asrama bukan milik lembaga') selected @endif>Asrama bukan milik
+                                                lembaga
+                                            </option>
+                                            <option value="Asrama milik lembaga"
+                                                @if ($data['home_status'] === 'Asrama milik lembaga') selected @endif>Asrama milik
+                                                lembaga
+                                            </option>
                                         </select>
                                     </div>
                                 </div>
@@ -475,11 +535,31 @@
                                 </div>
                                 <div class="item-profile">
                                     <div class="title-item">
-                                        Pendapatan Ayah
+                                        Pendapatan Ayah (/bulan)
                                     </div>
                                     <div class="content-item">
-                                        <input name="father_income" type="text" class="form-control"
-                                            id="exampleFormControlInput1" value="{{ $data['father_income'] }}">
+                                        <select name="father_income" class="form-select"
+                                            aria-label="Default select example">
+                                            <option value="" @if ($data['father_income'] === null) selected @endif>
+                                                Pilih
+                                                salah satu</option>
+                                            <option value="≤ Rp. 500.000"
+                                                @if ($data['father_income'] === '≤ Rp. 500.000') selected @endif>≤ Rp. 500.000</option>
+                                            <option value="Rp. 500.001 - Rp. 1.000.000"
+                                                @if ($data['father_income'] === 'Rp. 500.001 - Rp. 1.000.000') selected @endif>Rp. 500.001 - Rp.
+                                                1.000.000</option>
+                                            <option value="Rp. 1.000.001 - Rp. 2.000.000"
+                                                @if ($data['father_income'] === 'Rp. 1.000.001 - Rp. 2.000.000') selected @endif>Rp. 1.000.001 - Rp.
+                                                2.000.000</option>
+                                            <option value="Rp. 2.000.001 - Rp. 3.000.000"
+                                                @if ($data['father_income'] === 'Rp. 2.000.001 - Rp. 3.000.000') selected @endif>Rp. 2.000.001 - Rp.
+                                                3.000.000</option>
+                                            <option value="Rp. 4.000.001 - Rp. 5.000.000"
+                                                @if ($data['father_income'] === 'Rp. 4.000.001 - Rp. 5.000.000') selected @endif>Rp. 4.000.001 - Rp.
+                                                5.000.000</option>
+                                            <option value="≥ Rp. 5.000.000"
+                                                @if ($data['father_income'] === '≥ Rp. 5.000.000') selected @endif>≥ Rp. 5.000.000</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="self-title">
@@ -532,11 +612,31 @@
                                 </div>
                                 <div class="item-profile">
                                     <div class="title-item">
-                                        Pendapatan Ibu
+                                        Pendapatan Ibu (/bulan)
                                     </div>
                                     <div class="content-item">
-                                        <input name="mother_income" type="text" class="form-control"
-                                            id="exampleFormControlInput1" value="{{ $data['mother_income'] }}">
+                                        <select name="mother_income" class="form-select"
+                                            aria-label="Default select example">
+                                            <option value="" @if ($data['mother_income'] === null) selected @endif>
+                                                Pilih
+                                                salah satu</option>
+                                            <option value="≤ Rp. 500.000"
+                                                @if ($data['mother_income'] === '≤ Rp. 500.000') selected @endif>≤ Rp. 500.000</option>
+                                            <option value="Rp. 500.001 - Rp. 1.000.000"
+                                                @if ($data['mother_income'] === 'Rp. 500.001 - Rp. 1.000.000') selected @endif>Rp. 500.001 - Rp.
+                                                1.000.000</option>
+                                            <option value="Rp. 1.000.001 - Rp. 2.000.000"
+                                                @if ($data['mother_income'] === 'Rp. 1.000.001 - Rp. 2.000.000') selected @endif>Rp. 1.000.001 - Rp.
+                                                2.000.000</option>
+                                            <option value="Rp. 2.000.001 - Rp. 3.000.000"
+                                                @if ($data['mother_income'] === 'Rp. 2.000.001 - Rp. 3.000.000') selected @endif>Rp. 2.000.001 - Rp.
+                                                3.000.000</option>
+                                            <option value="Rp. 4.000.001 - Rp. 5.000.000"
+                                                @if ($data['mother_income'] === 'Rp. 4.000.001 - Rp. 5.000.000') selected @endif>Rp. 4.000.001 - Rp.
+                                                5.000.000</option>
+                                            <option value="≥ Rp. 5.000.000"
+                                                @if ($data['mother_income'] === '≥ Rp. 5.000.000') selected @endif>≥ Rp. 5.000.000</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="self-title">
@@ -594,12 +694,33 @@
                                 </div>
                                 <div class="item-profile">
                                     <div class="title-item">
-                                        Pendapatan Wali <span class="badge bg-secondary mx-3 mb-2">Bagi yang tinggal
+                                        Pendapatan Wali (/bulan) <span class="badge bg-secondary mx-3 mb-2">Bagi yang
+                                            tinggal
                                             bersama wali</span>
                                     </div>
                                     <div class="content-item">
-                                        <input name="guardian_income" type="text" class="form-control"
-                                            id="exampleFormControlInput1" value="{{ $data['guardian_income'] }}">
+                                        <select name="guardian_income" class="form-select"
+                                            aria-label="Default select example">
+                                            <option value="" @if ($data['guardian_income'] === null) selected @endif>
+                                                Pilih
+                                                salah satu</option>
+                                            <option value="≤ Rp. 500.000"
+                                                @if ($data['guardian_income'] === '≤ Rp. 500.000') selected @endif>≤ Rp. 500.000</option>
+                                            <option value="Rp. 500.001 - Rp. 1.000.000"
+                                                @if ($data['guardian_income'] === 'Rp. 500.001 - Rp. 1.000.000') selected @endif>Rp. 500.001 - Rp.
+                                                1.000.000</option>
+                                            <option value="Rp. 1.000.001 - Rp. 2.000.000"
+                                                @if ($data['guardian_income'] === 'Rp. 1.000.001 - Rp. 2.000.000') selected @endif>Rp. 1.000.001 - Rp.
+                                                2.000.000</option>
+                                            <option value="Rp. 2.000.001 - Rp. 3.000.000"
+                                                @if ($data['guardian_income'] === 'Rp. 2.000.001 - Rp. 3.000.000') selected @endif>Rp. 2.000.001 - Rp.
+                                                3.000.000</option>
+                                            <option value="Rp. 4.000.001 - Rp. 5.000.000"
+                                                @if ($data['guardian_income'] === 'Rp. 4.000.001 - Rp. 5.000.000') selected @endif>Rp. 4.000.001 - Rp.
+                                                5.000.000</option>
+                                            <option value="≥ Rp. 5.000.000"
+                                                @if ($data['guardian_income'] === '≥ Rp. 5.000.000') selected @endif>≥ Rp. 5.000.000</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-success">Simpan</button>
@@ -614,6 +735,18 @@
                             Dokumen
                         </div>
                         <div class="col-12 self-profile">
+                            <div class="self-title">
+                                Download Surat Pernyataan
+                            </div>
+                            <div class="item-profile">
+                                <div class="title-item">
+                                    Silakan unduh file surat pernyataan di sini.
+                                </div>
+                                <div class="content-item">
+                                    <a href="/download/surat_pernyataan_saba.pdf" class="my-3 btn btn-secondary">Downlaod
+                                        <i class="fa-solid fa-download"></i></a>
+                                </div>
+                            </div>
                             <div class="self-title">
                                 Masukan Dokumen
                             </div>
