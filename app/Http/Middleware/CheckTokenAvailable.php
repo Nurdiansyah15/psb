@@ -21,19 +21,29 @@ class CheckTokenAvailable
     {
         if (Cookie::get('sipon_session') !== null) {
 
+            if ($request->data) {
+
+                Cookie::queue('sipon_session', Crypt::decryptString($request->data), 10080);
+
+                //https://psb.kyaigalangsewu.net/
+                return redirect('http://127.0.0.1:8300/admin');
+            }
+
             $token = json_decode(Cookie::get('sipon_session'))->token;
 
             $response = Http::withHeaders([
                 'Accept' => 'aplication/json',
                 'Authorization' => 'Bearer ' . $token,
-            ])->get('https://sipon.kyaigalangsewu.net/api/v1/token');
+            ])->get('http://127.0.0.1:8888/api/v1/token');
+
+            // dd($response->status());
 
             if ($response->status() != 200) {
 
                 setcookie('sipon_session', '', time() - 1);
 
                 //https://sipon.kyaigalangsewu.net/logout
-                return redirect('https://sipon.kyaigalangsewu.net/logout');
+                return redirect('http://127.0.0.1:8888/logout');
             }
 
             return $next($request);
@@ -42,11 +52,11 @@ class CheckTokenAvailable
 
                 Cookie::queue('sipon_session', Crypt::decryptString($request->data), 10080);
 
-                //https://administrasi.kyaigalangsewu.net/
-                return redirect('http://127.0.0.1:8200');
+                //https://psb.kyaigalangsewu.net/
+                return redirect('http://127.0.0.1:8300/admin');
             } else {
                 //https://sipon.kyaigalangsewu.net/
-                return redirect('https://sipon.kyaigalangsewu.net');
+                return redirect('http://127.0.0.1:8888');
             }
         }
     }

@@ -1,16 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Page;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Http;
 
-class LandingController extends Controller
+class DashboardController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
         $response = Http::withHeaders([
@@ -53,74 +50,14 @@ class LandingController extends Controller
         $jmlKitabPutri = count($kitabPutri);
 
         $count = array(
-            'putra' => $jmlTahfidhPutra + $jmlKitabPutra,
-            'putri' => $jmlTahfidhPutri + $jmlKitabPutri
+            'tahfidh_pa' => $jmlTahfidhPutra,
+            'kitab_pa' => $jmlKitabPutra,
+            'tahfidh_pi' => $jmlTahfidhPutri,
+            'kitab_pi' => $jmlKitabPutri
         );
 
-        if (session('id') != null) {
-            $id = session('id');
-            $response = Http::withHeaders([
-                'X-API-KEY' => config('app.api_key'),
-                'Accept' => 'application/json'
-            ])->get('https://sipon.kyaigalangsewu.net/api/v1/psb/register/' . $id);
-            $data = $response->json()['data'];
-        } else {
-            $data = null;
-        }
-
-
-        return view('landing', [
-            'setting' => $setting,
-            'count' => $count,
-            'data' => $data
+        return view('admin-page.dashboardadmin', [
+            'data' => $count
         ]);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
     }
 }

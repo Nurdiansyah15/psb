@@ -22,8 +22,8 @@
     <link rel="stylesheet" href="{{ asset('assets/css/template.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/owl.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/landing-style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/dashboard-user-style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/landing-style.css') }}?<?php echo time(); ?>">
+    <link rel="stylesheet" href="{{ asset('css/dashboard-user-style.css') }}?<?php echo time(); ?>">
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -291,7 +291,7 @@
     <script src="{{ asset('assets/js/owl-carousel.js') }}"></script>
     <script src="{{ asset('assets/js/counter.js') }}"></script>
     <script src="{{ asset('assets/js/custom.js') }}"></script>
-    <script src="{{ asset('js/dashboard-user.js') }}"></script>
+    <script src="{{ asset('js/dashboard-user.js') }}?<?php echo time(); ?>"></script>
 
 </body>
 

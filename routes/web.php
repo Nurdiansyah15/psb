@@ -5,9 +5,10 @@ use App\Http\Controllers\Page\RegisterController;
 use App\Http\Controllers\Page\ForgotController;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Page\DashboardController;
+use App\Http\Controllers\Admin\DashboardController as Admin;
 use Illuminate\Support\Facades\Route;
-use SebastianBergmann\Template\Template;
 use App\Http\Controllers\Admin\DaftarController;
+use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Download\DownloadController;
 use Illuminate\Support\Facades\Cookie;
 
@@ -41,12 +42,23 @@ use Illuminate\Support\Facades\Cookie;
 // Route::get('/daftarsantri', function () {
 //     return view('admin-page/daftarsantri');
 // });
-Route::get('/gel', function () {
-    return view('admin-page/gelombang');
+
+Route::prefix('admin')->group(function () {
+    Route::middleware('sipon')->group(function () {
+        Route::get('', [Admin::class, 'index']);
+        Route::get('/pendaftar', [DaftarController::class, 'index']);
+        Route::post('/pendaftar/{id}', [DaftarController::class, 'destroy'])->name('pendaftar.destroy');
+        Route::get('/gelombang', [SettingController::class, 'index']);
+
+        Route::get('/logout', function () {
+
+            Cookie::queue(Cookie::make('sipon_session', null, -1));
+
+            return redirect('/admin');
+        });
+    });
 });
-Route::get('/admin', [AuthController::class, 'admin']);
-Route::get('/pendaftar', [DaftarController::class, 'index']);
-Route::delete('/pendaftar/{id}', [DaftarController::class, 'destroy'])->name('pendaftar.destroy');
+
 
 Route::get('/login', [AuthController::class, 'index']);
 Route::get('/logout', [AuthController::class, 'logout']);

@@ -9,7 +9,8 @@
         <div class="dropdown">
             <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
                 id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="/assets/images/profil.jpg" alt="" width="32" height="32" class="rounded-circle me-2">
+                <img src="/assets/images/profil.jpg" alt="" width="32" height="32"
+                    class="rounded-circle me-2">
                 <strong>Fahrul</strong>
             </a>
             <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
@@ -17,7 +18,7 @@
                 <li>
                     <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="{{url('/')}}">Sign out</a></li>
+                <li><button class="dropdown-item" href="{{ url('/admin/logout') }}">Sign out</button></li>
             </ul>
         </div>
     </div>
