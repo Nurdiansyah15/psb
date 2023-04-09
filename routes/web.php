@@ -39,16 +39,16 @@ use Illuminate\Support\Facades\Cookie;
 // Route::get('/admin', function () {
 //     return view('admin-page/dashboaradmin');
 // });
-// Route::get('/daftarsantri', function () {
-//     return view('admin-page/daftarsantri');
-// });
+Route::get('/gel', function () {
+    return view('admin-page.gelombang');
+});
 
 Route::prefix('admin')->group(function () {
     Route::middleware('sipon')->group(function () {
         Route::get('', [Admin::class, 'index']);
         Route::get('/pendaftar', [DaftarController::class, 'index']);
         Route::put('/pendaftar/{id}/', [DaftarController::class, 'update']);
-        Route::post('/pendaftar/{id}', [DaftarController::class, 'destroy'])->name('pendaftar.destroy');
+        Route::delete('/pendaftar/{id}', [DaftarController::class, 'destroy'])->name('pendaftar.destroy');
         Route::get('/gelombang', [SettingController::class, 'index']);
 
         Route::get('/logout', function () {

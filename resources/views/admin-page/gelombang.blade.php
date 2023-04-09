@@ -80,18 +80,17 @@
             </tr>
         </thead>
         <tbody>
-        @foreach ($data as $item)
+       
             <tr>
                 <td>
-                    <a href="{{ route('admin.gelombang.detail', $item->id) }}" class="text-decoration-none text-dark">
-                        {{ $item->nama }}
+                    
                     </a>
                 </td>
                 <td>
-                    {{ $item->pembukaan }}
+                  
                 </td>
                 <td>
-                    {{ $item->penutupan }}
+                  
                 </td>
                 <td>
         
@@ -191,7 +190,6 @@
                     </div>
                 </td>
             </tr>
-        @endforeach
         </tbody>
     </table>
 </div>

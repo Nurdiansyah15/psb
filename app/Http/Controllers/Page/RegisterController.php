@@ -94,18 +94,18 @@ class RegisterController extends Controller
             'Accept' => 'aplication/json',
             'X-API-KEY' => 'siponapikey',
         ])->get('http://sipon.kyaigalangsewu.net/api/v1/psb/register');
-        foreach($data['data'] as $r => $d){
-            if($d['nik']==$request->nik){
+        foreach ($data['data'] as $r => $d) {
+            if ($d['nik'] == $request->nik) {
                 return redirect('daftar')->with('status', 'NIK Anda sudah terdaftar');
                 return false;
             }
 
-            if($d['email']==$request->email){
+            if ($d['email'] == $request->email) {
                 return redirect('daftar')->with('status', 'Email Anda sudah terdaftar');
                 return false;
             }
 
-            if($d['phone']==$request->phone){
+            if ($d['phone'] == $request->phone) {
                 return redirect('daftar')->with('status', 'No. Whatsapp Anda sudah terdaftar');
                 return false;
             }
@@ -115,17 +115,29 @@ class RegisterController extends Controller
             'X-API-KEY' => 'siponapikey',
         ])->post('http://sipon.kyaigalangsewu.net/api/v1/psb/register', $request->all());
 
-        if($response['code']==400){
+        $id = $response['data']['id'];
+
+        $dataku = Http::withHeaders([
+            'Accept' => 'aplication/json',
+            'X-API-KEY' => 'siponapikey',
+        ])->get('http://sipon.kyaigalangsewu.net/api/v1/psb/register/' . $id);
+        $detail = [
+            'no_regis' => $dataku['data']['no_regis'],
+            'nik' => $dataku['data']['nik'],
+            'fullname' => $dataku['data']['fullname'],
+            'email' => $dataku['data']['email'],
+            'phone' => $dataku['data']['phone'],
+            'password' => $request->password,
+        ];
+        if ($response['code'] == 400) {
             return back()->withInput()
                 ->withErrors($response['errors']);
-        }else{
+        } else {
 
-            Mail::to($request->email)->send(new Pendaftaran($request->all()));
+            Mail::to($request->email)->send(new Pendaftaran($detail));
             $url = "/daftar/" . Crypt::encryptString($response->json()['data']['id']);
             return redirect($url)->with('status', 'Berhasil melakukan pendaftaran');
         }
-
-
     }
 
     /**

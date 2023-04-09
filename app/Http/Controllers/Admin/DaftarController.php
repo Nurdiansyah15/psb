@@ -86,12 +86,12 @@ class DaftarController extends Controller
         ])->put('https://sipon.kyaigalangsewu.net/api/v1/psb/register/' . $id, $request->all());
 
         // echo $response;
-            if(@$response['message']=='Success'){
-                return redirect('/admin/pendaftar')->with('status', 'Berhasil mengubah data');
-            }else{
-                return back()->withInput()
+        if (@$response['message'] == 'Success') {
+            return redirect('/admin/pendaftar')->with('status', 'Berhasil mengubah data');
+        } else {
+            return back()->withInput()
                 ->withErrors($response['message']);
-            }
+        }
     }
 
     /**
@@ -100,10 +100,10 @@ class DaftarController extends Controller
     public function destroy(string $id)
     {
         $token = json_decode(Cookie::get('sipon_session'))->token;
-        echo $pendaftar = Http::withHeaders([
+        $pendaftar = Http::withHeaders([
             'Authorization' => 'Bearer ' . $token,
             'Accept' => 'application/json'
         ])->delete('https://sipon.kyaigalangsewu.net/api/v1/psb/register/' . $id);
-        // return back()->with('status', 'Data berhasil dihapus');
+        return back()->with('status', 'Data berhasil dihapus');
     }
 }
