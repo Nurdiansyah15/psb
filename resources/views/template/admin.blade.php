@@ -12,7 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
         integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous">
     </script>
-    <title>PSB KGS</title>
+    <title>PSB | PP. Kyai Galang Sewu </title>
     <link rel="shortcut icon" href="{{ asset('/assets/images/logo-kgs.png') }}" />
     <!-- Bootstrap core CSS -->
     <link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet"

@@ -80,17 +80,18 @@ class DaftarController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $fields = $request->validate([
-            'no_regis' => 'string',
-            'role' => 'string',
-            'password' => 'string',
-        ]);
-        $user = User::where('id', $id)->first();
-        $data = $user->update($fields);
-        if ($data) {
-            return redirect()->back()->with('success', 'Data berhasil diubah');
-        }
-        return redirect()->back()->withErrors('failed', 'Data gagal diubah');
+        $response = Http::withHeaders([
+            'X-API-KEY' => config('app.api_key'),
+            'Accept' => 'application/json'
+        ])->put('https://sipon.kyaigalangsewu.net/api/v1/psb/register/' . $id, $request->all());
+
+        // echo $response;
+            if(@$response['message']=='Success'){
+                return redirect('/admin/pendaftar')->with('status', 'Berhasil mengubah data');
+            }else{
+                return back()->withInput()
+                ->withErrors($response['message']);
+            }
     }
 
     /**
