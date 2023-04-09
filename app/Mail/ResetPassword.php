@@ -17,9 +17,9 @@ class ResetPassword extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public function __construct($detail)
     {
-        //
+        $this->detail=$detail;
     }
 
     /**
@@ -28,7 +28,7 @@ class ResetPassword extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            from: new Address('admin@kyaigalangsewu.net', 'Panitia PSB'),
+            from: new Address('admin@kyaigalangsewu.net', 'Panitia PSB PP. Kyai Galang Sewu'),
             subject: 'Reset Password',
         );
     }
@@ -41,7 +41,7 @@ class ResetPassword extends Mailable
         return new Content(
             view: 'user-page.forgotpassword.message',
             with:[
-                'newpass'=>$data->newpass,
+                'password'=>$this->detail['password'],
             ]
         );
     }

@@ -38,6 +38,7 @@ class ForgotController extends Controller
 
         foreach ($pendaftar['data'] as $rows => $r) {
             if ($r['email'] == $request->email) {
+
                 $id = $r['id'];
                 $email = $r['email'];
                 $password = Str::random(8);
@@ -48,19 +49,17 @@ class ForgotController extends Controller
                 ])->put('https://sipon.kyaigalangsewu.net/api/v1/psb/register/' . $id, [
                     'password' => $password,
                 ]);
+                $detail = [
+                    'password' => $password,
+                    ];
+                Mail::to($email)->send(new ResetPassword($detail));
 
-                Mail::to('mmgrup17@gmail.com')->send(new ResetPassword());
-
-                return view('user-page.forgotpassword.index')->with(['success' => 'Berhasil reset password']);
-            } else {
-                $data = [
-                    'newpass' => '123'
-                ];
-                Mail::to('mmgrup17@gmail.com')->send(new ResetPassword($data));
-
-                return view('user-page.forgotpassword.index')->with(['error' => 'Email tidak ditemukan']);
+                return back()->with(['success' => 'Berhasil reset password']);
             }
         }
+
+        return back()->withInput()->withErrors(['email'=>'Email tidak ditemukan']);
+
     }
 
     /**

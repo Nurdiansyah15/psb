@@ -1,1 +1,1 @@
-<p>Password baru Anda adalah {{$newpass}}</p>
+<p>Password baru Anda adalah <strong>{{$password}}</strong></p>

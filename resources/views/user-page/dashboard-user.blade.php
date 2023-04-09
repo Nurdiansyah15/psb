@@ -644,6 +644,16 @@
                                 </div>
                                 <div class="item-profile">
                                     <div class="title-item">
+                                        Hubungan Dengan Wali <span class="badge bg-secondary mx-3 mb-2">Bagi yang tinggal bersama
+                                            wali</span>
+                                    </div>
+                                    <div class="content-item">
+                                        <input name="guardian_relationship" type="text" class="form-control"
+                                            id="exampleFormControlInput1" value="{{ $data['guardian_relationship'] }}">
+                                    </div>
+                                </div>
+                                <div class="item-profile">
+                                    <div class="title-item">
                                         Nama Wali <span class="badge bg-secondary mx-3 mb-2">Bagi yang tinggal bersama
                                             wali</span>
                                     </div>

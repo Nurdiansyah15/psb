@@ -12,14 +12,39 @@
                                         <div class="row justify-content-center">
                                             <div class="col-md-12 col-lg-12 col-xl-12 p-4">
                                                 <p class="text-center fw-bold mb-3">Masukkan Email Anda !</p>
+                                                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
                                                 <form action="forgot" method="POST">
                                                     @method('POST')
                                                     @csrf
-                                                    <!-- jenis Kelamin -->
+                                                    @error('email')
+                                                        {{-- <div class="alert alert-danger"></div> --}}
+                                                        <script>
+                                                            Swal.fire({
+                                                                position: 'center',
+                                                                icon: 'error',
+                                                                title: '{{ $message }}',
+                                                                showConfirmButton: false,
+                                                                timer: 1500
+                                                            })
+                                                        </script>
+                                                    @enderror
+                                                    @if(session('success'))
+                                                        {{-- <div class="alert alert-danger"></div> --}}
+                                                        <script>
+                                                            Swal.fire({
+                                                                position: 'center',
+                                                                icon: 'success',
+                                                                title: '{{ session('success') }}',
+                                                                showConfirmButton: false,
+                                                                timer: 1500
+                                                            })
+                                                        </script>
+                                                    @endif
                                                     <div class="d-flex flex-row align-items-center mb-4">
 
-                                                        <input type="email" required class="form-control" name="email"
-                                                            placeholder="email">
+                                                        <input value="{{ old('email') }}" type="email"
+                                                            class="form-control  @error('email') is-invalid @enderror"
+                                                            id="email" name="email">
 
                                                     </div>
 
@@ -40,26 +65,4 @@
             </div>
         </div>
     </div>
-    @if (session()->has('success'))
-        <script>
-            Swal.fire({
-                position: 'center',
-                icon: 'success',
-                title: {{session('success')}},
-                showConfirmButton: false,
-                timer: 3000
-            })
-        </script>
-    @endif
-    @if (session()->has('error'))
-        <script>
-            Swal.fire({
-                position: 'center',
-                icon: 'error',
-                title: {{session('error')}},
-                showConfirmButton: false,
-                timer: 3000
-            })
-        </script>
-    @endif
 @endsection
