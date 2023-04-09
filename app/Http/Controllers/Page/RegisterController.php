@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Crypt;
+use App\Mail\Pendaftaran;
+use Illuminate\Support\Facades\Mail;
 
 class RegisterController extends Controller
 {
@@ -97,6 +99,16 @@ class RegisterController extends Controller
                 return redirect('daftar')->with('status', 'NIK Anda sudah terdaftar');
                 return false;
             }
+
+            if($d['email']==$request->email){
+                return redirect('daftar')->with('status', 'Email Anda sudah terdaftar');
+                return false;
+            }
+
+            if($d['phone']==$request->phone){
+                return redirect('daftar')->with('status', 'No. Whatsapp Anda sudah terdaftar');
+                return false;
+            }
         }
         $response = Http::withHeaders([
             'Accept' => 'aplication/json',
@@ -107,6 +119,8 @@ class RegisterController extends Controller
             return back()->withInput()
                 ->withErrors($response['errors']);
         }else{
+
+            Mail::to($request->email)->send(new Pendaftaran($request->all()));
             $url = "/daftar/" . Crypt::encryptString($response->json()['data']['id']);
             return redirect($url)->with('status', 'Berhasil melakukan pendaftaran');
         }

@@ -2,10 +2,10 @@
 @section('content')
     <div class="text-center ">
         <?php
-        
+
         $id = $data['id'];
         $nama = $data['name'];
-        
+
         ?>
 
 
@@ -26,7 +26,7 @@
                         <div class=" container h-50 mt-5">
                             <div class="row d-flex justify-content-center align-items-center h-100">
                                 <div class="col-lg-12 col-xl-11">
-                                    <h3 style="margin-top:40px">Pendaftaran Santri Tahun {{ $nama }}</h3>
+                                    <h3 style="margin-top:30px">Pendaftaran Santri Tahun {{ $nama }}</h3>
                                     <div class="card text-black">
                                         <div class="card-header" style="background:#146C94;color:#fff;">
                                             Step 2
