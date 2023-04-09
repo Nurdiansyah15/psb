@@ -175,10 +175,29 @@
                         </div>
                     </td>
                     <td>
-                        <form action="{{ route('pendaftar.destroy', $item['id']) }}" method="POST">@csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-danger btn-sm d-inline-flex">Delete</button>
-                        </form>
+                        <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#delete{{ $item['no_regis'] }}">
+                            Delete
+                        </button>
+                        <div data-bs-backdrop="static" class="modal fade" id="delete{{$item['no_regis'] }}" tabindex="-1" aria-labelledby="deleteLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="deleteLabel">Hapus Data
+                                        </h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Apakah anda yakin ingin menghapus data ini?</p>
+                                    </div>
+                                    <div class=" modal-footer">
+                                        <form action="{{ route('pendaftar.destroy', $item['id']) }}" method="POST">@csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger btn-sm d-inline-flex">Delete</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#detail{{ $item['no_regis'] }}">
                             Detail
                         </button>
