@@ -1,4 +1,4 @@
-@extends("template.admin")
+@extends("template.admin2")
 @section("content")
 <!-- Page Wrapper -->
 <div class="container mt-3">
@@ -80,52 +80,47 @@
             </tr>
         </thead>
         <tbody>
-       
+
             <tr>
                 <td>
-                    
+
                     </a>
                 </td>
                 <td>
-                  
+
                 </td>
                 <td>
-                  
+
                 </td>
                 <td>
-        
+
                 </td>
                 <td>
-                    <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                        data-bs-target="#Status">Status</button>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#Status">Status</button>
                     <div class="modal fade" id="Status" tabindex="-1" aria-labelledby="StatusLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h1 class="modal-title fs-5" id="StatusLabel">Status Gelombang</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
                                     <a href="#" role="button" class="btn btn-success">Aktif</a>
                                     <a href="#" role="button" class="btn btn-danger">Nonaktif</a>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                        data-bs-target="#edit">Edit</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#edit">Edit</button>
                     <div class="modal fade" id="edit" tabindex="-1" aria-labelledby="editLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-scrollable">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h1 class="modal-title fs-5" id="editLabel">Atur Gelombang</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body ">
                                     <form>
@@ -178,8 +173,7 @@
                                     </form>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                     <button type="button" class="btn btn-danger">Delete</button>
                                     <button class="btn btn-primary " name="submit" type="submit">
                                         Submit

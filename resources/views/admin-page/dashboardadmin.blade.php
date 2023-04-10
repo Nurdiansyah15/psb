@@ -1,4 +1,4 @@
-@extends('template.admin')
+@extends('template.admin2')
 @section('content')
 <!-- Page Wrapper -->
 <div id="wrapper">

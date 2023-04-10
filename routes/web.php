@@ -42,6 +42,9 @@ use Illuminate\Support\Facades\Cookie;
 Route::get('/gel', function () {
     return view('admin-page.gelombang');
 });
+Route::get('/admin2', function () {
+    return view('template.admin2');
+});
 
 Route::prefix('admin')->group(function () {
     Route::middleware('sipon')->group(function () {

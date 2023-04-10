@@ -1,4 +1,4 @@
-@extends('template.admin')
+@extends('template.admin2')
 @section('content')
 <!-- Custom styles for this template -->
 
@@ -203,7 +203,7 @@
                         </button>
                         <!-- Modal Detail -->
                         <div class="modal" id="detail{{ $item['no_regis'] }}" aria-labelledby="detailLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-dialog  modal-dialog-centered modal-dialog-scrollable">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h5 class="modal-title" id="detailLabel">Data Santri</h5>
