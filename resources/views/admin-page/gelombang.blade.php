@@ -80,17 +80,17 @@
             </tr>
         </thead>
         <tbody>
-
+       
             <tr>
                 <td>
-
+                    
                     </a>
                 </td>
                 <td>
-
+                  
                 </td>
                 <td>
-
+                  
                 </td>
                 <td>
 
@@ -184,6 +184,7 @@
                     </div>
                 </td>
             </tr>
+        @endforeach
         </tbody>
     </table>
 </div>

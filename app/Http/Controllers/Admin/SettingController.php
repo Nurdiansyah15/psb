@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Cookie;
 
 class SettingController extends Controller
 {
@@ -12,7 +14,14 @@ class SettingController extends Controller
      */
     public function index()
     {
-        return view('admin-page.gelombang');
+        $setting = Http::withHeaders([
+            'Authorization' => 'Bearer ' . json_decode(Cookie::get('sipon_session'))->token,
+            'Accept' => 'application/json'
+        ])->get('https://sipon.kyaigalangsewu.net/api/v1/psb/setting/');
+
+        return view('admin-page.gelombang',[
+            'data' => $setting['data']
+        ]);
     }
 
     /**

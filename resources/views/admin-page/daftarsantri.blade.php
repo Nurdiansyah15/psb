@@ -1,88 +1,94 @@
 @extends('template.admin2')
 @section('content')
-<!-- Custom styles for this template -->
+    <!-- Custom styles for this template -->
 
-<body>
-    <?php
-    function tgl_indo($tanggal)
-    {
-        if ($tanggal == '') {
-            return '';
+    <body>
+        <?php
+        function tgl_indo($tanggal)
+        {
+            if ($tanggal == '') {
+                return '';
+            }
+            $bulan = [
+                1 => 'Januari',
+                'Februari',
+                'Maret',
+                'April',
+                'Mei',
+                'Juni',
+                'Juli',
+                'Agustus',
+                'September',
+                'Oktober',
+                'November',
+                'Desember',
+            ];
+            $pecahkan = explode('-', $tanggal);
+        
+            return $pecahkan[2] . ' ' . $bulan[(int) $pecahkan[1]] . ' ' . $pecahkan[0];
         }
-        $bulan = [
-            1 => 'Januari',
-            'Februari',
-            'Maret',
-            'April',
-            'Mei',
-            'Juni',
-            'Juli',
-            'Agustus',
-            'September',
-            'Oktober',
-            'November',
-            'Desember',
-        ];
-        $pecahkan = explode('-', $tanggal);
+        ?>
+        <div class="container mt-3">
+            <h2>
+                <b>Data Calon Santri Baru</b>
+            </h2>
+            <div class="table-responsive">
+                <table class="table table-bordered mt-3">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>No Pendaftaran</th>
+                            <th>Program</th>
+                            <th>Nama Lengkap</th>
+                            <th>Jenis Kelamin</th>
+                            <th>Verifikasi</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($data as $item)
+                            <tr>
+                                <td>{{ $loop->iteration }}</td>
+                                <td>
+                                    {{ $item['no_regis'] }}
+                                    @if ($item['status'] == 1)
+                                        <span class="badge bg-danger">verified</span>
+                                    @endif
+                                </td>
+                                <td>
+                                    {{ $item['program'] }}
+                                </td>
+                                <td>
+                                    {{ $item['fullname'] }}
+                                </td>
+                                <td>
+                                    @if ($item['option'] == '1')
+                                        {{ 'Laki-laki' }}
+                                    @else
+                                        {{ 'Perempuan' }}
+                                    @endif
+                                </td>
+                                <td>
+                                    <!-- Button trigger modal -->
+                                    @if (isset($item['path_doc']) || isset($item['path_bill']) || isset($item['path_mutasi_emis']))
+                                        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#verifikasi{{ $item['no_regis'] }}">
+                                            Verifikasi
+                                        </button>
+                                    @endif
 
-        return $pecahkan[2] . ' ' . $bulan[(int) $pecahkan[1]] . ' ' . $pecahkan[0];
-    }
-    ?>
-    <div class="container mt-3">
-        <h2>
-            <b>Data Calon Santri Baru</b>
-        </h2>
-        <table class="table table-bordered mt-3">
-            <thead>
-                <tr>
-                    <th>No Pendaftaran</th>
-                    <th>Program</th>
-                    <th>Nama Lengkap</th>
-                    <th>Jenis Kelamin</th>
-                    <th>Verifikasi</th>
-                    <th>Aksi</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach ($data as $item)
-                <tr>
-                    <td>
-                        {{ $item['no_regis'] }}
-                        @if($item['status']==1)
-                        <span class="badge bg-danger">verified</span>
-                        @endif
-                    </td>
-                    <td>
-                        {{ $item['program'] }}
-                    </td>
-                    <td>
-                        {{ $item['fullname'] }}
-                    </td>
-                    <td>
-                        @if ($item['option'] == '1')
-                        {{ 'Laki-laki' }}
-                        @else
-                        {{ 'Perempuan' }}
-                        @endif
-                    </td>
-                    <td>
-                        <!-- Button trigger modal -->
-                        @if (isset($item['path_doc']) || isset($item['path_bill']) || isset($item['path_mutasi_emis']))
-                        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#verifikasi{{ $item['no_regis'] }}">
-                            Verifikasi
-                        </button>
-                        @endif
-
-                        <!-- Modal Berkas -->
-                        <div data-bs-backdrop="static" class="modal fade" id="verifikasi{{ $item['no_regis'] }}" tabindex="-1" aria-labelledby="verifikasiLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="verifikasiLabel">Verifikasi
-                                        </h1>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
+                                    <!-- Modal verifikasi -->
+                                    <div data-bs-backdrop="static" class="modal fade" id="verifikasi{{ $item['no_regis'] }}"
+                                        tabindex="-1" aria-labelledby="verifikasiLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="verifikasiLabel">Verifikasi
+                                                    </h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
 
                                         @if (isset($item['path_doc']))
                                         <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#berkas{{ $item['no_regis'] }}">
@@ -203,7 +209,7 @@
                         </button>
                         <!-- Modal Detail -->
                         <div class="modal" id="detail{{ $item['no_regis'] }}" aria-labelledby="detailLabel" aria-hidden="true">
-                            <div class="modal-dialog  modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h5 class="modal-title" id="detailLabel">Data Santri</h5>
@@ -499,11 +505,12 @@
                         </div>
                     </td>
 
-                </tr>
-                @endforeach
-            </tbody>
-        </table>
-    </div>
-    </div>
-    </div>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {{-- </div>
+    </div> --}}
     @endsection
