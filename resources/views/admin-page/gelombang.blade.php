@@ -87,8 +87,15 @@
                     </a>
                 </td>
                 <td>
-
+                    <?php
+                    setlocale(LC_ALL, 'ID');
+                    echo strftime('%d %B %Y', strtotime($data['start_period']));
+                    ?>
                 </td>
+                <?php
+                setlocale(LC_ALL, 'ID');
+                echo strftime('%d %B %Y', strtotime($data['end_period']));
+                ?>
                 <td>
 
                 </td>
