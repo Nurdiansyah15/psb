@@ -45,6 +45,9 @@ Route::get('/gel', function () {
 Route::get('/admin2', function () {
     return view('template.admin2');
 });
+Route::get('/coba', function () {
+    return view('template.partials.ujicoba');
+});
 
 Route::prefix('admin')->group(function () {
     Route::middleware('sipon')->group(function () {
