@@ -68,12 +68,17 @@ class RegisterController extends Controller
             }
         }
 
+        if($request->type=='2'){
+            $next = "y";
+        }
+
 
         return view('register.formregister', [
             "data" => $response['data'],
             "next" => $next,
             "option" => $request->option,
             "program" => $request->program,
+            "type" => $request->type,
         ]);
     }
 
@@ -121,12 +126,19 @@ class RegisterController extends Controller
             'Accept' => 'aplication/json',
             'X-API-KEY' => 'siponapikey',
         ])->get('http://sipon.kyaigalangsewu.net/api/v1/psb/register/' . $id);
+        if($dataku['data']['type']=='1'){
+            $type='Mukim';
+        }else{
+            $type='Kalong';
+        }
         $detail = [
             'no_regis' => $dataku['data']['no_regis'],
             'nik' => $dataku['data']['nik'],
             'fullname' => $dataku['data']['fullname'],
             'email' => $dataku['data']['email'],
             'phone' => $dataku['data']['phone'],
+            'program' => $dataku['data']['program'],
+            'type' => $type,
             'password' => $request->password,
         ];
         if ($response['code'] == 400) {
