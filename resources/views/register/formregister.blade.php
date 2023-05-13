@@ -34,7 +34,7 @@
                                         <div class="card-body ">
                                             <div class="row justify-content-center">
                                                 <div class="col-md-10 col-lg-12 col-xl-5 order-2 order-lg-1">
-                                                    <p class="text-center h5 fw-bold mx-1 mx-md-4">Daftar</p>
+                                                    <p class="text-center h5 fw-bold mx-1 mx-md-4">Form Pendaftaran</p>
                                                     <form class="mx-1 mx-md-6" action="{{ route('daftar.store') }}"
                                                         method="POST">
                                                         @csrf
@@ -80,6 +80,8 @@
                                                                 @error('phone')
                                                                     <div class="alert alert-danger">{{ $message }}</div>
                                                                 @enderror
+                                                                <input required type="hidden" name="type"
+                                                                    value="{{ $type }}">
                                                                 <input required type="hidden" name="option"
                                                                     value="{{ $option }}">
                                                                 <input required type="hidden" name="program"

@@ -22,6 +22,16 @@
             <td>{{$data['email']}}</td>
         </tr>
         <tr>
+            <td>Program</td>
+            <td>:</td>
+            <td>{{$data['program']}}</td>
+        </tr>
+        <tr>
+            <td>Jenis</td>
+            <td>:</td>
+            <td>Santri {{$data['type']}}</td>
+        </tr>
+        <tr>
             <td>No. Telp</td>
             <td>:</td>
             <td>{{$data['phone']}}</td>
