@@ -56,6 +56,7 @@ Route::prefix('admin')->group(function () {
         Route::put('/pendaftar/{id}/', [DaftarController::class, 'update']);
         Route::delete('/pendaftar/{id}', [DaftarController::class, 'destroy'])->name('pendaftar.destroy');
         Route::get('/gelombang', [SettingController::class, 'index']);
+        Route::post('/gelombang', [SettingController::class, 'create']);
 
         Route::get('/logout', function () {
 

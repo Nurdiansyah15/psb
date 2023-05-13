@@ -1,4 +1,4 @@
-@extends('template.admin2')
+@extends('template.admin3')
 @section('content')
 <!-- Custom styles for this template -->
 
@@ -33,7 +33,7 @@
             <b>Data Calon Santri Baru</b>
         </h2>
         <div class="table-responsive">
-            <table class="table table-bordered mt-3">
+            <table id="example" class="table table-bordered mt-3">
                 <thead>
                     <tr>
                         <th>No</th>
@@ -41,7 +41,7 @@
                         <th>Program</th>
                         <th>Nama Lengkap</th>
                         <th>Jenis Kelamin</th>
-                        <th>Verifikasi</th>
+                        <th>Verif</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -70,14 +70,15 @@
                         </td>
                         <td>
                             <!-- Button trigger modal -->
+
                             @if (isset($item['path_doc']) || isset($item['path_bill']) || isset($item['path_mutasi_emis']))
-                            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#verifikasi{{ $item['no_regis'] }}">
-                                Verifikasi
+                            <button type="button" class="btn btn-primary btn-sm " data-bs-toggle="modal" data-bs-target="#verifikasi{{ $item['no_regis'] }}">
+                                <i class="fa fa-edit"></i>
                             </button>
                             @endif
 
                             <!-- Modal verifikasi -->
-                            <div data-bs-backdrop="static" class="modal fade" id="verifikasi{{ $item['no_regis'] }}" tabindex="-1" aria-labelledby="verifikasiLabel" aria-hidden="true">
+                            <div class="modal fade" id="verifikasi{{ $item['no_regis'] }}" tabindex="-1" aria-labelledby="verifikasiLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -117,8 +118,8 @@
                                 </div>
                             </div>
                             <!-- Modal Berkas -->
-                            <div data-bs-backdrop="static" class="modal fade" id="berkas{{ $item['no_regis'] }}" tabindex="-1" aria-labelledby="berkasLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-xl">
+                            <div class="modal fade" id="berkas{{ $item['no_regis'] }}" tabindex="-1" aria-labelledby="berkasLabel" aria-hidden="true">
+                                <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <h1 class="modal-title fs-5" id="berkasLabel">Lihat
@@ -137,8 +138,8 @@
                                 </div>
                             </div>
                             <!-- Modal bayar -->
-                            <div data-bs-backdrop="static" class="modal fade" id="bayar{{ $item['no_regis'] }}" tabindex="-1" aria-labelledby="bayarLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-xl">
+                            <div class="modal fade" id="bayar{{ $item['no_regis'] }}" tabindex="-1" aria-labelledby="bayarLabel" aria-hidden="true">
+                                <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <h1 class="modal-title fs-5" id="bayarLabel">Lihat
@@ -157,8 +158,8 @@
                                 </div>
                             </div>
                             <!-- Modal Emis -->
-                            <div data-bs-backdrop="static" class="modal fade" id="emis{{ $item['no_regis'] }}" tabindex="-1" aria-labelledby="emisLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-xl">
+                            <div class="modal fade" id="emis{{ $item['no_regis'] }}" tabindex="-1" aria-labelledby="emisLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <h1 class="modal-title fs-5" id="emisLabel">Lihat
@@ -179,7 +180,7 @@
                         </td>
                         <td>
                             <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#delete{{ $item['no_regis'] }}">
-                                Delete
+                                <i class="fa fa-trash"></i>
                             </button>
                             <div data-bs-backdrop="static" class="modal fade" id="delete{{$item['no_regis'] }}" tabindex="-1" aria-labelledby="deleteLabel" aria-hidden="true">
                                 <div class="modal-dialog">
@@ -202,11 +203,11 @@
                                 </div>
                             </div>
                             <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#detail{{ $item['no_regis'] }}">
-                                Detail
+                                <i class="fa fa-file"></i>
                             </button>
                             <!-- Modal Detail -->
                             <div class="modal" id="detail{{ $item['no_regis'] }}" aria-labelledby="detailLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <h5 class="modal-title" id="detailLabel">Data Santri</h5>
@@ -491,8 +492,7 @@
                                                     </table>
                                                 </ol>
                                             </div>
-                                            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-                                            </script>
+
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
