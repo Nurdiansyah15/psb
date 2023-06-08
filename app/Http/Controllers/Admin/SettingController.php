@@ -30,6 +30,7 @@ class SettingController extends Controller
 
     public function create(Request $request)
     {
+        // dd($request->all());
         $setting = Http::withHeaders([
             'Authorization' => 'Bearer ' . json_decode(Cookie::get('sipon_session'))->token,
             'Accept' => 'application/json'
@@ -57,11 +58,6 @@ class SettingController extends Controller
             'quota_tahfidh_pa' => 'required',
             'quota_tahfidh_pi' => 'required',
         ]);
-        // $SettingController = SettingController::create($validatedData);
-        // return response()->json([
-        //     'message' => 'Pembuatan Gelombang Berhasil',
-        //     'data' => $SettingController
-        // ], 201);
     }
 
     /**
@@ -69,11 +65,6 @@ class SettingController extends Controller
      */
     public function show(string $id)
     {
-        // $SettingController = SettingController::find($id);
-        // return response()->json([
-        //     'message' => 'success',
-        //     'data' => $SettingController
-        // ], 200);
     }
 
     /**
@@ -81,11 +72,10 @@ class SettingController extends Controller
      */
     public function edit(string $id)
     {
-        // $SettingController = SettingController::find($id);
-        // return response()->json([
-        //     'message' => 'success',
-        //     'data' => $SettingController
-        // ], 200);
+        // $Setting = Http::withHeaders([
+        //     'Authorization' => 'Bearer ' . json_decode(Cookie::get('sipon_session'))->token,
+        //     'Accept' => 'application/json'
+        // ])->get('https://sipon.kyaigalangsewu.net/api/v1/psb/setting/1' . $id);
     }
 
     /**
@@ -93,31 +83,25 @@ class SettingController extends Controller
      */
     public function update(Request $request, string $id)
     {
+        if ($request->status == 1) {
+            // echo "1";
+            echo $setting = Http::withHeaders([
+                'X-API-KEY' => config('app.api_key'),
+                'Accept' => 'application/json'
+            ])->get('https://sipon.kyaigalangsewu.net/api/v1/psb/setDisableAll');
+        }
+        // dd($request->all());
         $setting = Http::withHeaders([
             'Authorization' => 'Bearer ' . json_decode(Cookie::get('sipon_session'))->token,
             'Accept' => 'application/json'
-        ])->put('https://sipon.kyaigalangsewu.net/api/v1/psb/setting/1' . $id, $request->all());
+        ])->put('https://sipon.kyaigalangsewu.net/api/v1/psb/setting/' . $id, $request->all());
 
-        if (@$setting['message'] == "Success") {
+        // dd($setting->json());
+        if ($setting['message'] == "Success") {
             return redirect('/admin/gelombang')->with('success', 'Update Gelombang Berhasil'); //redire
         } else {
             return back()->with('error', 'Update Gelombang Gagal'); //redire
         }
-
-        // $SettingController = SettingController::find($id);
-        // $validatedData = $request->validate([
-        //     'start_period' => 'required|date_format:Y-m-d H:i:s',
-        //     'end_period' => 'required|date_format:Y-m-d H:i:s',
-        //     'quota_kitab_pa' => 'required|integer|min:1',
-        //     'quota_kitab_pi' => 'required|integer|min:1',
-        //     'quota_tahfidh_pa' => 'required|integer|min:1',
-        //     'quota_tahfidh_pi' => 'required|integer|min:1',
-        // ]);
-        // $SettingController->update($SettingController);
-        // return response()->json([
-        //     'message' => 'Pembuatan Gelombang Berhasil',
-        //     'data' => $SettingController
-        // ], 201);
     }
 
     /**
@@ -128,7 +112,7 @@ class SettingController extends Controller
         $setting = Http::withHeaders([
             'Authorization' => 'Bearer ' . json_decode(Cookie::get('sipon_session'))->token,
             'Accept' => 'application/json'
-        ])->delete('https://sipon.kyaigalangsewu.net/api/v1/psb/setting/1' . $id);
+        ])->delete('https://sipon.kyaigalangsewu.net/api/v1/psb/setting/' . $id);
         return back()->with('success', 'Delete Gelombang Berhasil');
     }
 }

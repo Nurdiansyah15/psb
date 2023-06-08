@@ -11,6 +11,8 @@ use App\Http\Controllers\Admin\DaftarController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Download\DownloadController;
 use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\Http;
+use App\Http\Controllers\LogoutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,32 +25,6 @@ use Illuminate\Support\Facades\Cookie;
 |
 */
 
-// Route::get('/', function () {
-//     return view('login');
-// });
-// Route::get('/1', function () {
-//     return view('dashboarduser');
-// });
-// Route::get('/3', function () {
-//     return view('z');
-// });
-
-// Route::get('/5', function () {
-//     return view('dashboard-user.dashboard-user');
-// // });
-// Route::get('/admin', function () {
-//     return view('admin-page/dashboaradmin');
-// });
-Route::get('/gel', function () {
-    return view('admin-page.gelombang');
-});
-Route::get('/admin2', function () {
-    return view('template.admin2');
-});
-Route::get('/coba', function () {
-    return view('template.partials.ujicoba');
-});
-
 Route::prefix('admin')->group(function () {
     Route::middleware('sipon')->group(function () {
         Route::get('', [Admin::class, 'index']);
@@ -57,15 +33,13 @@ Route::prefix('admin')->group(function () {
         Route::delete('/pendaftar/{id}', [DaftarController::class, 'destroy'])->name('pendaftar.destroy');
         Route::get('/gelombang', [SettingController::class, 'index']);
         Route::post('/gelombang', [SettingController::class, 'create']);
-
-        Route::get('/logout', function () {
-
-            Cookie::queue(Cookie::make('sipon_session', null, -1));
-
-            return redirect('/admin');
-        });
+        Route::get('/gelombang/{id}', [SettingController::class, 'show']);
+        Route::post('/gelombang/{id}', [SettingController::class, 'update'])->name('gelombang.update');
+        Route::delete('/gelombang/{id}', [SettingController::class, 'destroy'])->name('gelombang.destroy');
+        Route::get('/logout',  [LogoutController::class, 'index']);
     });
 });
+
 
 
 Route::get('/login', [AuthController::class, 'index']);

@@ -105,31 +105,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Content Row -->
-                <div class="row">
-                    <!-- Content Column -->
-                    <div class="col-lg-12 mb-4">
-                        <!-- Status Pendaftaran -->
-                        <div class="card shadow mb-4">
-                            <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary">Status Pendaftaran</h6>
-                            </div>
-                            <div class="card-body">
-                                <h4 class="small font-weight-bold">Belum Lengkap <span class="float-right">30%</span>
-                                </h4>
-                                <div class="progress mb-4">
-                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 30%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <h4 class="small font-weight-bold">Sudah Lengkap <span class="float-right">70%</span>
-                                </h4>
-                                <div class="progress">
-                                    <div class="progress-bar bg-success" role="progressbar" style="width: 70%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
             <!-- /.container-fluid -->
         </div>
