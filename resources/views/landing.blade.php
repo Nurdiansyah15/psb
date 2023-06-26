@@ -564,7 +564,14 @@
                                     </li>
                                     <li>
                                         <span>Tanggal:</span>
-                                        <h6>28 Mar 2023 - 19 April 2023</h6>
+                                        <h6> <?php
+                                            setlocale(LC_ALL, 'ID');
+                                            echo strftime('%d %B %Y', strtotime($setting['start_period']));
+                                            ?> -
+                                            <?php
+                                            setlocale(LC_ALL, 'ID');
+                                            echo strftime('%d %B %Y', strtotime($setting['end_period']));
+                                            ?></h6>
                                     </li>
                                     <li>
                                         <span><strong> Metode Pembayaran </strong></span>
